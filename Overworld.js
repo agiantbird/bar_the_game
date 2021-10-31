@@ -12,19 +12,30 @@ class Overworld {
     //Clear off the canvas
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-    //Draw Lower layer
-    this.map.drawLowerImage(this.ctx);
+    // Establish camera person
+    const cameraPerson = this.map.gameObjects.hero;
 
-    //Draw Game Objects
+    // Update all objects
     Object.values(this.map.gameObjects).forEach(object => {
       object.update({
-        arrow: this.directionInput.direction
+        arrow: this.directionInput.direction,
+        map: this.map
       })
-      object.sprite.draw(this.ctx);
+    })
+
+    //Draw Lower layer
+    this.map.drawLowerImage(this.ctx, cameraPerson);
+
+    //Draw Game Objects
+    // Draw 'southern' over 'northern' characters
+    Object.values(this.map.gameObjects).sort((a,b) => {
+      return a.y - b.y;
+    }).forEach(object => {
+      object.sprite.draw(this.ctx, cameraPerson);
     })
 
     //Draw Upper layer
-    this.map.drawUpperImage(this.ctx);
+    this.map.drawUpperImage(this.ctx, cameraPerson);
 
 
      requestAnimationFrame(() => {
@@ -35,13 +46,22 @@ class Overworld {
  }
 
  init() {
-  this.map = new OverworldMap(window.OverworldMaps.BarRoom);
+  this.map = new OverworldMap(window.OverworldMaps.DemoRoom);
+  this.map.mountObjects();
 
   this.directionInput = new DirectionInput();
   this.directionInput.init();
   this.directionInput.direction;
 
   this.startGameLoop();
+
+  // this.map.startCutscene([
+  //   {who: "hero", type: "walk", direction: "down"},
+  //   {who: "hero", type: "walk", direction: "down"},
+  //   {who: "npcA", type: "walk", direction: "left"},
+  //   {who: "npcA", type: "walk", direction: "left"},
+  //   {who: "npcA", type: "stand", direction: "up", time: 800},
+  // ])
  }
 
 }
