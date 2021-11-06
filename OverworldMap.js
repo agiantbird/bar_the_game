@@ -99,7 +99,7 @@ class OverworldMap {
 
 window.OverworldMaps = {
   DemoRoom: {
-    lowerSrc: "/images/maps/BarLower.png",
+    lowerSrc: "/images/maps/BarLowerWithHardwood.png",
     upperSrc: "/images/maps/BarUpper.png",
     gameObjects: {
       hero: new Person({
@@ -124,6 +124,23 @@ window.OverworldMaps = {
               { type: "textMessage", text: "Go away!"},
               { who: "hero", type: "walk",  direction: "up" },
               { who: "hero", type: "stand",  direction: "down", time: 300 },
+            ]
+          }
+        ]
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 1800 },
+          { type: "stand",  direction: "down", time: 4000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "...thirsty", faceHero: "characterM" },
+              { type: "textMessage", text: "need beer"},
             ]
           }
         ]
@@ -190,13 +207,15 @@ window.OverworldMaps = {
     }
   },
   Kitchen: {
+    // lowerSrc: "/images/maps/text_scene_test.png",
+    // upperSrc: "/images/maps/text_scene_test.png",
     lowerSrc: "/images/maps/KitchenLower.png",
     upperSrc: "/images/maps/KitchenUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(5),
-        y: utils.withGrid(5),
+        x: utils.withGrid(10),
+        y: utils.withGrid(6),
       }),
       npcB: new Person({
         x: utils.withGrid(10),
