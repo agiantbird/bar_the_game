@@ -107,27 +107,27 @@ window.OverworldMaps = {
         x: utils.withGrid(5),
         y: utils.withGrid(5),
       }),
-      npcA: new Person({
-        x: utils.withGrid(7),
-        y: utils.withGrid(9),
-        src: "/images/characters/people/npc1_gray.png",
-        behaviorLoop: [
-          { type: "stand",  direction: "left", time: 1800 },
-          { type: "stand",  direction: "up", time: 4000 },
-          { type: "stand",  direction: "right", time: 1200 },
-          { type: "stand",  direction: "up", time: 300 },
-        ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "I'm busy...", faceHero: "npcA" },
-              { type: "textMessage", text: "Go away!"},
-              { who: "hero", type: "walk",  direction: "up" },
-              { who: "hero", type: "stand",  direction: "down", time: 300 },
-            ]
-          }
-        ]
-      }),
+      // npcA: new Person({
+      //   x: utils.withGrid(7),
+      //   y: utils.withGrid(9),
+      //   src: "/images/characters/people/npc1_gray.png",
+      //   behaviorLoop: [
+      //     { type: "stand",  direction: "left", time: 1800 },
+      //     { type: "stand",  direction: "up", time: 4000 },
+      //     { type: "stand",  direction: "right", time: 1200 },
+      //     { type: "stand",  direction: "up", time: 300 },
+      //   ],
+      //   talking: [
+      //     {
+      //       events: [
+      //         { type: "textMessage", text: "I'm busy...", faceHero: "npcA" },
+      //         { type: "textMessage", text: "Go away!"},
+      //         { who: "hero", type: "walk",  direction: "up" },
+      //         { who: "hero", type: "stand",  direction: "down", time: 300 },
+      //       ]
+      //     }
+      //   ]
+      // }),
       characterM: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
@@ -139,16 +139,65 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "...thirsty", faceHero: "characterM" },
-              { type: "textMessage", text: "need beer"},
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
             ]
           }
         ]
       }),
-      npcB: new Person({
-        x: utils.withGrid(9),
-        y: utils.withGrid(4),
-        src: "/images/characters/people/hero_gray.png",
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 300 },
+          { type: "stand",  direction: "down", time: 5000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      characterO: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/o_sitting.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 900 },
+          { type: "stand",  direction: "up", time: 4000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Hi :)", faceHero: "characterO" },
+              { type: "textMessage", text: "I'm O.!"},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(8),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      // npcB: new Person({
+      //   x: utils.withGrid(9),
+      //   y: utils.withGrid(4),
+      //   src: "/images/characters/people/hero_gray.png",
         // behaviorLoop: [
         //   { type: "walk",  direction: "left" },
         //   { type: "stand",  direction: "up", time: 800 },
@@ -156,7 +205,7 @@ window.OverworldMaps = {
         //   { type: "walk",  direction: "right" },
         //   { type: "walk",  direction: "down" },
         // ]
-      }),
+      // }),
     },
     walls: {
       // back wall
@@ -184,16 +233,16 @@ window.OverworldMaps = {
       [utils.asGridCoord(6,3)]: [
         {
           events: [
-            { who: "npcB", type: "walk",  direction: "left" },
-            { who: "npcB", type: "walk",  direction: "left" },
-            { who: "npcB", type: "walk",  direction: "left" },
-            { who: "npcB", type: "stand",  direction: "up", time: 500 },
-            { type: "textMessage", text:"You can't be in there!"},
-            { who: "npcB", type: "walk",  direction: "right" },
-            { who: "npcB", type: "walk",  direction: "right" },
-            { who: "npcB", type: "walk",  direction: "right" },
-            { who: "npcB", type: "stand",  direction: "down", time: 500 },
-            { who: "hero", type: "walk",  direction: "down" },
+            // { who: "npcB", type: "walk",  direction: "left" },
+            // { who: "npcB", type: "walk",  direction: "left" },
+            // { who: "npcB", type: "walk",  direction: "left" },
+            // { who: "npcB", type: "stand",  direction: "up", time: 500 },
+            // { type: "textMessage", text:"You can't be in there!"},
+            // { who: "npcB", type: "walk",  direction: "right" },
+            // { who: "npcB", type: "walk",  direction: "right" },
+            // { who: "npcB", type: "walk",  direction: "right" },
+            // { who: "npcB", type: "stand",  direction: "down", time: 500 },
+            { who: "hero", type: "walk",  direction: "down" }
           ]
         }
       ],
