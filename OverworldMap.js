@@ -99,8 +99,8 @@ class OverworldMap {
 
 window.OverworldMaps = {
   DemoRoom: {
-    lowerSrc: "/images/maps/BarLowerWithHardwood.png",
-    upperSrc: "/images/maps/BarUpper.png",
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -180,20 +180,30 @@ window.OverworldMaps = {
         ]
       }),
       emptyStool1: new Person({
-        x: utils.withGrid(5),
-        y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool2: new Person({
-        x: utils.withGrid(7),
+        x: utils.withGrid(4),
         y: utils.withGrid(7),
         src: "/images/assets/stool_sprite_sheet.png",
       }),
       emptyStool3: new Person({
-        x: utils.withGrid(8),
+        x: utils.withGrid(5),
         y: utils.withGrid(7),
         src: "/images/assets/stool_sprite_sheet.png",
       }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      // emptyStool3: new Person({
+      //   x: utils.withGrid(8),
+      //   y: utils.withGrid(7),
+      //   src: "/images/assets/stool_sprite_sheet.png",
+      // }),
       // npcB: new Person({
       //   x: utils.withGrid(9),
       //   y: utils.withGrid(4),
