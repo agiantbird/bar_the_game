@@ -5,13 +5,16 @@
   bottom: 0;
   height: 36px;
   padding: 4px;
-  background: var(--menu-background);
+  background: var(--dialog-background);
   border-top: 1px solid var(--menu-border-color);
   color: var(--menu-font-color);
 }
 .TextMessage_p {
   margin: 0;
-  font-size: 12px;
+  /*font-family: Helvetica, Arial, sans-serif; OCR A Std, monospace*/
+  font-family: DejaVu Sans Mono, monospace;
+
+  font-size: 10px;
 }
 .TextMessage span {
   opacity: 0;

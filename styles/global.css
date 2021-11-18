@@ -1,9 +1,10 @@
 :root {
 	--border-color: #291D4D;
-	--dialog-background: #FFF3B4;
+	--dialog-background: #ECECEC;
 	
 	--menu-background: #FFE8D2;
-	--menu-font-color: #A48465;
+	/*--menu-font-color: #A48465;*/
+	--menu-font-color: #575656;
 	--menu-selected-background: #7FC2FF;
 }
 
