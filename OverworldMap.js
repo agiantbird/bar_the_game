@@ -355,7 +355,7 @@ window.OverworldMaps = {
             // { type: "textMessage", text: "J: I don't think it has one. Or maybe it is the point."},
             // { type: "textMessage", text: "L: It's its own point?"},
             // { type: "textMessage", text: "......."},
-            // { type: "textMessage", text: "M: It's its own point?"},
+            // { type: "textMessage", text: "M: It vends soda."},
           ]
         }
       ]
@@ -475,13 +475,16 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "Kitchen" }
+            { type: "changeMap", map: "C03_K_Bedroom_Pt_1" },
+            // need to also load up text and events for the next scene
+            { type: "textMessage", text: "....... test test ......."},
+            { type: "changeMap", map: "C03_K_Bedroom_Pt_2" },
           ]
         }
       ]
     }
   },
-  Kitchen: {
+  C03_K_Bedroom_Pt_1: {
     lowerSrc: "/images/maps/k_bedroom_lower_with_furniture_no_weather_machine.png",
     // upperSrc: "/images/maps/text_scene_test.png",
     upperSrc: "/images/maps/k_bedroom_upper_clean_wip.png",
@@ -494,18 +497,6 @@ window.OverworldMaps = {
         y: utils.withGrid(5),
         src: "/images/characters/people/npc1_gray.png"
       }),
-      // npcB: new Person({
-      //   x: utils.withGrid(10),
-      //   y: utils.withGrid(8),
-      //   src: "/images/characters/people/npc3.png",
-      //   talking: [
-      //     {
-      //       events: [
-      //         { type: "textMessage", text: "You made it!", faceHero:"npcB" },
-      //       ]
-      //     }
-      //   ]
-      // })
     },
     walls: {
       // back wall
@@ -533,6 +524,56 @@ window.OverworldMaps = {
       [utils.asGridCoord(9,7)] : true,
       [utils.asGridCoord(10,8)] : true,
       [utils.asGridCoord(10,9)] : true,
+    },
+  },
+  C03_K_Bedroom_Pt_2: {
+    lowerSrc: "/images/maps/k_bedroom_lower_with_furniture_with_weather_machine.png",
+    // upperSrc: "/images/maps/text_scene_test.png",
+    upperSrc: "/images/maps/k_bedroom_upper_clean_wip.png",
+    // lowerSrc: "/images/maps/KitchenLower.png",
+    // upperSrc: "/images/maps/KitchenUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(2),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/npc1_gray.png"
+      }),
+    },
+    walls: {
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bed and nightstand
+      [utils.asGridCoord(1,7)] : true,
+      [utils.asGridCoord(2,7)] : true,
+      [utils.asGridCoord(1,8)] : true,
+
+      // desk
+      [utils.asGridCoord(5,9)] : true,
+      [utils.asGridCoord(6,9)] : true,
+
+      // lamp
+      [utils.asGridCoord(9,7)] : true,
+      [utils.asGridCoord(10,8)] : true,
+      [utils.asGridCoord(10,9)] : true,
+
+      // weather machine
+      [utils.asGridCoord(8,4)] : true,
+      [utils.asGridCoord(8,5)] : true,
+      [utils.asGridCoord(8,6)] : true,
+      [utils.asGridCoord(9,4)] : true,
+      [utils.asGridCoord(9,5)] : true,
+      [utils.asGridCoord(9,6)] : true,
     },
   },
 }
