@@ -356,16 +356,6 @@ window.OverworldMaps = {
             // { type: "textMessage", text: "L: It's its own point?"},
             // { type: "textMessage", text: "......."},
             // { type: "textMessage", text: "M: It's its own point?"},
-
-
-
-
-
-
-
-            { type: "textMessage", text: "M: I am M!"},
-            { type: "textMessage", text: "L: I am L!"},
-            { type: "textMessage", text: "J: I am J!"},
           ]
         }
       ]
@@ -492,17 +482,17 @@ window.OverworldMaps = {
     }
   },
   Kitchen: {
-    lowerSrc: "/images/maps/k_bedroom_lower_wip.png",
+    lowerSrc: "/images/maps/k_bedroom_lower_with_furniture_no_weather_machine.png",
     // upperSrc: "/images/maps/text_scene_test.png",
-    upperSrc: "/images/maps/k_bedroom_upper_wip.png",
+    upperSrc: "/images/maps/k_bedroom_upper_clean_wip.png",
     // lowerSrc: "/images/maps/KitchenLower.png",
     // upperSrc: "/images/maps/KitchenUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(10),
-        y: utils.withGrid(6),
-        src: "/images/characters/people/npc3.png"
+        x: utils.withGrid(2),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/npc1_gray.png"
       }),
       // npcB: new Person({
       //   x: utils.withGrid(10),
@@ -516,6 +506,33 @@ window.OverworldMaps = {
       //     }
       //   ]
       // })
-    }
+    },
+    walls: {
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bed and nightstand
+      [utils.asGridCoord(1,7)] : true,
+      [utils.asGridCoord(2,7)] : true,
+      [utils.asGridCoord(1,8)] : true,
+
+      // desk
+      [utils.asGridCoord(5,9)] : true,
+      [utils.asGridCoord(6,9)] : true,
+
+      // lamp
+      [utils.asGridCoord(9,7)] : true,
+      [utils.asGridCoord(10,8)] : true,
+      [utils.asGridCoord(10,9)] : true,
+    },
   },
 }
