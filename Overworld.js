@@ -62,6 +62,7 @@ class Overworld {
   this.map = new OverworldMap(mapConfig);
   this.map.overworld = this;
   this.map.mountObjects();
+  this.map.checkForFootstepCutscene();
  }
 
  init() {

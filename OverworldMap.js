@@ -3,6 +3,7 @@ class OverworldMap {
     this.overworld = null;
     this.gameObjects = config.gameObjects;
     this.cutsceneSpaces = config.cutsceneSpaces || {};
+    this.overrideCheckForFootstepCutscene = config.overrideCheckForFootstepCutscene || false;
     this.walls = config.walls || {};
 
     this.lowerImage = new Image();
@@ -78,7 +79,7 @@ class OverworldMap {
   checkForFootstepCutscene() {
     const hero = this.gameObjects["hero"];
     const match = this.cutsceneSpaces[ `${hero.x},${hero.y}` ];
-    if (!this.isCutscenePlaying && match) {
+    if (!this.isCutscenePlaying && !this.overrideCheckForFootstepCutscene && match) {
       this.startCutscene( match[0].events )
     }
   }
@@ -477,8 +478,9 @@ window.OverworldMaps = {
           events: [
             { type: "changeMap", map: "C03_K_Bedroom_Pt_1" },
             // need to also load up text and events for the next scene
-            { type: "textMessage", text: "....... test test ......."},
-            { type: "changeMap", map: "C03_K_Bedroom_Pt_2" },
+            // { type: "changeMap", map: "C03_K_Bedroom_Pt_2" },
+            // { who: "hero", type: "walk",  direction: "down" },
+            // { who: "hero", type: "walk",  direction: "right" },
           ]
         }
       ]
@@ -525,6 +527,21 @@ window.OverworldMaps = {
       [utils.asGridCoord(10,8)] : true,
       [utils.asGridCoord(10,9)] : true,
     },
+    cutsceneSpaces: {
+    // cutsceneSpaces: {
+      [utils.asGridCoord(2,5)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1800 },
+            { type: "textMessage", text: "....*POP*....*FIZZ*....*POP*...."},
+            { type: "textMessage", text: "K: ....????"},
+            { who: "hero", type: "stand",  direction: "right", time: 600 },
+            { type: "textMessage", text: "K: ....!!!!"},
+            { type: "changeMap", map: "C03_K_Bedroom_Pt_2" },
+          ],
+        },
+      ],
+    },
   },
   C03_K_Bedroom_Pt_2: {
     lowerSrc: "/images/maps/k_bedroom_lower_with_furniture_with_weather_machine.png",
@@ -537,7 +554,10 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(2),
         y: utils.withGrid(5),
-        src: "/images/characters/people/npc1_gray.png"
+        src: "/images/characters/people/npc1_gray.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 1800 },
+        ],
       }),
     },
     walls: {
