@@ -236,90 +236,90 @@ window.OverworldMaps = {
             // "..."'s at the begginning of each chapter 
             { who: "characterM", type: "stand",  direction: "down", time: 400 },
             { type: "textMessage", text: "L: It's weird that it's here though-- isn't it, J.?"},
-            { type: "textMessage", text: "J: Why's that?"},
-            { type: "textMessage", text: "L: Well, you serve drinks here. Why would you also have a vending machine people can buy drinks from?"},
-            { type: "textMessage", text: "J: It's just soda; you can't get beer or anything from it."},
-            { type: "textMessage", text: "L: Sure, but you have soda at the bar. Doesn't that thing just cost you time to stock?"},
-            { type: "textMessage", text: "J: I guess it would, but I don't stock it."},
-            { type: "textMessage", text: "M: You don't?"},
-            { type: "textMessage", text: "J: Nope."},
-            { type: "textMessage", text: "L: Then who does? \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0  \u00A0  \u00A0  \u00A0 \u00A0 \u00A0 \u00A0 M: Then who does?"},
-            { type: "textMessage", text: "J: Some guy."},
-            { type: "textMessage", text: "L: Some guy? \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0  \u00A0  \u00A0  \u00A0 \u00A0 \u00A0 M: Some guy?"},
-            { type: "textMessage", text: "J: Some guy."},
-            { type: "textMessage", text: "L: It can't make much money for him either."},
-            { type: "textMessage", text: ".............."},
-            { type: "textMessage", text: "L: How long has that thing been here, anyway? I've never thought about it before. Is it new?"},
-            { type: "textMessage", text: "M: It's covered in dust."},
-            { type: "textMessage", text: "J: It's not new."},
-            { type: "textMessage", text: ".............."},
-            { type: "textMessage", text: "L: How have I never noticed it?"},
-            { type: "textMessage", text: "M: Why would you look for a soda machine in a bar? Like you've been saying this whole time."},
-            { type: "textMessage", text: "L: Yeah, it's weird that it's here though."},
-            { type: "textMessage", text: "M: The soda company probably tries to put one wherever there is space and an outlet,"},
-            { type: "textMessage", text: "M: betting some will make money, some will lose money."},
-            { type: "textMessage", text: "M: It will all even out in the end and the product will pay for its own advertising."},
-            { type: "textMessage", text: "L: Pay for its own advertising?"},
-            { type: "textMessage", text: "M: Sure. It's a basic strategy but clever in its own way."},
-            { type: "textMessage", text: "L: I don't think a vending machine would make me think about a product. Just about a vending machine."},
-            { type: "textMessage", text: "M: But you can't think of a vending machine without thinking about what it has inside."},
-            { type: "textMessage", text: "L: I could think of an empty vending machine."},
-            { type: "textMessage", text: "M: Why would you?"},
-            { type: "textMessage", text: "L: I don't know."},
-            { type: "textMessage", text: "M: Would it still be a vending machine at that point?"},
-            { type: "textMessage", text: "L: I don't know."},
-            { type: "textMessage", text: "J: The soda company doesn't own the vending machine."},
-            { type: "textMessage", text: "M: It doesn't?"},
-            { type: "textMessage", text: "J: Nope."},
-            { type: "textMessage", text: "L: Who does?"},
-            { type: "textMessage", text: "J: Some guy."},
-            { type: "textMessage", text: "M: Some guy?"},
-            { type: "textMessage", text: "J: Yep."},
-            { type: "textMessage", text: "L: The same guy that stocks it?"},
-            { type: "textMessage", text: "J: The very same."},
-            { type: "textMessage", text: "M: Who is he?"},
-            { type: "textMessage", text: "J: I don't know much about him. He licenses vending machines in the area"},
-            { type: "textMessage", text: "J: and asked if he could put one in my bar not long after I first opened this place up."},
-            { type: "textMessage", text: "L: And you said yes?"},
-            { type: "textMessage", text: "M: The vending machine is here, isn't it?"},
-            { type: "textMessage", text: "L: It is."},
-            { type: "textMessage", text: "L: What does it cost, J.?"},
-            { type: "textMessage", text: "J: For what?"},
-            { type: "textMessage", text: "L: For the machine? How much do you pay the guy?"},
-            { type: "textMessage", text: "J: Nothing."},
-            { type: "textMessage", text: "L: Nothing?"},
-            { type: "textMessage", text: "J: Nothing."},
-            { type: "textMessage", text: "L: Nothing..."},
-            { type: "textMessage", text: "M: It's big and it has a refrigerator. Doesn't it cost you a lot in electricity?"},
-            { type: "textMessage", text: "J: It uses less than you'd think, but I don't pay for its energy costs."},
-            { type: "textMessage", text: "M: You don't?"},
-            { type: "textMessage", text: "J: Nope."},
-            { type: "textMessage", text: "L: Who pays for it, then?"},
-            { type: "textMessage", text: "J: The guy. We square up once a year."},
-            { type: "textMessage", text: "L: Who uses it?"},
-            { type: "textMessage", text: "J: Mostly the in-between kinds of customers. People that are coming in to wait out some weather..."},
-            { type: "textMessage", text: "J: People that need to charge their phone..."},
-            { type: "textMessage", text: "J: People that come in to ask how to get somewhere or if something is nearby..."},
-            { type: "textMessage", text: "J: People that end up in a bar but don't need anything from a bar"},
-            { type: "textMessage", text: "J: and want to buy something to justify their visit."},
-            { type: "textMessage", text: "M: But you don't get that money."},
-            { type: "textMessage", text: "J: No, but they don't need to buy something to justify their visit."},
-            { type: "textMessage", text: "L: And it's not much money."},
-            { type: "textMessage", text: "M: Yeah you're not missing out on much. How much money could that really make?"},
-            { type: "textMessage", text: "J: It's not much but it adds up higher than you'd think. Maybe a couple hundred bucks a year."},
-            { type: "textMessage", text: "L: That is high."},
-            { type: "textMessage", text: "M: But not much."},
-            { type: "textMessage", text: "J: High but not much."},
-            { type: "textMessage", text: "M: How much does it cost in electricity?"},
-            { type: "textMessage", text: "J: About what it earns."},
-            { type: "textMessage", text: "L: So the guy doesn't make anything? That's a bummer."},
-            { type: "textMessage", text: "J: He doesn't lose anything, either. Just time."},
-            { type: "textMessage", text: "M: We all lose that."},
-            { type: "textMessage", text: "L: So what's the point of it?"},
-            { type: "textMessage", text: "J: I don't think it has one. Or maybe it is the point."},
-            { type: "textMessage", text: "L: It's its own point?"},
-            { type: "textMessage", text: "......."},
-            { type: "textMessage", text: "M: It vends soda."},
+            // { type: "textMessage", text: "J: Why's that?"},
+            // { type: "textMessage", text: "L: Well, you serve drinks here. Why would you also have a vending machine people can buy drinks from?"},
+            // { type: "textMessage", text: "J: It's just soda; you can't get beer or anything from it."},
+            // { type: "textMessage", text: "L: Sure, but you have soda at the bar. Doesn't that thing just cost you time to stock?"},
+            // { type: "textMessage", text: "J: I guess it would, but I don't stock it."},
+            // { type: "textMessage", text: "M: You don't?"},
+            // { type: "textMessage", text: "J: Nope."},
+            // { type: "textMessage", text: "L: Then who does? \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0  \u00A0  \u00A0  \u00A0 \u00A0 \u00A0 \u00A0 M: Then who does?"},
+            // { type: "textMessage", text: "J: Some guy."},
+            // { type: "textMessage", text: "L: Some guy? \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0  \u00A0  \u00A0  \u00A0 \u00A0 \u00A0 M: Some guy?"},
+            // { type: "textMessage", text: "J: Some guy."},
+            // { type: "textMessage", text: "L: It can't make much money for him either."},
+            // { type: "textMessage", text: ".............."},
+            // { type: "textMessage", text: "L: How long has that thing been here, anyway? I've never thought about it before. Is it new?"},
+            // { type: "textMessage", text: "M: It's covered in dust."},
+            // { type: "textMessage", text: "J: It's not new."},
+            // { type: "textMessage", text: ".............."},
+            // { type: "textMessage", text: "L: How have I never noticed it?"},
+            // { type: "textMessage", text: "M: Why would you look for a soda machine in a bar? Like you've been saying this whole time."},
+            // { type: "textMessage", text: "L: Yeah, it's weird that it's here though."},
+            // { type: "textMessage", text: "M: The soda company probably tries to put one wherever there is space and an outlet,"},
+            // { type: "textMessage", text: "M: betting some will make money, some will lose money."},
+            // { type: "textMessage", text: "M: It will all even out in the end and the product will pay for its own advertising."},
+            // { type: "textMessage", text: "L: Pay for its own advertising?"},
+            // { type: "textMessage", text: "M: Sure. It's a basic strategy but clever in its own way."},
+            // { type: "textMessage", text: "L: I don't think a vending machine would make me think about a product. Just about a vending machine."},
+            // { type: "textMessage", text: "M: But you can't think of a vending machine without thinking about what it has inside."},
+            // { type: "textMessage", text: "L: I could think of an empty vending machine."},
+            // { type: "textMessage", text: "M: Why would you?"},
+            // { type: "textMessage", text: "L: I don't know."},
+            // { type: "textMessage", text: "M: Would it still be a vending machine at that point?"},
+            // { type: "textMessage", text: "L: I don't know."},
+            // { type: "textMessage", text: "J: The soda company doesn't own the vending machine."},
+            // { type: "textMessage", text: "M: It doesn't?"},
+            // { type: "textMessage", text: "J: Nope."},
+            // { type: "textMessage", text: "L: Who does?"},
+            // { type: "textMessage", text: "J: Some guy."},
+            // { type: "textMessage", text: "M: Some guy?"},
+            // { type: "textMessage", text: "J: Yep."},
+            // { type: "textMessage", text: "L: The same guy that stocks it?"},
+            // { type: "textMessage", text: "J: The very same."},
+            // { type: "textMessage", text: "M: Who is he?"},
+            // { type: "textMessage", text: "J: I don't know much about him. He licenses vending machines in the area"},
+            // { type: "textMessage", text: "J: and asked if he could put one in my bar not long after I first opened this place up."},
+            // { type: "textMessage", text: "L: And you said yes?"},
+            // { type: "textMessage", text: "M: The vending machine is here, isn't it?"},
+            // { type: "textMessage", text: "L: It is."},
+            // { type: "textMessage", text: "L: What does it cost, J.?"},
+            // { type: "textMessage", text: "J: For what?"},
+            // { type: "textMessage", text: "L: For the machine? How much do you pay the guy?"},
+            // { type: "textMessage", text: "J: Nothing."},
+            // { type: "textMessage", text: "L: Nothing?"},
+            // { type: "textMessage", text: "J: Nothing."},
+            // { type: "textMessage", text: "L: Nothing..."},
+            // { type: "textMessage", text: "M: It's big and it has a refrigerator. Doesn't it cost you a lot in electricity?"},
+            // { type: "textMessage", text: "J: It uses less than you'd think, but I don't pay for its energy costs."},
+            // { type: "textMessage", text: "M: You don't?"},
+            // { type: "textMessage", text: "J: Nope."},
+            // { type: "textMessage", text: "L: Who pays for it, then?"},
+            // { type: "textMessage", text: "J: The guy. We square up once a year."},
+            // { type: "textMessage", text: "L: Who uses it?"},
+            // { type: "textMessage", text: "J: Mostly the in-between kinds of customers. People that are coming in to wait out some weather..."},
+            // { type: "textMessage", text: "J: People that need to charge their phone..."},
+            // { type: "textMessage", text: "J: People that come in to ask how to get somewhere or if something is nearby..."},
+            // { type: "textMessage", text: "J: People that end up in a bar but don't need anything from a bar"},
+            // { type: "textMessage", text: "J: and want to buy something to justify their visit."},
+            // { type: "textMessage", text: "M: But you don't get that money."},
+            // { type: "textMessage", text: "J: No, but they don't need to buy something to justify their visit."},
+            // { type: "textMessage", text: "L: And it's not much money."},
+            // { type: "textMessage", text: "M: Yeah you're not missing out on much. How much money could that really make?"},
+            // { type: "textMessage", text: "J: It's not much but it adds up higher than you'd think. Maybe a couple hundred bucks a year."},
+            // { type: "textMessage", text: "L: That is high."},
+            // { type: "textMessage", text: "M: But not much."},
+            // { type: "textMessage", text: "J: High but not much."},
+            // { type: "textMessage", text: "M: How much does it cost in electricity?"},
+            // { type: "textMessage", text: "J: About what it earns."},
+            // { type: "textMessage", text: "L: So the guy doesn't make anything? That's a bummer."},
+            // { type: "textMessage", text: "J: He doesn't lose anything, either. Just time."},
+            // { type: "textMessage", text: "M: We all lose that."},
+            // { type: "textMessage", text: "L: So what's the point of it?"},
+            // { type: "textMessage", text: "J: I don't think it has one. Or maybe it is the point."},
+            // { type: "textMessage", text: "L: It's its own point?"},
+            // { type: "textMessage", text: "......."},
+            // { type: "textMessage", text: "M: It vends soda."},
           ]
         }
       ]
@@ -509,6 +509,7 @@ window.OverworldMaps = {
             { type: "textMessage", text: "K: ....????"},
             { who: "hero", type: "stand",  direction: "right", time: 600 },
             { type: "textMessage", text: "K: ....!!!!"},
+            { who: "hero", type: "stand",  direction: "down", time: 100 },
             { type: "changeMap", map: "C03_K_Bedroom_Pt_2" },
           ],
         },
@@ -571,30 +572,30 @@ window.OverworldMaps = {
             { type: "changeMap", map: "C04_Bar" },
             { who: "hero", type: "stand",  direction: "right", time: 1800 },
             { type: "textMessage", text: "L: You've had this place a long time, huh?"},
-            { type: "textMessage", text: "J: I suppose I have."},
-            { type: "textMessage", text: "L: What was here beforehand?"},
-            { type: "textMessage", text: "J: Nothing."},
-            { type: "textMessage", text: "L: Nothing?"},
-            { type: "textMessage", text: "J: Nothing."},
-            { type: "textMessage", text: "L: So you built this place?"},
-            { type: "textMessage", text: "J: No."},
-            { type: "textMessage", text: "L: No?"},
-            { type: "textMessage", text: "J: The building was here. There just wasn't a business operating in it, which is why I could buy it."},
-            { type: "textMessage", text: "L: What was here before you and before it was nothing?"},
-            { type: "textMessage", text: "J: I don't know; I didn't ask. There was some furniture I kept and some that I got rid of."},
-            { type: "textMessage", text: "I ordered the bar you're sitting at and a company installed it."},
-            { type: "textMessage", text: "L: What furniture did you keep?"},
-            { type: "textMessage", text: "J: Those tables and chairs by the door. Those magazine racks I keep the spare menus in."},
-            { type: "textMessage", text: "L: But those could have been for any business..."},
-            { type: "textMessage", text: "J: I guess so."},
-            { type: "textMessage", text: ".........."},
-            { type: "textMessage", text: ".........."},
-            { type: "textMessage", text: "L: Have you looked in the walls?"},
-            { type: "textMessage", text: "J: In the walls?"},
-            { type: "textMessage", text: "L: Yes."},
-            { type: "textMessage", text: "J: Why would I look in the walls?"},
-            { type: "textMessage", text: "L: I don't know..."},
-            { type: "textMessage", text: "L: Because you looked at everything outside of them, I guess."},
+            // { type: "textMessage", text: "J: I suppose I have."},
+            // { type: "textMessage", text: "L: What was here beforehand?"},
+            // { type: "textMessage", text: "J: Nothing."},
+            // { type: "textMessage", text: "L: Nothing?"},
+            // { type: "textMessage", text: "J: Nothing."},
+            // { type: "textMessage", text: "L: So you built this place?"},
+            // { type: "textMessage", text: "J: No."},
+            // { type: "textMessage", text: "L: No?"},
+            // { type: "textMessage", text: "J: The building was here. There just wasn't a business operating in it, which is why I could buy it."},
+            // { type: "textMessage", text: "L: What was here before you and before it was nothing?"},
+            // { type: "textMessage", text: "J: I don't know; I didn't ask. There was some furniture I kept and some that I got rid of."},
+            // { type: "textMessage", text: "I ordered the bar you're sitting at and a company installed it."},
+            // { type: "textMessage", text: "L: What furniture did you keep?"},
+            // { type: "textMessage", text: "J: Those tables and chairs by the door. Those magazine racks I keep the spare menus in."},
+            // { type: "textMessage", text: "L: But those could have been for any business..."},
+            // { type: "textMessage", text: "J: I guess so."},
+            // { type: "textMessage", text: ".........."},
+            // { type: "textMessage", text: ".........."},
+            // { type: "textMessage", text: "L: Have you looked in the walls?"},
+            // { type: "textMessage", text: "J: In the walls?"},
+            // { type: "textMessage", text: "L: Yes."},
+            // { type: "textMessage", text: "J: Why would I look in the walls?"},
+            // { type: "textMessage", text: "L: I don't know..."},
+            // { type: "textMessage", text: "L: Because you looked at everything outside of them, I guess."},
           ],
         },
       ],
@@ -691,10 +692,163 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
+            { type: "changeMap", map: "C05_Bar" },
+            { type: "textMessage", text: "Testing being in the new chapter.."},
+          ]
+        }
+      ]
+    }
+  },
+  C05_Bar: {
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 300 },
+          { type: "stand",  direction: "down", time: 5000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 1800 },
+          { type: "stand",  direction: "down", time: 4000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
             { type: "changeMap", map: "DemoRoom" },
           ]
         }
       ]
     }
   },
+  // example map: C04_Bar: {
+  //   lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+  //   upperSrc: "/images/maps/C01_BarUpper.png",
+  //   gameObjects: {
+  //     hero: new Person({
+  //       isPlayerControlled: true,
+  //       x: utils.withGrid(5),
+  //       y: utils.withGrid(5),
+  //     }),
+  //     characterL: new Person({
+  //       x: utils.withGrid(3),
+  //       y: utils.withGrid(5),
+  //       src: "/images/characters/people/l_sitting.png",
+  //       behaviorLoop: [
+  //         { type: "stand",  direction: "right", time: 300 },
+  //         { type: "stand",  direction: "down", time: 5000 }
+  //       ],
+  //       talking: [
+  //         {
+  //           events: [
+  //             { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+  //             { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+  //           ]
+  //         }
+  //       ]
+  //     }),
+  //   },
+  //   walls: {
+  //     [utils.asGridCoord(1,3)] : true,
+  //     [utils.asGridCoord(7,3)] : true,
+  //     [utils.asGridCoord(4,4)] : true,
+  //   },
+  //   cutsceneSpaces: {
+  //     [utils.asGridCoord(5,10)]: [
+  //       {
+  //         events: [
+  //            { type: "changeMap", map: "C0X_NextMapId" },
+  //            { type: "textMessage", text: "Testing being in the new chapter.."},
+  //         ]
+  //       }
+  //     ]
+  //   }
+  // },
 }
