@@ -694,33 +694,33 @@ window.OverworldMaps = {
           events: [
             { type: "changeMap", map: "C05_Bar" },
             { type: "textMessage", text: "M: What are you looking at?"},
-            { type: "textMessage", text: "J: Nothing."},
-            { type: "textMessage", text: "M: Oh, ok."},
-            { type: "textMessage", text: "J: But I feel like there isn't supposed to be nothing there. Wasn't there something there?"},
-            { type: "textMessage", text: "M: There was something there?"},
-            { type: "textMessage", text: "L: There's a wall there."},
-            { type: "textMessage", text: "M: A wall isn't something, it's a place for something."},
-            { type: "textMessage", text: "L: It's a 'there' but not a thing?"},
-            { type: "textMessage", text: "M: Right, and it is an 'is'."},
-            { type: "textMessage", text: "L: It is?"},
-            { type: "textMessage", text: "J: I think there was a window there."},
-            { type: "textMessage", text: "M: A window?"},
-            { type: "textMessage", text: "J: A window."},
-            { type: "textMessage", text: "M: There can't have been a window there. There's a wall there."},
-            { type: "textMessage", text: "L: Maybe someone took it."},
-            { type: "textMessage", text: "J: Took it?"},
-            { type: "textMessage", text: "L: Yeah, stole it."},
-            { type: "textMessage", text: "M: How do you steal a window?"},
-            { type: "textMessage", text: "L: You cut it out of the wall."},
-            { type: "textMessage", text: "M: Then there'd be a window-sized window cut out of the wall."},
-            { type: "textMessage", text: "J: I don't think it was stolen."},
-            { type: "textMessage", text: "L: You should have put bars over it."},
-            { type: "textMessage", text: "M: Do you remember what was outside?"},
-            { type: "textMessage", text: "J: Outside the window?"},
-            { type: "textMessage", text: "M: Yes, when you looked through the window."},
-            { type: "textMessage", text: "J: Not really... No, I guess not."},
-            { type: "textMessage", text: "M: Then it probably was never there. Maybe you had a window there in another bar you tended."},
-            { type: "textMessage", text: "J: Yeah, maybe."},
+            // { type: "textMessage", text: "J: Nothing."},
+            // { type: "textMessage", text: "M: Oh, ok."},
+            // { type: "textMessage", text: "J: But I feel like there isn't supposed to be nothing there. Wasn't there something there?"},
+            // { type: "textMessage", text: "M: There was something there?"},
+            // { type: "textMessage", text: "L: There's a wall there."},
+            // { type: "textMessage", text: "M: A wall isn't something, it's a place for something."},
+            // { type: "textMessage", text: "L: It's a 'there' but not a thing?"},
+            // { type: "textMessage", text: "M: Right, and it is an 'is'."},
+            // { type: "textMessage", text: "L: It is?"},
+            // { type: "textMessage", text: "J: I think there was a window there."},
+            // { type: "textMessage", text: "M: A window?"},
+            // { type: "textMessage", text: "J: A window."},
+            // { type: "textMessage", text: "M: There can't have been a window there. There's a wall there."},
+            // { type: "textMessage", text: "L: Maybe someone took it."},
+            // { type: "textMessage", text: "J: Took it?"},
+            // { type: "textMessage", text: "L: Yeah, stole it."},
+            // { type: "textMessage", text: "M: How do you steal a window?"},
+            // { type: "textMessage", text: "L: You cut it out of the wall."},
+            // { type: "textMessage", text: "M: Then there'd be a window-sized window cut out of the wall."},
+            // { type: "textMessage", text: "J: I don't think it was stolen."},
+            // { type: "textMessage", text: "L: You should have put bars over it."},
+            // { type: "textMessage", text: "M: Do you remember what was outside?"},
+            // { type: "textMessage", text: "J: Outside the window?"},
+            // { type: "textMessage", text: "M: Yes, when you looked through the window."},
+            // { type: "textMessage", text: "J: Not really... No, I guess not."},
+            // { type: "textMessage", text: "M: Then it probably was never there. Maybe you had a window there in another bar you tended."},
+            // { type: "textMessage", text: "J: Yeah, maybe."},
           ]
         }
       ]
@@ -829,12 +829,112 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "DemoRoom" },
+            { type: "changeMap", map: "C06_Bar" },
+            { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
       ]
     }
   },
+  C06_Bar: {
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+      }),
+      characterDuckWorrier: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(11),
+        src: "/images/characters/people/hero_gray.png",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 300 },
+        //   { type: "stand",  direction: "down", time: 5000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "I fret over ducks!", faceHero: "characterDuckWorrier" },
+              // { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool6: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool7: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    // cutsceneSpaces: {
+    //   [utils.asGridCoord(5,10)]: [
+    //     {
+    //       events: [
+    //          { type: "changeMap", map: "C0X_NextMapId" },
+    //          { type: "textMessage", text: "Testing being in the new chapter.."},
+    //       ]
+    //     }
+    //   ]
+    // }
+  },
+
+
+
+
   // example map: C04_Bar: {
   //   lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
   //   upperSrc: "/images/maps/C01_BarUpper.png",
