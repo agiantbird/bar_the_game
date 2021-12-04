@@ -972,7 +972,6 @@ window.OverworldMaps = {
         {
           events: [
             { who: "hero", type: "stand",  direction: "down", time: 1800 },
-            { type: "textMessage", text: "TEST RAISE SNAKES"},
             { who: "characterDuckWorrier", type: "walk",  direction: "up" },
             { who: "characterDuckWorrier", type: "walk",  direction: "down" },
             { who: "characterDuckWorrier", type: "walk",  direction: "down" },
@@ -997,6 +996,60 @@ window.OverworldMaps = {
             { who: "characterDuckWorrier", type: "stand",  direction: "down", time: 1800 },
             { who: "characterDuckWorrier", type: "stand",  direction: "up", time: 1800 },
             { type: "textMessage", text: "Customer: ...excuse me?"},
+            { type: "textMessage", text: "J: Yes?"},
+            { type: "textMessage", text: "............"},
+            { type: "textMessage", text: "J: ...something to drink?"},
+            { type: "textMessage", text: "Customer: No, thank you. I was just wondering-- you own this bar, yes?"},
+            { type: "textMessage", text: "J: Yes."},
+            { type: "textMessage", text: "Customer: And you're here most days?"},
+            { type: "textMessage", text: "J: Yes."},
+            { type: "textMessage", text: "Customer: And have you seen a duck?"},
+            { type: "textMessage", text: "J: A duck?"},
+            { type: "textMessage", text: "Customer: Yes."},
+            { type: "textMessage", text: "J: Yes, I've seen a duck before."},
+            { type: "textMessage", text: "Customer: No, not a duck."},
+            { type: "textMessage", text: "J: Not a duck?"},
+            { type: "textMessage", text: "Customer: I mean not any duck. A duck in your parking lot."},
+            { type: "textMessage", text: "J: Oh!"},
+            { type: "textMessage", text: "Customer: Oh? Then you've seen it?"},
+            { type: "textMessage", text: "J: No, not once."},
+            { type: "textMessage", text: "Customer: Oh. I thought maybe you adopted the duck or maybe that you killed it."},
+            { type: "textMessage", text: "I used to see it everyday in your parking lot, but I haven't for a week or so."},
+            { type: "textMessage", text: "J: Nope."},
+            { type: "textMessage", text: "Customer: Perhaps it migrated."},
+            { type: "textMessage", text: "J: About the time for it, I suppose."},
+            { type: "textMessage", text: "Customer: I don't like the duck very much."},
+            { type: "textMessage", text: "J: No?"},
+            { type: "textMessage", text: "Customer: No. I'm nervous it might fly at my head or peck at my feet each time I walk past it."},
+            { type: "textMessage", text: "But I also worry about the duck from time to time the rest of the day once I'm away from it."},
+            { type: "textMessage", text: "J: It must be a relief to you that it's gone?"},
+            { type: "textMessage", text: "Customer: No... No, I don't think so. Well, thank you."},
+            { type: "textMessage", text: "............"},
+            { type: "textMessage", text: "............"},
+            { who: "characterDuckWorrier", type: "stand",  direction: "left", time: 1800 },
+            { type: "textMessage", text: "Customer: Ah!"},
+            { who: "characterDuckWorrier", type: "walk",  direction: "left" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "left" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "left" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "up" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "up" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "up" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "left" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "up" },
+            { who: "characterDuckWorrier", type: "stand",  direction: "up", time: 1800 },
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "right" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "right" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "right" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "right" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
             // characterDuckWorrier
             { type: "changeMapNoTransition", map: "C06_Bar_Pt2" },
             // { type: "textMessage", text: "TEST RAISE SNAKES"},
@@ -1020,23 +1073,23 @@ window.OverworldMaps = {
         x: utils.withGrid(5),
         y: utils.withGrid(5),
       }),
-      characterDuckWorrier: new Person({
-        x: utils.withGrid(5),
-        y: utils.withGrid(11),
-        src: "/images/characters/people/hero_gray.png",
-        // behaviorLoop: [
-        //   { type: "stand",  direction: "right", time: 300 },
-        //   { type: "stand",  direction: "down", time: 5000 }
-        // ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "I fret over ducks! even in part two!", faceHero: "characterDuckWorrier" },
-              // { type: "textMessage", text: "I'm inquisitive and cheerful!"},
-            ]
-          }
-        ]
-      }),
+      // characterDuckWorrier: new Person({
+      //   x: utils.withGrid(5),
+      //   y: utils.withGrid(11),
+      //   src: "/images/characters/people/hero_gray.png",
+      //   // behaviorLoop: [
+      //   //   { type: "stand",  direction: "right", time: 300 },
+      //   //   { type: "stand",  direction: "down", time: 5000 }
+      //   // ],
+      //   talking: [
+      //     {
+      //       events: [
+      //         { type: "textMessage", text: "I fret over ducks! even in part two!", faceHero: "characterDuckWorrier" },
+      //         // { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+      //       ]
+      //     }
+      //   ]
+      // }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
