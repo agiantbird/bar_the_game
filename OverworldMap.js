@@ -796,6 +796,29 @@ window.OverworldMaps = {
       }),
     },
     walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
       // back wall
       [utils.asGridCoord(1,3)] : true,
       [utils.asGridCoord(2,3)] : true,
@@ -829,14 +852,15 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "C06_Bar" },
-            { type: "textMessage", text: "this should be chapter 6..."},
+            { type: "changeMap", map: "C06_Bar_Pt1" },
+            // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
       ]
     }
   },
-  C06_Bar: {
+  // { type: "changeMapNoTransition", map: "C06_Bar" }
+  C06_Bar_Pt1: {
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -899,6 +923,29 @@ window.OverworldMaps = {
       }),
     },
     walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
       // back wall
       [utils.asGridCoord(1,3)] : true,
       [utils.asGridCoord(2,3)] : true,
@@ -920,16 +967,173 @@ window.OverworldMaps = {
       [utils.asGridCoord(7,6)] : true,
       [utils.asGridCoord(8,6)] : true,
     },
-    // cutsceneSpaces: {
-    //   [utils.asGridCoord(5,10)]: [
-    //     {
-    //       events: [
-    //          { type: "changeMap", map: "C0X_NextMapId" },
-    //          { type: "textMessage", text: "Testing being in the new chapter.."},
-    //       ]
-    //     }
-    //   ]
-    // }
+    cutsceneSpaces: {
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "down", time: 1800 },
+            { type: "textMessage", text: "TEST RAISE SNAKES"},
+            { who: "characterDuckWorrier", type: "walk",  direction: "up" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "up" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "up" },
+            { who: "characterDuckWorrier", type: "stand",  direction: "up", time: 1800 },
+            { type: "textMessage", text: "........."},
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "down" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "up" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "up" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "up" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "up" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "right" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "left" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "left" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "right" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "right" },
+            { who: "characterDuckWorrier", type: "walk",  direction: "left" },
+            { who: "characterDuckWorrier", type: "stand",  direction: "down", time: 1800 },
+            { who: "characterDuckWorrier", type: "stand",  direction: "up", time: 1800 },
+            { who: "characterDuckWorrier", type: "stand",  direction: "down", time: 1800 },
+            { who: "characterDuckWorrier", type: "stand",  direction: "up", time: 1800 },
+            { type: "textMessage", text: "Customer: ...excuse me?"},
+            // characterDuckWorrier
+            { type: "changeMapNoTransition", map: "C06_Bar_Pt2" },
+            // { type: "textMessage", text: "TEST RAISE SNAKES"},
+            // { type: "textMessage", text: "K: ....????"},
+            // { who: "hero", type: "stand",  direction: "right", time: 600 },
+            // { type: "textMessage", text: "K: ....!!!!"},
+            // { who: "hero", type: "stand",  direction: "down", time: 100 },
+            // { type: "changeMap", map: "C03_K_Bedroom_Pt_2" },
+          ],
+        },
+      ],
+    },
+    // overrideCheckForFootstepCutscene: false,
+  },
+  C06_Bar_Pt2: {
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+      }),
+      characterDuckWorrier: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(11),
+        src: "/images/characters/people/hero_gray.png",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 300 },
+        //   { type: "stand",  direction: "down", time: 5000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "I fret over ducks! even in part two!", faceHero: "characterDuckWorrier" },
+              // { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool6: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool7: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            // { who: "hero", type: "stand",  direction: "left", time: 1800 },
+            // { type: "textMessage", text: "TEST RAISE SNAKES"},
+            // { type: "textMessage", text: "K: ....????"},
+            // { who: "hero", type: "stand",  direction: "right", time: 600 },
+            // { type: "textMessage", text: "K: ....!!!!"},
+            // { who: "hero", type: "stand",  direction: "down", time: 100 },
+            // { type: "changeMap", map: "C03_K_Bedroom_Pt_2" },
+          ],
+        },
+      ],
+    },
+    // overrideCheckForFootstepCutscene: false,
   },
 
 

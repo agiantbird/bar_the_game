@@ -66,7 +66,9 @@ class Overworld {
  }
 
  init() {
-  this.startMap(window.OverworldMaps.DemoRoom);
+  // this.startMap(window.OverworldMaps.DemoRoom);
+  //starting at chap 5 for easy dev
+  this.startMap(window.OverworldMaps.C05_Bar);
 
 
   this.bindActionInput();
