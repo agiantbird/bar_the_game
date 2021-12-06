@@ -1450,30 +1450,30 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,5)]: [
         {
           events: [
-            { who: "characterL", type: "stand",  direction: "right", time: 400 },
-            { who: "hero", type: "stand",  direction: "left", time: 400 },
-            { type: "textMessage", text: "M: What sign?"},
-            { type: "textMessage", text: "J: The bar's sign."},
-            { type: "textMessage", text: "M: The bar has a sign?"},
-            { type: "textMessage", text: "J: Yep."},
-            { type: "textMessage", text: "M: And the sign is out?"},
-            { type: "textMessage", text: "L: It's not lit up."},
-            { type: "textMessage", text: "M: It lights up?"},
-            { type: "textMessage", text: "J: Yep. I just fipped the switch for it. Thanks, L."},
-            { type: "textMessage", text: "M: Is it big?"},
-            { type: "textMessage", text: "L: Pretty big."},
-            { type: "textMessage", text: "J: About sign-sized."},
-            { type: "textMessage", text: "M: Where is it?"},
-            { who: "characterL", type: "stand",  direction: "left", time: 800 },
-            { who: "characterL", type: "stand",  direction: "down", time: 800 },
-            { who: "characterL", type: "stand",  direction: "left", time: 800 },
-            { who: "characterL", type: "stand",  direction: "down", time: 800 },
-            { who: "characterL", type: "stand",  direction: "left", time: 800 },
-            { type: "textMessage", text: "L: It'd be past right about there."},
-            { who: "characterM", type: "stand",  direction: "left", time: 2000 },
-            { type: "textMessage", text: "M: I've never seen it."},
-            { type: "textMessage", text: "L: You mean you've never noticed it?"},
-            { type: "textMessage", text: "M: No."},
+            // { who: "characterL", type: "stand",  direction: "right", time: 400 },
+            // { who: "hero", type: "stand",  direction: "left", time: 400 },
+            // { type: "textMessage", text: "M: What sign?"},
+            // { type: "textMessage", text: "J: The bar's sign."},
+            // { type: "textMessage", text: "M: The bar has a sign?"},
+            // { type: "textMessage", text: "J: Yep."},
+            // { type: "textMessage", text: "M: And the sign is out?"},
+            // { type: "textMessage", text: "L: It's not lit up."},
+            // { type: "textMessage", text: "M: It lights up?"},
+            // { type: "textMessage", text: "J: Yep. I just fipped the switch for it. Thanks, L."},
+            // { type: "textMessage", text: "M: Is it big?"},
+            // { type: "textMessage", text: "L: Pretty big."},
+            // { type: "textMessage", text: "J: About sign-sized."},
+            // { type: "textMessage", text: "M: Where is it?"},
+            // { who: "characterL", type: "stand",  direction: "left", time: 800 },
+            // { who: "characterL", type: "stand",  direction: "down", time: 800 },
+            // { who: "characterL", type: "stand",  direction: "left", time: 800 },
+            // { who: "characterL", type: "stand",  direction: "down", time: 800 },
+            // { who: "characterL", type: "stand",  direction: "left", time: 800 },
+            // { type: "textMessage", text: "L: It'd be past right about there."},
+            // { who: "characterM", type: "stand",  direction: "left", time: 2000 },
+            // { type: "textMessage", text: "M: I've never seen it."},
+            // { type: "textMessage", text: "L: You mean you've never noticed it?"},
+            // { type: "textMessage", text: "M: No."},
 
 
             // { who: "characterM", type: "walk",  direction: "up" },
@@ -1511,10 +1511,93 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap", map: "C08_Black_Background_Text_Scene" },
             // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
+      ]
+    }
+  },
+  C08_Black_Background_Text_Scene: {
+    // lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    // upperSrc: "/images/maps/C01_BarUpper.png",
+    lowerSrc: "/images/maps/all_black_screen.png",
+    upperSrc: "/images/maps/all_black_screen.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: "What would you say to yourself, . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . if you could talk to yourself ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . I can talk to myself."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . But as a stranger, I mean . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . As an objective party . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . I don't talk to strangers ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+
+            { type: "changeMap", map: "DemoRoom" },
+          ],
+        },
       ]
     }
   },

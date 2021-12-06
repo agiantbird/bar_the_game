@@ -68,7 +68,7 @@ class Overworld {
  init() {
   // this.startMap(window.OverworldMaps.DemoRoom);
   //starting at chap 5 for easy dev
-  this.startMap(window.OverworldMaps.C05_Bar);
+  this.startMap(window.OverworldMaps.C08_Black_Background_Text_Scene);
 
 
   this.bindActionInput();
@@ -80,12 +80,12 @@ class Overworld {
   this.startGameLoop();
 
 
-  this.map.startCutscene([
+  // this.map.startCutscene([
     // { type: "changeMap", map: "DemoRoom" }
     // chapter 1
-    { who: "characterM", type: "stand",  direction: "right", time: 20 },
-    { who: "characterL", type: "stand",  direction: "right", time: 20 },
-    { type: "textMessage", text: "... ... ... ... ... ... ... ... ... ..."},
+    // { who: "characterM", type: "stand",  direction: "right", time: 20 },
+    // { who: "characterL", type: "stand",  direction: "right", time: 20 },
+    // { type: "textMessage", text: "... ... ... ... ... ... ... ... ... ..."},
     // { type: "textMessage", text: " ... ... ... ..."},
     // { type: "textMessage", text: "."},
     // { type: "textMessage", text: '...'},
@@ -135,6 +135,6 @@ class Overworld {
     // { type: "textMessage", text: "How much longer will we be here?"},
     // { type: "textMessage", text: ".............."},
     // { type: "textMessage", text: ".............."},
-  ])
+  // ])
  }
 }
