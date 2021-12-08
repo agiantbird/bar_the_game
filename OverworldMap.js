@@ -1597,7 +1597,139 @@ window.OverworldMaps = {
             // { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
             // { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
 
-            { type: "changeMap", map: "C09_Space_Sattelite_Scene_Pt1" },
+            { type: "changeMap", map: "sattelite_animated_background_frame_1_test" },
+          ],
+        },
+      ]
+    }
+  },
+  sattelite_animated_background_frame_1_test: {
+    lowerSrc: "/images/maps/sattelite_animated_background_frame_1_test.png",
+    upperSrc: "/images/maps/sattelite_animated_background_frame_1_test.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "sattelite_animated_background_frame_2_test" },
+          ],
+        },
+      ]
+    }
+  },
+  sattelite_animated_background_frame_2_test: {
+    lowerSrc: "/images/maps/sattelite_animated_background_frame_2_test.png",
+    upperSrc: "/images/maps/sattelite_animated_background_frame_2_test.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "sattelite_animated_background_frame_3_test" },
+          ],
+        },
+      ]
+    }
+  },
+  sattelite_animated_background_frame_3_test: {
+    lowerSrc: "/images/maps/sattelite_animated_background_frame_1_test.png",
+    upperSrc: "/images/maps/sattelite_animated_background_frame_1_test.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "sattelite_animated_background_frame_4_test" },
+          ],
+        },
+      ]
+    }
+  },
+  sattelite_animated_background_frame_4_test: {
+    lowerSrc: "/images/maps/sattelite_animated_background_frame_2_test.png",
+    upperSrc: "/images/maps/sattelite_animated_background_frame_2_test.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "sattelite_animated_background_frame_5_test" },
+          ],
+        },
+      ]
+    }
+  },
+  sattelite_animated_background_frame_5_test: {
+    lowerSrc: "/images/maps/sattelite_animated_background_frame_1_test.png",
+    upperSrc: "/images/maps/sattelite_animated_background_frame_1_test.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "sattelite_animated_background_frame_6_test" },
+          ],
+        },
+      ]
+    }
+  },
+  sattelite_animated_background_frame_6_test: {
+    lowerSrc: "/images/maps/sattelite_animated_background_frame_2_test.png",
+    upperSrc: "/images/maps/sattelite_animated_background_frame_2_test.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C09_Space_Sattelite_Scene_Pt1" },
           ],
         },
       ]
@@ -1667,6 +1799,7 @@ window.OverworldMaps = {
       [utils.asGridCoord(11,6)]: [
         {
           events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
             { type: "textMessage", text: "- - - - - - EARTH'S EXOSPHERE, 1960 A.D. - - - - - -"},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
             { type: "textMessage", text: "There is a box above the Earth."},
