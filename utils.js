@@ -26,6 +26,13 @@ const utils = {
     if (direction === "up") {return "down"}
     return "up"
   },
+  wait(ms) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve()
+      }, ms)
+    })
+  },
   emitEvent(name, detail) {
     const event = new CustomEvent(name, {
       detail
