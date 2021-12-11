@@ -80,8 +80,8 @@ class Overworld {
   this.startGameLoop();
 
 
-  // this.map.startCutscene([
-    // { type: "changeMap", map: "DemoRoom" }
+  this.map.startCutscene([
+    // { type: "changeMap", map: "DemoRoom" },
     // chapter 1
     // { who: "characterM", type: "stand",  direction: "right", time: 20 },
     // { who: "characterL", type: "stand",  direction: "right", time: 20 },
@@ -135,6 +135,6 @@ class Overworld {
     // { type: "textMessage", text: "How much longer will we be here?"},
     // { type: "textMessage", text: ".............."},
     // { type: "textMessage", text: ".............."},
-  // ])
+  ])
  }
 }
