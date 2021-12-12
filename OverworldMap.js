@@ -1492,7 +1492,6 @@ window.OverworldMaps = {
 
             // { type: "changeMapNoTransition", map: "C07_Bar_Pt2" },
             // { type: "changeMapNoTransition", map: "C06_Bar_Pt2" },
-            // { type: "textMessage", text: "TEST RAISE SNAKES"},
             // { type: "textMessage", text: "K: ....????"},
             // { who: "hero", type: "stand",  direction: "right", time: 600 },
             // { type: "textMessage", text: "K: ....!!!!"},
@@ -1824,10 +1823,450 @@ window.OverworldMaps = {
             { type: "textMessage", text: "There is what looks like snow."},
             { type: "textMessage", text: "There is a planet looking at itself."},
 
-            { type: "changeMap", map: "C05_Bar" },
+            { type: "changeMap", map: "C10_Bar_Pt1" },
           ],
         },
       ]
     }
+  },
+  C10_Bar_Pt1: {
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        behaviorLoop: [
+          // { type: "stand",  direction: "right", time: 300 },
+          // { type: "stand",  direction: "down", time: 5000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      fruitEnjoyer1: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(12),
+        src: "/images/characters/people/hero_gray.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "I love fruit and my wife!", faceHero: "fruitEnjoyer1" },
+            ]
+          }
+        ]
+      }),
+     fruitEnjoyer2: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(11),
+        src: "/images/characters/people/npc1_gray.png",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 300 },
+        //   { type: "stand",  direction: "down", time: 5000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "I love fruit and my husband!", faceHero: "fruitEnjoyer2" },
+              // { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool6: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            { who: "characterL", type: "stand",  direction: "right", time: 50 },
+            { who: "fruitEnjoyer2", type: "stand",  direction: "up", time: 10 },
+            { who: "hero", type: "stand",  direction: "down", time: 1800 },
+            // { type: "textMessage", text: "We're in chapter 10"},
+            { who: "fruitEnjoyer2", type: "walk",  direction: "up" },
+            { who: "fruitEnjoyer2", type: "walk",  direction: "up" },
+            { who: "fruitEnjoyer2", type: "walk",  direction: "right" },
+            { who: "fruitEnjoyer2", type: "walk",  direction: "up" },
+            { who: "fruitEnjoyer2", type: "stand",  direction: "up", time: 10 },
+            { who: "fruitEnjoyer1", type: "walk",  direction: "up" },
+            { who: "fruitEnjoyer1", type: "walk",  direction: "up" },
+            { who: "fruitEnjoyer1", type: "walk",  direction: "up" },
+            { who: "fruitEnjoyer1", type: "walk",  direction: "up" },
+            { type: "textMessage", text: "Customer: Two beers please! And is it okay if we eat this in here?"},
+            { type: "textMessage", text: "It's cut up fruit that we bought at the grocery store across the street."},
+            { who: "characterL", type: "stand",  direction: "down", time: 1000 },
+            { type: "textMessage", text: "J: Of course. Enjoy."},
+            { type: "changeMapNoTransition", map: "C10_Bar_Pt2" },
+          ],
+        },
+      ],
+    },
+    // overrideCheckForFootstepCutscene: false,
+  },
+  C10_Bar_Pt2: {
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        behaviorLoop: [
+          // { type: "stand",  direction: "right", time: 300 },
+          // { type: "stand",  direction: "down", time: 5000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      fruitEnjoyer1: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/l_sitting.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "I love fruit and my wife!", faceHero: "fruitEnjoyer1" },
+            ]
+          }
+        ]
+      }),
+     fruitEnjoyer2: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/o_sitting.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "I love fruit and my husband!", faceHero: "fruitEnjoyer2" },
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool6: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            { who: "fruitEnjoyer2", type: "stand",  direction: "up", time: 10 },
+            { who: "characterL", type: "stand",  direction: "down", time: 1000 },
+            { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            { who: "hero", type: "stand",  direction: "down", time: 1800 },
+            { who: "characterL", type: "stand",  direction: "down", time: 2000 },
+            { who: "characterL", type: "stand",  direction: "right", time: 2000 },
+            { who: "characterL", type: "stand",  direction: "down", time: 2000 },
+            { who: "characterL", type: "stand",  direction: "right", time: 2000 },
+            { type: "textMessage", text: "L: Hey, how come you don't sell fruit at the bar?"},
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "J: Here?"},
+            { type: "textMessage", text: "L: Yeah. It looks like it'd go really well with beer."},
+            { type: "textMessage", text: "J: Why should I sell fruit here? If the grocery store sells fruit?"},
+            { type: "textMessage", text: "L: That's a good point. I guess there's no need to sell what the grocery store sells."},
+            { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { who: "hero", type: "walk",  direction: "right" },
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            { who: "hero", type: "walk",  direction: "up" },
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { who: "hero", type: "walk",  direction: "down", time: 1000 },
+            { who: "hero", type: "stand",  direction: "down", time: 100 },
+            { type: "textMessage", text: "J: Excuse me, the grocery store across the road-- it doesn't happen to sell beer does it?"},
+            { who: "fruitEnjoyer1", type: "stand",  direction: "right", time: 1000 },
+            { who: "fruitEnjoyer2", type: "stand",  direction: "left", time: 1000 },
+            { who: "fruitEnjoyer1", type: "stand",  direction: "up", time: 500 },
+            { who: "fruitEnjoyer2", type: "stand",  direction: "up", time: 500 },
+            { type: "textMessage", text: "Customer: No, no it doesn't. No beer or wine at all."},
+            { type: "textMessage", text: "J: I see. Thank you."},
+            { type: "changeMapNoTransition", map: "C10_Bar_Pt3" },
+          ],
+        },
+      ],
+    },
+  },
+  C10_Bar_Pt3: {
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(6),
+        y: utils.withGrid(5),
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        behaviorLoop: [
+          // { type: "stand",  direction: "right", time: 300 },
+          // { type: "stand",  direction: "down", time: 5000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      fruitEnjoyer1: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/l_sitting.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "I love fruit and my wife!", faceHero: "fruitEnjoyer1" },
+            ]
+          }
+        ]
+      }),
+     fruitEnjoyer2: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/o_sitting.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "I love fruit and my husband!", faceHero: "fruitEnjoyer2" },
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool6: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            { type: "changeMap", map: "C06_Bar_Pt1" },
+          ]
+        }
+      ]
+    },
   },
 }
