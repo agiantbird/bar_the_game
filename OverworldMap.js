@@ -2843,11 +2843,79 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap", map: "C12_Bar_Pt1" },
+          ]
+        }
+      ]
+    }
+  },
+  C12_Bar_Pt1: {
+    // lowerSrc: "/images/maps/parking_lot_wip.png",
+    lowerSrc: "/images/maps/testtest.png",
+    // upperSrc: "/images/maps/parkinglot_upper.png",
+    upperSrc: "/images/maps/uppertesttest.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+      }),
+    },
+    walls: {
+      // edges of level
+      // [utils.asGridCoord(0,3)] : true,
+      // [utils.asGridCoord(0,4)] : true,
+      // [utils.asGridCoord(0,5)] : true,
+      // [utils.asGridCoord(0,6)] : true,
+      // [utils.asGridCoord(0,7)] : true,
+      // [utils.asGridCoord(0,8)] : true,
+      // [utils.asGridCoord(0,9)] : true,
+      // [utils.asGridCoord(1,10)] : true,
+      // [utils.asGridCoord(2,10)] : true,
+      // [utils.asGridCoord(3,10)] : true,
+      // [utils.asGridCoord(4,10)] : true,
+      // [utils.asGridCoord(6,10)] : true,
+      // [utils.asGridCoord(7,10)] : true,
+      // [utils.asGridCoord(8,10)] : true,
+      // [utils.asGridCoord(9,10)] : true,
+      // [utils.asGridCoord(10,10)] : true,
+      // [utils.asGridCoord(11,9)] : true,
+      // [utils.asGridCoord(11,8)] : true,
+      // [utils.asGridCoord(11,7)] : true,
+      // [utils.asGridCoord(11,6)] : true,
+      // [utils.asGridCoord(11,5)] : true,
+      // [utils.asGridCoord(11,4)] : true,
+      // // back wall
+      // [utils.asGridCoord(1,3)] : true,
+      // [utils.asGridCoord(2,3)] : true,
+      // [utils.asGridCoord(3,3)] : true,
+      // [utils.asGridCoord(4,3)] : true,
+      // [utils.asGridCoord(5,3)] : true,
+      // //     door is at 6, 3
+      // [utils.asGridCoord(7,3)] : true,
+      // [utils.asGridCoord(8,3)] : true,
+      // [utils.asGridCoord(9,3)] : true,
+      // [utils.asGridCoord(10,3)] : true,
+
+      // // bar
+      // [utils.asGridCoord(4,4)] : true,
+      // [utils.asGridCoord(4,5)] : true,
+      // [utils.asGridCoord(4,6)] : true,
+      // [utils.asGridCoord(5,6)] : true,
+      // [utils.asGridCoord(6,6)] : true,
+      // [utils.asGridCoord(7,6)] : true,
+      // [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,10)]: [
+        {
+          events: [
+            { type: "changeMap", map: "C07_Bar_Pt1" },
             // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
       ]
     }
+    // overrideCheckForFootstepCutscene: false,
   },
 }
