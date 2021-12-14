@@ -5,9 +5,11 @@ class GameObject {
     this.x = config.x || 0;
     this.y = config.y || 0;
     this.direction = config.direction || "down";
+    this.removeWall = config.removeWall || false;
     this.sprite = new Sprite({
       gameObject: this,
       src: config.src || "/images/characters/people/hero_gray.png",
+      useShadow: config.useShadow || false,
     });
 
     this.behaviorLoop = config.behaviorLoop || [];
@@ -19,7 +21,9 @@ class GameObject {
 
   mount(map) {
     this.isMounted = true;
-    map.addWall(this.x, this.y);
+    if(this.removeWall == false) {
+      map.addWall(this.x, this.y);
+    }
 
     //If we have a behavior, kick off after a short delay
     setTimeout(() => {

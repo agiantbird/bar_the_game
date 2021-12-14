@@ -12,7 +12,7 @@ class Overworld {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
       //Establish the camera person
-      const cameraPerson = this.map.gameObjects.hero;
+      const cameraPerson = this.map.gameObjects.cameraOverrider || this.map.gameObjects.hero;
 
       //Update all objects
       Object.values(this.map.gameObjects).forEach(object => {

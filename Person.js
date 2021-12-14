@@ -3,7 +3,6 @@ class Person extends GameObject {
     super(config);
     this.movingProgressRemaining = 0;
     this.isStanding = false;
-
     this.isPlayerControlled = config.isPlayerControlled || false;
 
     this.directionUpdate = {

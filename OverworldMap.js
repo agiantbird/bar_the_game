@@ -11,6 +11,7 @@ class OverworldMap {
 
     this.upperImage = new Image();
     this.upperImage.src = config.upperSrc;
+    this.useShadow = config.useShadow || false;
 
     this.isCutscenePlaying = false;
     this.isPaused = false;
@@ -2857,8 +2858,15 @@ window.OverworldMaps = {
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
+        x: utils.withGrid(12),
+        y: utils.withGrid(6),
+      }),
+      cameraOverrider: new Person({
         x: utils.withGrid(11),
         y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        useShadow: true,
       }),
     },
     walls: {
