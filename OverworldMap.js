@@ -1376,6 +1376,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        useShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Why not buy a water, the wet stuff we all love to drink?" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
