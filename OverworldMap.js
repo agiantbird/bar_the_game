@@ -1381,7 +1381,7 @@ window.OverworldMaps = {
         y: utils.withGrid(3),
         src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
         removeWall: true,
-        useShadow: true,
+        dontUseShadow: true,
         talking: [
           {
             events: [
@@ -2880,7 +2880,7 @@ window.OverworldMaps = {
         y: utils.withGrid(6),
         src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
         removeWall: true,
-        useShadow: true,
+        dontUseShadow: true,
       }),
     },
     walls: {

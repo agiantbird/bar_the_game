@@ -10,13 +10,13 @@ class Sprite {
 
     //Shadow
     this.shadow = new Image();
-    this.useShadow = config.useShadow || false;
-    if (!this.useShadow === true) {
+    this.dontUseShadow = config.dontUseShadow || false;
+    if (!this.dontUseShadow) {
       this.shadow.src = "/images/characters/shadow.png";
     }
     this.shadow.onload = () => {
       this.isShadowLoaded = true;
-    };
+    }
 
     //Configure Animation & Initial State
     this.animations = config.animations || {

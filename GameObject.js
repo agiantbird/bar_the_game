@@ -6,10 +6,11 @@ class GameObject {
     this.y = config.y || 0;
     this.direction = config.direction || "down";
     this.removeWall = config.removeWall || false;
+    // this.dontUseShadow = config.dontUseShadow || true;
     this.sprite = new Sprite({
       gameObject: this,
       src: config.src || "/images/characters/people/hero_gray.png",
-      useShadow: config.useShadow || false,
+      dontUseShadow: config.dontUseShadow || false,
     });
 
     this.behaviorLoop = config.behaviorLoop || [];
