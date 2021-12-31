@@ -102,6 +102,7 @@ class OverworldMap {
 
 window.OverworldMaps = {
   DemoRoom: {
+    id: "DemoRoom",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -226,7 +227,13 @@ window.OverworldMaps = {
         {
           events: [
             // { type: "changeMap", map: "Kitchen" }
-            { type: "changeMap", map: "C02_Bar" },
+            // { type: "changeMap", map: "C02_Bar" },
+            { type: "changeMap",
+              map: "C02_Bar",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
             // the above 'turns the page' to the next chapter
             // but you need to actually put the text of the next chapter here
             // and not in the C02_Bar object, for example
@@ -328,6 +335,7 @@ window.OverworldMaps = {
     }
   },
   C02_Bar: {
+    id: "C02_Bar",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -441,7 +449,13 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "C03_K_Bedroom_Pt_1" },
+            //{ type: "changeMap", map: "C03_K_Bedroom_Pt_1" },
+            { type: "changeMap",
+              map: "C03_K_Bedroom_Pt_1",
+              x: utils.withGrid(2),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
             // need to also load up text and events for the next scene
             // { type: "changeMap", map: "C03_K_Bedroom_Pt_2" },
             // { who: "hero", type: "walk",  direction: "down" },
@@ -452,6 +466,7 @@ window.OverworldMaps = {
     }
   },
   C03_K_Bedroom_Pt_1: {
+    id: "C03_K_Bedroom_Pt_1",
     lowerSrc: "/images/maps/k_bedroom_lower_with_furniture_no_weather_machine.png",
     // upperSrc: "/images/maps/text_scene_test.png",
     upperSrc: "/images/maps/k_bedroom_upper_clean_wip.png",
@@ -511,13 +526,20 @@ window.OverworldMaps = {
             { who: "hero", type: "stand",  direction: "right", time: 600 },
             { type: "textMessage", text: "K: ....!!!!"},
             { who: "hero", type: "stand",  direction: "down", time: 100 },
-            { type: "changeMap", map: "C03_K_Bedroom_Pt_2" },
+            { type: "changeMap",
+              map: "C03_K_Bedroom_Pt_2",
+              x: utils.withGrid(2),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+            // { type: "changeMap", map: "C03_K_Bedroom_Pt_2" },
           ],
         },
       ],
     },
   },
   C03_K_Bedroom_Pt_2: {
+    id: "C03_K_Bedroom_Pt_2",
     lowerSrc: "/images/maps/k_bedroom_lower_with_furniture_with_weather_machine.png",
     // upperSrc: "/images/maps/text_scene_test.png",
     upperSrc: "/images/maps/k_bedroom_upper_clean_wip.png",
@@ -570,7 +592,14 @@ window.OverworldMaps = {
       [utils.asGridCoord(6,3)]: [
         {
           events: [
-            { type: "changeMap", map: "C04_Bar" },
+            // { type: "changeMap", map: "C04_Bar" },
+            { type: "changeMap",
+              map: "C04_Bar",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+
             { who: "hero", type: "stand",  direction: "right", time: 1800 },
             // { type: "textMessage", text: "L: You've had this place a long time, huh?"},
             // { type: "textMessage", text: "J: I suppose I have."},
@@ -603,6 +632,7 @@ window.OverworldMaps = {
     },
   },
   C04_Bar: {
+    id: "C04_Bar",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -693,7 +723,13 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "C05_Bar" },
+            { type: "changeMap",
+              map: "C05_Bar",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+            // { type: "changeMap", map: "C05_Bar" },
             // { type: "textMessage", text: "M: What are you looking at?"},
             // { type: "textMessage", text: "J: Nothing."},
             // { type: "textMessage", text: "M: Oh, ok."},
@@ -728,6 +764,7 @@ window.OverworldMaps = {
     }
   },
   C05_Bar: {
+    id: "C05_Bar",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -853,15 +890,21 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "C06_Bar_Pt1" },
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C06_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
             // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
       ]
     }
-  },
-  // { type: "changeMapNoTransition", map: "C06_Bar" }
+  },  
   C06_Bar_Pt1: {
+    id: "C06_Bar_Pt1",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -1066,6 +1109,7 @@ window.OverworldMaps = {
     // overrideCheckForFootstepCutscene: false,
   },
   C06_Bar_Pt2: {
+    id: "C06_Bar_Pt2",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -1159,7 +1203,14 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "C07_Bar_Pt1" },
+            // { type: "changeMap", map: "C07_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C07_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+
             // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
@@ -1168,6 +1219,7 @@ window.OverworldMaps = {
     // overrideCheckForFootstepCutscene: false,
   },
   C07_Bar_Pt1: {
+    id: "C07_Bar_Pt1",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -1334,6 +1386,7 @@ window.OverworldMaps = {
     }
   },
   C07_Bar_Pt2: {
+    id: "C07_Bar_Pt2",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -1525,7 +1578,14 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "C08_Black_Background_Text_Scene" },
+
+            // { type: "changeMap", map: "C08_Black_Background_Text_Scene" },
+            { type: "changeMap",
+              map: "C08_Black_Background_Text_Scene",
+              x: utils.withGrid(11),
+              y: utils.withGrid(6),
+              direction: "down"
+            },
             // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
@@ -1533,6 +1593,7 @@ window.OverworldMaps = {
     }
   },
   C08_Black_Background_Text_Scene: {
+    id: "C08_Black_Background_Text_Scene",
     // lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     // upperSrc: "/images/maps/C01_BarUpper.png",
     lowerSrc: "/images/maps/all_black_screen.png",
@@ -1611,13 +1672,20 @@ window.OverworldMaps = {
             // { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
 
-            { type: "changeMap", map: "sattelite_animated_background_frame_1_test" },
+            // { type: "changeMap", map: "sattelite_animated_background_frame_1_test" },
+            { type: "changeMap",
+              map: "sattelite_animated_background_frame_1_test",
+              x: utils.withGrid(11),
+              y: utils.withGrid(6),
+              direction: "down"
+            },
           ],
         },
       ]
     }
   },
   sattelite_animated_background_frame_1_test: {
+    id: "sattelite_animated_background_frame_1_test",
     lowerSrc: "/images/maps/sattelite_animated_background_frame_1_test.png",
     upperSrc: "/images/maps/sattelite_animated_background_frame_1_test.png",
     gameObjects: {
@@ -1640,6 +1708,7 @@ window.OverworldMaps = {
     }
   },
   sattelite_animated_background_frame_2_test: {
+    id: "sattelite_animated_background_frame_2_test",
     lowerSrc: "/images/maps/sattelite_animated_background_frame_2_test.png",
     upperSrc: "/images/maps/sattelite_animated_background_frame_2_test.png",
     gameObjects: {
@@ -1662,6 +1731,7 @@ window.OverworldMaps = {
     }
   },
   sattelite_animated_background_frame_3_test: {
+    id: "sattelite_animated_background_frame_3_test",
     lowerSrc: "/images/maps/sattelite_animated_background_frame_1_test.png",
     upperSrc: "/images/maps/sattelite_animated_background_frame_1_test.png",
     gameObjects: {
@@ -1684,6 +1754,7 @@ window.OverworldMaps = {
     }
   },
   sattelite_animated_background_frame_4_test: {
+    id: "sattelite_animated_background_frame_4_test",
     lowerSrc: "/images/maps/sattelite_animated_background_frame_2_test.png",
     upperSrc: "/images/maps/sattelite_animated_background_frame_2_test.png",
     gameObjects: {
@@ -1706,6 +1777,7 @@ window.OverworldMaps = {
     }
   },
   sattelite_animated_background_frame_5_test: {
+    id: "sattelite_animated_background_frame_5_test",
     lowerSrc: "/images/maps/sattelite_animated_background_frame_1_test.png",
     upperSrc: "/images/maps/sattelite_animated_background_frame_1_test.png",
     gameObjects: {
@@ -1728,6 +1800,7 @@ window.OverworldMaps = {
     }
   },
   sattelite_animated_background_frame_6_test: {
+    id: "sattelite_animated_background_frame_6_test",
     lowerSrc: "/images/maps/sattelite_animated_background_frame_2_test.png",
     upperSrc: "/images/maps/sattelite_animated_background_frame_2_test.png",
     gameObjects: {
@@ -1750,6 +1823,7 @@ window.OverworldMaps = {
     }
   },
   C09_Space_Sattelite_Scene_Pt1: {
+    id: "C09_Space_Sattelite_Scene_Pt1",
     // lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     // upperSrc: "/images/maps/C01_BarUpper.png",
     lowerSrc: "/images/maps/earth_sattelite_wip.png",
@@ -1837,13 +1911,20 @@ window.OverworldMaps = {
             { type: "textMessage", text: "There is what looks like snow."},
             { type: "textMessage", text: "There is a planet looking at itself."},
 
-            { type: "changeMap", map: "C10_Bar_Pt1" },
+            // { type: "changeMap", map: "C10_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C10_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
           ],
         },
       ]
     }
   },
   C10_Bar_Pt1: {
+    id: "C10_Bar_Pt1",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -2002,6 +2083,7 @@ window.OverworldMaps = {
     // overrideCheckForFootstepCutscene: false,
   },
   C10_Bar_Pt2: {
+    id: "C10_Bar_Pt2",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -2157,6 +2239,7 @@ window.OverworldMaps = {
     },
   },
   C10_Bar_Pt3: {
+    id: "C10_Bar_Pt3",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -2276,13 +2359,20 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "C11_Bar_Pt1" },
+            // { type: "changeMap", map: "C11_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C11_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
           ]
         }
       ]
     },
   },
   C11_Bar_Pt1: {
+    id: "C11_Bar_Pt1",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -2427,6 +2517,7 @@ window.OverworldMaps = {
     }
   },
   C11_Bar_Pt2: {
+    id: "C11_Bar_Pt2",
     lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
     gameObjects: {
@@ -2574,6 +2665,7 @@ window.OverworldMaps = {
     }
   },
   C11_Bar_Pt3: {
+    id: "C11_Bar_Pt3",
     // TODO: Need to also lighten the sprites in this chapter
     // with the same shade (people and stools)
     // this could also be one of two brightenings (hence, half bright, implying full bright.)
@@ -2733,6 +2825,7 @@ window.OverworldMaps = {
     }
   },
   C11_Bar_Pt4: {
+    id: "C11_Bar_Pt4",
     // TODO: Need to also lighten the sprites in this chapter
     // with the same shade (people and stools)
     // this could also be one of two brightenings (hence, half bright, implying full bright.)
@@ -2858,13 +2951,20 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "C12_Bar_Pt1" },
+            // { type: "changeMap", map: "C12_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C12_Bar_Pt1",
+              x: utils.withGrid(12),
+              y: utils.withGrid(6),
+              direction: "down"
+            },
           ]
         }
       ]
     }
   },
   C12_Bar_Pt1: {
+    id: "C12_Bar_Pt1",
     // lowerSrc: "/images/maps/parking_lot_wip.png",
     lowerSrc: "/images/maps/testtest.png",
     // upperSrc: "/images/maps/parkinglot_upper.png",
@@ -2932,7 +3032,14 @@ window.OverworldMaps = {
       [utils.asGridCoord(11,10)]: [
         {
           events: [
-            { type: "changeMap", map: "C07_Bar_Pt1" },
+            // { type: "changeMap", map: "C07_Bar_Pt1" },
+            // Link to next map (not chapter 7)
+            { type: "changeMap",
+              map: "C07_Bar_Pt1",
+              x: utils.withGrid(12),
+              y: utils.withGrid(6),
+              direction: "down"
+            },
             // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }

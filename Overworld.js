@@ -69,25 +69,53 @@ class Overworld {
    })
  }
 
- startMap(mapConfig) {
+ startMap(mapConfig, heroInitialState=null) {
   this.map = new OverworldMap(mapConfig);
   this.map.overworld = this;
   this.map.mountObjects();
+  if(heroInitialState) {
+    const {hero} = this.map.gameObjects
+    this.map.removeWall(hero.x, hero.y);
+    hero.x = heroInitialState.x;
+    hero.y = heroInitialState.y;
+    hero.direction = heroInitialState.direction;
+    this.map.addWall(hero.x, hero.y);
+  }
+
+  this.progress.mapId = mapConfig.id;
+  this.progress.startingHeroX = this.map.gameObjects.hero.x;
+  this.progress.startingHeroY = this.map.gameObjects.hero.y;
+  this.progress.startingHeroDirection = this.map.gameObjects.hero.direction;
   this.map.checkForFootstepCutscene();
  }
 
  init() {
-  // this.startMap(window.OverworldMaps.DemoRoom);
-  //starting at chap 11 for easy dev
-  this.startMap(window.OverworldMaps.C12_Bar_Pt1);
+  //Create a new Progress tracker
+  this.progress = new Progress();
 
+  //Potentially load saved data
+  let initialHeroState = null;
+  const saveFile = this.progress.getSaveFile();
+  if (saveFile) {
+    this.progress.load();
+    initialHeroState = {
+      x: this.progress.startingHeroX,
+      y: this.progress.startingHeroY,
+      direction: this.progress.startingHeroDirection,
+    }
+  }
 
+  // start the first map (alter which map is initial map in Progress.js for easy dev)
+  this.startMap(window.OverworldMaps[this.progress.mapId],initialHeroState);
+
+  // create controls
   this.bindActionInput();
   this.bindHeroPositionCheck();
 
   this.directionInput = new DirectionInput();
   this.directionInput.init();
 
+  // start game
   this.startGameLoop();
 
 
