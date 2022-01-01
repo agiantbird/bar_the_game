@@ -89,14 +89,22 @@ class Overworld {
   this.map.checkForFootstepCutscene();
  }
 
- init() {
+ async init() {
+
+  const container = document.querySelector(".game-container")
   //Create a new Progress tracker
   this.progress = new Progress();
+
+  //Show the title screen
+  this.titleScreen = new TitleScreen({
+    progress: this.progress
+  })
+  const useSaveFile = await this.titleScreen.init(container)
 
   //Potentially load saved data
   let initialHeroState = null;
   const saveFile = this.progress.getSaveFile();
-  if (saveFile) {
+  if (useSaveFile) {
     this.progress.load();
     initialHeroState = {
       x: this.progress.startingHeroX,
