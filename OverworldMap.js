@@ -2954,8 +2954,8 @@ window.OverworldMaps = {
             // { type: "changeMap", map: "C12_Bar_Pt1" },
             { type: "changeMap",
               map: "C12_Bar_Pt1",
-              x: utils.withGrid(12),
-              y: utils.withGrid(6),
+              x: utils.withGrid(11),
+              y: utils.withGrid(11),
               direction: "down"
             },
           ]
@@ -2972,8 +2972,8 @@ window.OverworldMaps = {
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(12),
-        y: utils.withGrid(6),
+        x: utils.withGrid(11),
+        y: utils.withGrid(11),
       }),
       cameraOverrider: new Person({
         x: utils.withGrid(11),
@@ -3029,22 +3029,195 @@ window.OverworldMaps = {
       // [utils.asGridCoord(8,6)] : true,
     },
     cutsceneSpaces: {
-      [utils.asGridCoord(11,10)]: [
+      [utils.asGridCoord(11,11)]: [
         {
           events: [
-            // { type: "changeMap", map: "C07_Bar_Pt1" },
-            // Link to next map (not chapter 7)
-            { type: "changeMap",
-              map: "C07_Bar_Pt1",
-              x: utils.withGrid(12),
-              y: utils.withGrid(6),
-              direction: "down"
-            },
-            // { type: "textMessage", text: "this should be chapter 6..."},
-          ]
-        }
-      ]
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "test test" },
+            { who: "hero", type: "walk",  direction: "up" },
+            { who: "hero", type: "walk",  direction: "up" },
+            { who: "hero", type: "walk",  direction: "up" },
+            { who: "hero", type: "walk",  direction: "up" },
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            // { who: "hero", type: "walk",  direction: "left" },
+            // { who: "hero", type: "walk",  direction: "right" },
+            // { who: "hero", type: "walk",  direction: "right" },
+            // { who: "hero", type: "walk",  direction: "right" },
+            // { who: "hero", type: "walk",  direction: "right" },
+            // { who: "hero", type: "walk",  direction: "left" },
+            // { who: "hero", type: "walk",  direction: "left" },
+            // { who: "hero", type: "walk",  direction: "up" },
+            // { who: "hero", type: "walk",  direction: "up" },
+            // { who: "hero", type: "stand",  direction: "down", time: 1000 },
+            // 11, 7
+            // { type: "textMessage", text: "test test" },
+            // { type: "textMessage", text: "M: Different in a way that seems more clean or less clean?" },
+            // { type: "textMessage", text: "L: I don't know." },
+            // { type: "textMessage", text: "It's too different to tell." },
+            {type: "changeMapNoTransition", map: "C12_Bar_Pt2"},
+
+
+            // { type: "textMessage", text: "We're in part 3" },
+            // { who: "characterM", type: "stand",  direction: "down", time: 1000 },
+            // { who: "characterM", type: "walk",  direction: "down" },
+            // { who: "characterM", type: "walk",  direction: "down" },
+            // { who: "characterM", type: "walk",  direction: "down" },
+            // { who: "characterM", type: "walk",  direction: "down" },
+            // { who: "characterM", type: "walk",  direction: "down" },
+            // { who: "characterM", type: "walk",  direction: "right" },
+            // { who: "characterM", type: "stand",  direction: "right", time: 2000 },
+            // { who: "characterM", type: "stand",  direction: "down", time: 2000 },
+            // {type: "changeMapNoTransition", map: "C12_Bar_Pt1"}
+          ],
+        },
+      ],
+      // [utils.asGridCoord(11,10)]: [
+      //   {
+      //     events: [
+      //       // { type: "changeMap", map: "C07_Bar_Pt1" },
+      //       // Link to next map (not chapter 7)
+      //       { type: "changeMap",
+      //         map: "C07_Bar_Pt1",
+      //         x: utils.withGrid(12),
+      //         y: utils.withGrid(6),
+      //         direction: "down"
+      //       },
+      //       // { type: "textMessage", text: "this should be chapter 6..."},
+      //     ]
+      //   }
+      // ]
     }
     // overrideCheckForFootstepCutscene: false,
+  },
+  C12_Bar_Pt2: {
+    id: "C12_Bar_Pt2",
+    lowerSrc: "/images/maps/parking_lot_lower_thought_animation_1.png",
+    upperSrc: "/images/maps/uppertesttest.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(7),
+      }),
+      cameraOverrider: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+      }),
+    },
+    walls: {
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,7)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "test test" },
+            {type: "changeMapNoTransition", map: "C12_Bar_Pt3"},
+          ],
+        },
+      ],
+    }
+  },
+  C12_Bar_Pt3: {
+    id: "C12_Bar_Pt3",
+    lowerSrc: "/images/maps/parking_lot_lower_thought_animation_2.png",
+    upperSrc: "/images/maps/uppertesttest.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(7),
+      }),
+      cameraOverrider: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+      }),
+    },
+    walls: {
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,7)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "test test" },
+            {type: "changeMapNoTransition", map: "C12_Bar_Pt4"},
+          ],
+        },
+      ],
+    }
+  },
+  C12_Bar_Pt4: {
+    id: "C12_Bar_Pt4",
+    lowerSrc: "/images/maps/parking_lot_lower_thought_animation_3.png",
+    upperSrc: "/images/maps/uppertesttest.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(7),
+      }),
+      cameraOverrider: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+      }),
+    },
+    walls: {
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,7)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "test test" },
+            {type: "changeMapNoTransition", map: "C12_Bar_Pt5"},
+          ],
+        },
+      ],
+    }
+  },
+  C12_Bar_Pt5: {
+    id: "C12_Bar_Pt5",
+    lowerSrc: "/images/maps/parking_lot_lower_thought_animation_4.png",
+    upperSrc: "/images/maps/uppertesttest.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(7),
+      }),
+      cameraOverrider: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+      }),
+    },
+    walls: {
+    },
+    // cutsceneSpaces: {
+    //   [utils.asGridCoord(11,7)]: [
+    //     {
+    //       events: [
+    //         { who: "hero", type: "stand",  direction: "up", time: 1000 },
+    //         { type: "textMessage", text: "test test" },
+    //         {type: "changeMapNoTransition", map: "C12_Bar_Pt5"},
+    //       ],
+    //     },
+    //   ],
+    // }
   },
 }
