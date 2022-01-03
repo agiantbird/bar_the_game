@@ -3412,7 +3412,7 @@ window.OverworldMaps = {
       // [utils.asGridCoord(8,6)] : true,
     },
     cutsceneSpaces: {
-      [utils.asGridCoord(11,11)]: [
+      [utils.asGridCoord(11,7)]: [
         {
           events: [
             { who: "hero", type: "stand",  direction: "up", time: 1000 },
@@ -3440,7 +3440,7 @@ window.OverworldMaps = {
             // { type: "textMessage", text: "M: Different in a way that seems more clean or less clean?" },
             // { type: "textMessage", text: "L: I don't know." },
             // { type: "textMessage", text: "It's too different to tell." },
-            // {type: "changeMapNoTransition", map: "C12_Bar_Pt2"},
+            {type: "changeMapNoTransition", map: "C12_Bar_Pt11"},
 
 
             // { type: "textMessage", text: "We're in part 3" },
@@ -3474,5 +3474,199 @@ window.OverworldMaps = {
       // ]
     }
     // overrideCheckForFootstepCutscene: false,
+  },
+  C12_Bar_Pt11: {
+    id: "C12_Bar_Pt11",
+    lowerSrc: "/images/maps/parking_lot_lower_bread_animation_1.png",
+    upperSrc: "/images/maps/uppertesttest.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(7),
+      }),
+      cameraOverrider: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+      }),
+    },
+    walls: {
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,7)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            {type: "changeMapNoTransition", map: "C12_Bar_Pt12"},
+          ],
+        },
+      ],
+    }
+  },
+  C12_Bar_Pt12: {
+    id: "C12_Bar_Pt12",
+    lowerSrc: "/images/maps/parking_lot_lower_bread_animation_2.png",
+    upperSrc: "/images/maps/uppertesttest.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(7),
+      }),
+      cameraOverrider: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+      }),
+    },
+    walls: {
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,7)]: [
+        {
+          events: [
+            // { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            {type: "changeMapNoTransition", map: "C12_Bar_Pt13"},
+          ],
+        },
+      ],
+    }
+  },
+  C12_Bar_Pt13: {
+    id: "C12_Bar_Pt13",
+    lowerSrc: "/images/maps/parking_lot_lower_bread_animation_3.png",
+    upperSrc: "/images/maps/uppertesttest.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(7),
+      }),
+      cameraOverrider: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+      }),
+    },
+    walls: {
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,7)]: [
+        {
+          events: [
+            // { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            {type: "changeMapNoTransition", map: "C12_Bar_Pt14"},
+          ],
+        },
+      ],
+    }
+  },
+  C12_Bar_Pt14: {
+    id: "C12_Bar_Pt14",
+    lowerSrc: "/images/maps/parking_lot_lower_bread_animation_4.png",
+    upperSrc: "/images/maps/uppertesttest.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(7),
+      }),
+      cameraOverrider: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+      }),
+    },
+    walls: {
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,7)]: [
+        {
+          events: [
+            // { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            {type: "changeMapNoTransition", map: "C12_Bar_Pt15"},
+          ],
+        },
+      ],
+    }
+  },
+  C12_Bar_Pt15: {
+    id: "C12_Bar_Pt15",
+    lowerSrc: "/images/maps/parking_lot_lower_bread_animation_5.png",
+    upperSrc: "/images/maps/uppertesttest.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(7),
+      }),
+      cameraOverrider: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+      }),
+    },
+    walls: {
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,7)]: [
+        {
+          events: [
+            // { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            {type: "changeMapNoTransition", map: "C12_Bar_Pt16"},
+          ],
+        },
+      ],
+    }
+  },
+  C12_Bar_Pt16: {
+    id: "C12_Bar_Pt16",
+    lowerSrc: "/images/maps/parking_lot_lower_bread_animation_5.png",
+    upperSrc: "/images/maps/uppertesttest.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(7),
+        direction: "left",
+      }),
+      cameraOverrider: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+      }),
+    },
+    walls: {
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,10)]: [
+        {
+          events: [
+            // { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            // { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            // {type: "changeMapNoTransition", map: "C12_Bar_Pt15"},
+            { type: "textMessage", text: "transition to chapter 13"},
+          ],
+        },
+      ],
+    }
   },
 }
