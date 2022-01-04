@@ -2817,7 +2817,7 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            { type: "changeMap", map: "C06_Bar_Pt1" },
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
             // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
@@ -3663,10 +3663,42 @@ window.OverworldMaps = {
             // { who: "hero", type: "stand",  direction: "right", time: 1000 },
             // { who: "hero", type: "stand",  direction: "left", time: 1000 },
             // {type: "changeMapNoTransition", map: "C12_Bar_Pt15"},
-            { type: "textMessage", text: "transition to chapter 13"},
+            // { type: "textMessage", text: "transition to chapter 13"},
+            { type: "changeMap",
+              map: "C13_Bar",
+              x: utils.withGrid(11),
+              y: utils.withGrid(6),
+              direction: "down"
+            },
           ],
         },
       ],
+    }
+  },
+  C13_Bar: {
+    id: "C13_Bar",
+    lowerSrc: "/images/maps/BarFrontLowerShadow.png",
+    upperSrc: "/images/maps/BarFrontLowerShadow.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 4000 },
+            { type: "textMessage", text: "Notice: The bar is closed as its bathroom has disappeared."},
+            { type: "textMessage", text: "We apologize for the inconvenience."},
+
+            // { type: "changeMapNoTransition", map: "sattelite_animated_background_frame_2_test" },
+          ],
+        },
+      ]
     }
   },
 }
