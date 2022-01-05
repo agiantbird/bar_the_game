@@ -4088,13 +4088,71 @@ window.OverworldMaps = {
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(8),
+        x: utils.withGrid(9),
         y: utils.withGrid(7),
         src: "/images/characters/people/grocer.png",
       }),
     },
     walls: {
       // edges of level
+      //// left wall
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      //// back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      [utils.asGridCoord(6,3)] : true,
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+      [utils.asGridCoord(11,3)] : true,
+      [utils.asGridCoord(12,3)] : true,
+      [utils.asGridCoord(13,3)] : true,
+      ////right wall
+      [utils.asGridCoord(14,4)] : true,
+      [utils.asGridCoord(14,5)] : true,
+      [utils.asGridCoord(14,6)] : true,
+      [utils.asGridCoord(14,7)] : true,
+      [utils.asGridCoord(14,8)] : true,
+      [utils.asGridCoord(14,9)] : true,
+      //// bottom wall
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(5,10)] : true,
+      // door is here
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,10)] : true,
+      [utils.asGridCoord(12,10)] : true,
+      [utils.asGridCoord(13,10)] : true,
+      // grocery shelf
+      [utils.asGridCoord(1,5)] : true,
+      [utils.asGridCoord(2,5)] : true,
+      [utils.asGridCoord(3,5)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(5,5)] : true,
+      [utils.asGridCoord(6,5)] : true,
+      [utils.asGridCoord(7,5)] : true,
+      [utils.asGridCoord(8,5)] : true,
+      [utils.asGridCoord(9,5)] : true,
+      [utils.asGridCoord(10,5)] : true,
+      // cash register
+      [utils.asGridCoord(9,8)] : true,
+      [utils.asGridCoord(10,8)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(12,8)] : true,
     },
     cutsceneSpaces: {
       [utils.asGridCoord(6,3)]: [
