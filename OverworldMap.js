@@ -4090,6 +4090,7 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(5),
         y: utils.withGrid(5),
+        src: "/images/characters/people/grocer_gray.png",
       }),
     },
     walls: {
