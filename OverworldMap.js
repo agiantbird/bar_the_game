@@ -4088,9 +4088,9 @@ window.OverworldMaps = {
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(5),
-        y: utils.withGrid(5),
-        src: "/images/characters/people/grocer_gray.png",
+        x: utils.withGrid(8),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/grocer.png",
       }),
     },
     walls: {
