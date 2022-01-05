@@ -4080,5 +4080,85 @@ window.OverworldMaps = {
         }
       ]
     }
+  },
+  C15_Grocery_pt1: {
+    id: "C15_Grocery_pt1",
+    lowerSrc: "/images/maps/grocery_store_lower.png",
+    upperSrc: "/images/maps/grocery_store_upper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+      }),
+    },
+    walls: {
+      // edges of level
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      // [utils.asGridCoord(5,5)]: [
+      //   {
+      //     events: [
+      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+      //       { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+      //       { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+      //       { type: "textMessage", text: "L: Hey, I got two waters."},
+      //       { who: "hero", type: "stand",  direction: "left", time: 1000 },
+      //       { type: "textMessage", text: "J: Extra thirsty today?"},
+      //       { type: "textMessage", text: "L: No."},
+      //       { type: "textMessage", text: "J: Then why the two waters?"},
+      //       { type: "textMessage", text: "L: I didn't mean to get two."},
+      //       { who: "characterM", type: "stand",  direction: "left", time: 1000 },
+      //       { type: "textMessage", text: "M: What does that mean?"},
+      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+      //       { type: "textMessage", text: "L: I paid for one water and two came out."},
+      //       { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+      //       { type: "textMessage", text: "L: Can you put this water back in for me, J.?"},
+      //       { type: "textMessage", text: "J: I can't open the fending machine."},
+      //       { type: "textMessage", text: "L: But I didn't pay for this......... or maybe I didn't pay for *this* ......."},
+      //       { type: "textMessage", text: "J: It's fine."},
+      //       { type: "textMessage", text: "L: Hm,"},
+      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+      //       { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+      //       { type: "textMessage", text: "M: If you're really upset about it, just put another water's worth of change in the machine."},
+      //       { type: "textMessage", text: "L: !!!"},
+      //       { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+      //       { type: "textMessage", text: "L: M.! You're a genius."},
+      //       { type: "textMessage", text: "M: Hmm, ha, well, you know, mm, hmm..."},
+      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+      //       { type: "textMessage", text: "L: Oh no."},
+      //       { type: "textMessage", text: "J: What?."},
+      //       { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+      //       { type: "textMessage", text: "L: It wants me to pick something."},
+      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+      //       // { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+      //     ]
+      //   }
+      // ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C06_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+            // { type: "textMessage", text: "this should be chapter 6..."},
+          ]
+        }
+      ]
+    }
   }, 
 }
