@@ -4070,10 +4070,10 @@ window.OverworldMaps = {
           events: [
             // { type: "changeMap", map: "C06_Bar_Pt1" },
             { type: "changeMap",
-              map: "C06_Bar_Pt1",
+              map: "C15_Grocery_pt1",
               x: utils.withGrid(5),
-              y: utils.withGrid(5),
-              direction: "down"
+              y: utils.withGrid(7),
+              direction: "up"
             },
             // { type: "textMessage", text: "this should be chapter 6..."},
           ]
@@ -4086,11 +4086,16 @@ window.OverworldMaps = {
     lowerSrc: "/images/maps/grocery_store_lower.png",
     upperSrc: "/images/maps/grocery_store_upper.png",
     gameObjects: {
-      hero: new Person({
-        isPlayerControlled: true,
+      grocer: new Person({
         x: utils.withGrid(9),
         y: utils.withGrid(7),
         src: "/images/characters/people/grocer.png",
+      }),
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/hero_gray.png",
       }),
     },
     walls: {
@@ -4155,55 +4160,154 @@ window.OverworldMaps = {
       [utils.asGridCoord(12,8)] : true,
     },
     cutsceneSpaces: {
-      [utils.asGridCoord(6,3)]: [
+      [utils.asGridCoord(1,6)]: [
         {
           events: [
-            { who: "hero", type: "walk",  direction: "down" },
-            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "it just seems to go on forever..."},
           ]
         }
       ],
-      // [utils.asGridCoord(5,5)]: [
-      //   {
-      //     events: [
-      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
-      //       { who: "characterL", type: "stand",  direction: "right", time: 1000 },
-      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
-      //       { who: "characterL", type: "stand",  direction: "right", time: 1000 },
-      //       { type: "textMessage", text: "L: Hey, I got two waters."},
-      //       { who: "hero", type: "stand",  direction: "left", time: 1000 },
-      //       { type: "textMessage", text: "J: Extra thirsty today?"},
-      //       { type: "textMessage", text: "L: No."},
-      //       { type: "textMessage", text: "J: Then why the two waters?"},
-      //       { type: "textMessage", text: "L: I didn't mean to get two."},
-      //       { who: "characterM", type: "stand",  direction: "left", time: 1000 },
-      //       { type: "textMessage", text: "M: What does that mean?"},
-      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
-      //       { type: "textMessage", text: "L: I paid for one water and two came out."},
-      //       { who: "characterL", type: "stand",  direction: "right", time: 1000 },
-      //       { type: "textMessage", text: "L: Can you put this water back in for me, J.?"},
-      //       { type: "textMessage", text: "J: I can't open the fending machine."},
-      //       { type: "textMessage", text: "L: But I didn't pay for this......... or maybe I didn't pay for *this* ......."},
-      //       { type: "textMessage", text: "J: It's fine."},
-      //       { type: "textMessage", text: "L: Hm,"},
-      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
-      //       { who: "characterL", type: "stand",  direction: "right", time: 1000 },
-      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
-      //       { type: "textMessage", text: "M: If you're really upset about it, just put another water's worth of change in the machine."},
-      //       { type: "textMessage", text: "L: !!!"},
-      //       { who: "characterL", type: "stand",  direction: "right", time: 1000 },
-      //       { type: "textMessage", text: "L: M.! You're a genius."},
-      //       { type: "textMessage", text: "M: Hmm, ha, well, you know, mm, hmm..."},
-      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
-      //       { type: "textMessage", text: "L: Oh no."},
-      //       { type: "textMessage", text: "J: What?."},
-      //       { who: "characterL", type: "stand",  direction: "right", time: 1000 },
-      //       { type: "textMessage", text: "L: It wants me to pick something."},
-      //       { who: "characterL", type: "stand",  direction: "up", time: 1000 },
-      //       // { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
-      //     ]
-      //   }
-      // ],
+      [utils.asGridCoord(5,7)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            { who: "grocer", type: "stand",  direction: "left", time: 1000},
+            { type: "textMessage", text: "Grocer: Yes, in the first aisle."},
+            // { who: "grocer", type: "stand",  direction: "down", time: 1000},
+            // { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "Customer: And bananas?"},
+            // { who: "grocer", type: "stand",  direction: "left", time: 1000},
+            // { type: "textMessage", text: "Grocer: Yes, aisle one."},
+            // { type: "textMessage", text: "Customer: Toothpicks?"},
+            // { type: "textMessage", text: "Grocer: We've got them! Last aisle."},
+            // { type: "textMessage", text: "Customer: What about--"},
+            // { type: "textMessage", text: "Grocer: Aisle one."},
+            // { type: "textMessage", text: "Customer: --olives?"},
+            // { type: "textMessage", text: "Grocer: Aisle one."},
+            // { type: "textMessage", text: "Customer: How did you know what I was going to say?"},
+            // { type: "textMessage", text: "Grocer: I didn't."},
+            // { type: "textMessage", text: "Customer: Then how did you know where to direct me?"},
+            // { who: "grocer", type: "stand",  direction: "up", time: 1000 },
+            // { who: "grocer", type: "stand",  direction: "left", time: 1000 },
+            // { type: "textMessage", text: "Grocer: We just have the one aisle, here."},
+            { type: "changeMapNoTransition", map: "C15_Grocery_pt2"},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C06_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+            // { type: "textMessage", text: "this should be chapter 6..."},
+          ]
+        }
+      ]
+    }
+  }, 
+  C15_Grocery_pt2: {
+    id: "C15_Grocery_pt2",
+    lowerSrc: "/images/maps/grocery_store_lower.png",
+    upperSrc: "/images/maps/grocery_store_upper.png",
+    gameObjects: {
+      grocer: new Person({
+        x: utils.withGrid(9),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/grocer.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "down", time: 1000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Grocer: Let me know if you need help finding anything.", faceHero: "grocer" },
+            ]
+          }
+        ]
+      }),
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/hero_gray.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      //// left wall
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      //// back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      [utils.asGridCoord(6,3)] : true,
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+      [utils.asGridCoord(11,3)] : true,
+      [utils.asGridCoord(12,3)] : true,
+      [utils.asGridCoord(13,3)] : true,
+      ////right wall
+      [utils.asGridCoord(14,4)] : true,
+      [utils.asGridCoord(14,5)] : true,
+      [utils.asGridCoord(14,6)] : true,
+      [utils.asGridCoord(14,7)] : true,
+      [utils.asGridCoord(14,8)] : true,
+      [utils.asGridCoord(14,9)] : true,
+      //// bottom wall
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(5,10)] : true,
+      // door is here
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,10)] : true,
+      [utils.asGridCoord(12,10)] : true,
+      [utils.asGridCoord(13,10)] : true,
+      // grocery shelf
+      [utils.asGridCoord(1,5)] : true,
+      [utils.asGridCoord(2,5)] : true,
+      [utils.asGridCoord(3,5)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(5,5)] : true,
+      [utils.asGridCoord(6,5)] : true,
+      [utils.asGridCoord(7,5)] : true,
+      [utils.asGridCoord(8,5)] : true,
+      [utils.asGridCoord(9,5)] : true,
+      [utils.asGridCoord(10,5)] : true,
+      // cash register
+      [utils.asGridCoord(9,8)] : true,
+      [utils.asGridCoord(10,8)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(12,8)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(1,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "it just seems to go on forever..."},
+          ]
+        }
+      ],
       [utils.asGridCoord(5,10)]: [
         {
           events: [
