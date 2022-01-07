@@ -5246,6 +5246,189 @@ window.OverworldMaps = {
           ]
         }
       ],
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            // { who: "hero", type: "stand",  direction: "left", time: 1000},
+            // { type: "textMessage", text: "J: What's strange?"},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: Hm?"},
+            // { type: "textMessage", text: "J: Did you say something was strange??"},
+            // { who: "vendingMachineGuy", type: "stand",  direction: "right", time: 1000},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: Hm? Oh. Yes, I guess I did. You're out of bottled water."},
+            // { type: "textMessage", text: "J: Is that strange?"},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: It's strange for you."},
+            // { type: "textMessage", text: "J: For me?"},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: You run out of soda pretty regularly..."},
+            // { type: "textMessage", text: "In fact, the only reason I really come around here is to refill B4-- B4 is soda."},
+            // { who: "vendingMachineGuy", type: "stand",  direction: "up", time: 1000},
+            // { who: "vendingMachineGuy", type: "stand",  direction: "right", time: 1000},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: But recently you've been running out of water. C1."},
+            // { type: "textMessage", text: "J: Ah, I see. One of our regulars has started buying a water bottle from the machine most nights"},
+            // { who: "vendingMachineGuy", type: "stand",  direction: "up", time: 1000},
+            // { who: "vendingMachineGuy", type: "stand",  direction: "down", time: 1000},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: Well I guess that would do it."},
+            // { who: "vendingMachineGuy", type: "stand",  direction: "right", time: 1000},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: I only brought soda for restocking."},
+            // { type: "textMessage", text: "Mind if I leave this open while I grab some water bottles across the street?"},
+            // { type: "textMessage", text: "J: Across the street? At the grocery store?"},
+            // { who: "vendingMachineGuy", type: "stand",  direction: "down", time: 1000},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: Yep."},
+            // { type: "textMessage", text: "J: Isn't that weird, though?"},
+            // { who: "vendingMachineGuy", type: "stand",  direction: "right", time: 1000},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: What do you mean?"},
+            // { type: "textMessage", text: "J: Buying water bottles from the grocery store to stock the vending machine?"},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: That's where I always buy my stock from."},
+            // { type: "textMessage", text: "J: You do?"},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: Sure. Where did you think I got it from?"},
+            // { type: "textMessage", text: "J: I don't know-- a warehouse."},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: What warehouse?"},
+            // { type: "textMessage", text: "J: I don't know. Just one that I picture when I think about warehouses."},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: No, it's the grocery store for me."},
+            // { type: "textMessage", text: "Couldn’t think of a better place to buy stock for your and the grocery store's vending machines"},
+            // { type: "textMessage", text: "J: The grocery store has a vending machine, too?"},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: Yep."},
+            // { type: "textMessage", text: "J: And you stock the grocery store's vending machine *from* the grocery store?"},
+            // { type: "textMessage", text: "VENDING MACHINE GUY: Yep."},
+            { type: "textMessage", text: "J: Don't you think that's remarkable?"},
+            { type: "textMessage", text: "VENDING MACHINE GUY: Not really."},
+            { who: "vendingMachineGuy", type: "walk",  direction: "down" },
+            { who: "vendingMachineGuy", type: "walk",  direction: "down" },
+            { who: "vendingMachineGuy", type: "walk",  direction: "right" },
+            { who: "vendingMachineGuy", type: "walk",  direction: "down" },
+            { who: "vendingMachineGuy", type: "stand",  direction: "right", time: 1000},
+            { type: "textMessage", text: "VENDING MACHINE GUY: Or, I suppose it might be."},
+            { who: "vendingMachineGuy", type: "walk",  direction: "down" },
+            { who: "vendingMachineGuy", type: "walk",  direction: "right" },
+            { who: "vendingMachineGuy", type: "walk",  direction: "right" },
+            { who: "vendingMachineGuy", type: "walk",  direction: "right" },
+            { who: "vendingMachineGuy", type: "walk",  direction: "down" },
+            { who: "vendingMachineGuy", type: "stand",  direction: "down", time: 1000},
+            { who: "vendingMachineGuy", type: "stand",  direction: "up", time: 1000},
+            { type: "textMessage", text: "VENDING MACHINE GUY: I'm not sure."},
+            { who: "vendingMachineGuy", type: "stand",  direction: "down", time: 1000},
+            { who: "vendingMachineGuy", type: "walk",  direction: "down" },
+            { who: "vendingMachineGuy", type: "walk",  direction: "down" },
+            { who: "vendingMachineGuy", type: "walk",  direction: "down" },
+            { type: "changeMapNoTransition", map: "C18_Bar_pt2"},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C18_Bar_pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+            // { type: "textMessage", text: "this should be chapter 6..."},
+          ]
+        }
+      ]
+    }
+  },
+  C18_Bar_pt2: {
+    id: "C18_Bar_pt2",
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool6: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool7: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
       [utils.asGridCoord(5,10)]: [
         {
           events: [
