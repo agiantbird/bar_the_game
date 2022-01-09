@@ -9,7 +9,7 @@ class GameObject {
     // this.dontUseShadow = config.dontUseShadow || true;
     this.sprite = new Sprite({
       gameObject: this,
-      src: config.src || "/images/characters/people/hero_gray.png",
+      src: config.src || "/images/characters/people/hero_filled.png",
       dontUseShadow: config.dontUseShadow || false,
     });
 
