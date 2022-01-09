@@ -7134,88 +7134,358 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,5)]: [
         {
           events: [
-            { who: "hero", type: "stand",  direction: "left", time: 50 },
-            // { type: "changeMapNoTransition", map: "C19_Bar_pt16"},
+            { who: "hero", type: "stand",  direction: "left", time: 2000 },
+            { type: "textMessage", text: "J: Ok."},
+            { who: "characterL", type: "stand",  direction: "down", time: 1000 },
+            { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+
+            { type: "changeMapNoTransition", map: "C19_Bar_pt16"},
           ]
         }
       ],
     }
   },
-  // C19_Bar_pt16: {
-  //   id: "C19_Bar_pt16",
-  //   lowerSrc: "/images/maps/WaterTasteTestFrame6.png",
-  //   upperSrc: "/images/maps/C19_BarUpperWithWater.png",
-  //   gameObjects: {
-  //     hero: new Person({
-  //       isPlayerControlled: true,
-  //       x: utils.withGrid(5),
-  //       y: utils.withGrid(5),
-  //       direction: "left",
-  //     }),
-  //     characterL: new Person({
-  //       x: utils.withGrid(3),
-  //       y: utils.withGrid(5),
-  //       src: "/images/characters/people/l_sitting.png",
-  //       direction: "left",
-  //       talking: [
-  //         {
-  //           events: [
-  //             { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-  //             { type: "textMessage", text: "I'm inquisitive and cheerful!"},
-  //           ]
-  //         }
-  //       ]
-  //     }),
-  //     characterM: new Person({
-  //       x: utils.withGrid(3),
-  //       y: utils.withGrid(4),
-  //       src: "/images/characters/people/m_sitting.png",
-  //       direction: "right",
-  //       talking: [
-  //         {
-  //           events: [
-  //             { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-  //             { type: "textMessage", text: "I'm kind of grumpy."},
-  //           ]
-  //         }
-  //       ]
-  //     }),
-  //     emptyStool1: new Person({
-  //       x: utils.withGrid(3),
-  //       y: utils.withGrid(6),
-  //       src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
-  //     }),
-  //     emptyStool2: new Person({
-  //       x: utils.withGrid(4),
-  //       y: utils.withGrid(7),
-  //       src: "/images/assets/stool_sprite_sheet.png",
-  //     }),
-  //     emptyStool3: new Person({
-  //       x: utils.withGrid(5),
-  //       y: utils.withGrid(7),
-  //       src: "/images/assets/stool_sprite_sheet.png",
-  //     }),
-  //     emptyStool4: new Person({
-  //       x: utils.withGrid(7),
-  //       y: utils.withGrid(7),
-  //       src: "/images/assets/stool_sprite_sheet.png",
-  //     }),
-  //     emptyStool5: new Person({
-  //       x: utils.withGrid(6),
-  //       y: utils.withGrid(7),
-  //       src: "/images/assets/stool_sprite_sheet.png",
-  //     }),
-  //   },
-  //   cutsceneSpaces: {
-  //     [utils.asGridCoord(5,5)]: [
-  //       {
-  //         events: [
-  //           { who: "hero", type: "stand",  direction: "left", time: 50 },
-  //           { type: "textMessage", text: "We've reached the end of the animation."},
-  //           // { type: "changeMapNoTransition", map: "C19_Bar_pt16"},
-  //         ]
-  //       }
-  //     ],
-  //   }
-  // },
+  C19_Bar_pt16: {
+    id: "C19_Bar_pt16",
+    lowerSrc: "/images/maps/WaterTasteTestFrame7.png",
+    upperSrc: "/images/maps/C19_BarUpperWithWater.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "right",
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        direction: "right",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        direction: "right",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "changeMapNoTransition", map: "C19_Bar_pt17"},
+          ]
+        }
+      ],
+    }
+  },
+  C19_Bar_pt17: {
+    id: "C19_Bar_pt17",
+    lowerSrc: "/images/maps/WaterTasteTestFrame8.png",
+    upperSrc: "/images/maps/C19_BarUpperWithWater.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "left",
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        direction: "right",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        direction: "right",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { who: "characterM", type: "stand",  direction: "down", time: 1000 },
+            { type: "textMessage", text: "M: What does it taste like?"},
+            { type: "textMessage", text: "L: Water."},
+            { type: "textMessage", text: "J: Try the other one."},
+            { type: "changeMapNoTransition", map: "C19_Bar_pt18"},
+          ]
+        }
+      ],
+    }
+  },
+  C19_Bar_pt18: {
+    id: "C19_Bar_pt18",
+    lowerSrc: "/images/maps/WaterTasteTestFrame9.png",
+    upperSrc: "/images/maps/C19_BarUpperWithWater.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "right",
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        direction: "right",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        direction: "right",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "changeMapNoTransition", map: "C19_Bar_pt19"},
+          ]
+        }
+      ],
+    }
+  },
+  C19_Bar_pt19: {
+    id: "C19_Bar_pt19",
+    lowerSrc: "/images/maps/WaterTasteTestFrame10.png",
+    upperSrc: "/images/maps/C19_BarUpperWithWater.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "right",
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        direction: "right",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        direction: "right",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { who: "characterM", type: "stand",  direction: "down", time: 1000 },
+            { type: "textMessage", text: "M: What does that one taste like?"},
+            { type: "textMessage", text: "L: Water."},
+            { type: "textMessage", text: "M: They taste the same?"},
+            { type: "textMessage", text: "L: No."},
+            // { type: "changeMapNoTransition", map: "C19_Bar_pt17"},
+          ]
+        }
+      ],
+    }
+  },
 }
