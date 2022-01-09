@@ -5605,6 +5605,434 @@ window.OverworldMaps = {
             { who: "characterL", type: "stand",  direction: "down", time: 1000 },
             { who: "characterL", type: "stand",  direction: "right", time: 1000 },
             { type: "textMessage", text: "L: Sure."},
+            { who: "characterL", type: "walk",  direction: "down" },
+            { who: "characterL", type: "walk",  direction: "right" },
+            { type: "changeMapNoTransition", map: "C19_Bar_pt2"},
+            // { type: "textMessage", text: "We're in chapter 19"},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: Hey, I got two waters."},
+            // { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            // { type: "textMessage", text: "J: Extra thirsty today?"},
+            // { type: "textMessage", text: "L: No."},
+            // { type: "textMessage", text: "J: Then why the two waters?"},
+            // { type: "textMessage", text: "L: I didn't mean to get two."},
+            // { who: "characterM", type: "stand",  direction: "left", time: 1000 },
+            // { type: "textMessage", text: "M: What does that mean?"},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "L: I paid for one water and two came out."},
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: Can you put this water back in for me, J.?"},
+            // { type: "textMessage", text: "J: I can't open the vending machine."},
+            // { type: "textMessage", text: "L: But I didn't pay for this......... or maybe I didn't pay for *this* ......."},
+            // { type: "textMessage", text: "J: It's fine."},
+            // { type: "textMessage", text: "L: Hm,"},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "M: If you're really upset about it, just put another water's worth of change in the machine."},
+            // { type: "textMessage", text: "L: !!!"},
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: M.! You're a genius."},
+            // { type: "textMessage", text: "M: Hmm, ha, well, you know, mm, hmm..."},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "L: Oh no."},
+            // { type: "textMessage", text: "J: What?"},
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: It wants me to pick something."},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { type: "changeMapNoTransition", map: "C14_Bar_pt2"},
+            // { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C06_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+            // { type: "textMessage", text: "this should be chapter 6..."},
+          ]
+        }
+      ]
+    }
+  },
+  C19_Bar_pt2: {
+    id: "C19_Bar_pt2",
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "left",
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        direction: "right",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        direction: "right",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "changeMapNoTransition", map: "C19_Bar_pt3"},
+            // { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            // { type: "textMessage", text: "J: You know I can give you water at the bar. It's free."},
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: I like getting it from the machine. I don't know if I'd drink it otherwise."},
+            // { who: "characterM", type: "stand",  direction: "down", time: 1000 },
+            // { who: "characterM", type: "stand",  direction: "left", time: 1000 },
+            // { type: "textMessage", text: "M: Why do you like getting it from the machine?"},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "L: I don't know. It's a whole thing when you get it from the machine."},
+            // { type: "textMessage", text: "M: A ritual of sorts?"},
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: I guess."},
+            // { type: "textMessage", text: "J: Does it taste different?"},
+            // { type: "textMessage", text: "L: I don't know."},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "L: It says here that it's purified. Is the bar's water purified?"},
+            // { type: "textMessage", text: "J: It's filtered."},
+            // { who: "characterM", type: "stand",  direction: "down", time: 1000 },
+            // { type: "textMessage", text: "M: That's not the same."},
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: How is it different?"},
+            // { who: "characterM", type: "stand",  direction: "left", time: 1000 },
+            // { type: "textMessage", text: "M: I don't know."},
+            // { who: "characterM", type: "stand",  direction: "down", time: 500 },
+            // { who: "characterM", type: "stand",  direction: "right", time: 500 },
+            // { type: "textMessage", text: "But it's not the same."},
+            // { type: "textMessage", text: "J: Should we do a taste test?"},
+            // { who: "characterL", type: "stand",  direction: "down", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: Sure."},
+            // { who: "characterL", type: "walk",  direction: "down" },
+            // { who: "characterL", type: "walk",  direction: "right" },
+            // { type: "changeMapNoTransition", map: "C19_Bar_pt2"},
+            // { type: "textMessage", text: "We're in chapter 19"},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: Hey, I got two waters."},
+            // { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            // { type: "textMessage", text: "J: Extra thirsty today?"},
+            // { type: "textMessage", text: "L: No."},
+            // { type: "textMessage", text: "J: Then why the two waters?"},
+            // { type: "textMessage", text: "L: I didn't mean to get two."},
+            // { who: "characterM", type: "stand",  direction: "left", time: 1000 },
+            // { type: "textMessage", text: "M: What does that mean?"},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "L: I paid for one water and two came out."},
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: Can you put this water back in for me, J.?"},
+            // { type: "textMessage", text: "J: I can't open the vending machine."},
+            // { type: "textMessage", text: "L: But I didn't pay for this......... or maybe I didn't pay for *this* ......."},
+            // { type: "textMessage", text: "J: It's fine."},
+            // { type: "textMessage", text: "L: Hm,"},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "M: If you're really upset about it, just put another water's worth of change in the machine."},
+            // { type: "textMessage", text: "L: !!!"},
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: M.! You're a genius."},
+            // { type: "textMessage", text: "M: Hmm, ha, well, you know, mm, hmm..."},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "L: Oh no."},
+            // { type: "textMessage", text: "J: What?"},
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: It wants me to pick something."},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { type: "changeMapNoTransition", map: "C14_Bar_pt2"},
+            // { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C06_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+            // { type: "textMessage", text: "this should be chapter 6..."},
+          ]
+        }
+      ]
+    }
+  },
+  C19_Bar_pt3: {
+    id: "C19_Bar_pt3",
+    lowerSrc: "/images/maps/C19_BarLowerWithWater.png",
+    upperSrc: "/images/maps/C19_BarUpperWithWater.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "left",
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        direction: "right",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        direction: "right",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+
+            // { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            // { type: "textMessage", text: "J: You know I can give you water at the bar. It's free."},
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: I like getting it from the machine. I don't know if I'd drink it otherwise."},
+            // { who: "characterM", type: "stand",  direction: "down", time: 1000 },
+            // { who: "characterM", type: "stand",  direction: "left", time: 1000 },
+            // { type: "textMessage", text: "M: Why do you like getting it from the machine?"},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "L: I don't know. It's a whole thing when you get it from the machine."},
+            // { type: "textMessage", text: "M: A ritual of sorts?"},
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: I guess."},
+            // { type: "textMessage", text: "J: Does it taste different?"},
+            // { type: "textMessage", text: "L: I don't know."},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { type: "textMessage", text: "L: It says here that it's purified. Is the bar's water purified?"},
+            // { type: "textMessage", text: "J: It's filtered."},
+            // { who: "characterM", type: "stand",  direction: "down", time: 1000 },
+            // { type: "textMessage", text: "M: That's not the same."},
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: How is it different?"},
+            // { who: "characterM", type: "stand",  direction: "left", time: 1000 },
+            // { type: "textMessage", text: "M: I don't know."},
+            // { who: "characterM", type: "stand",  direction: "down", time: 500 },
+            // { who: "characterM", type: "stand",  direction: "right", time: 500 },
+            // { type: "textMessage", text: "But it's not the same."},
+            // { type: "textMessage", text: "J: Should we do a taste test?"},
+            // { who: "characterL", type: "stand",  direction: "down", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: Sure."},
+            // { who: "characterL", type: "walk",  direction: "down" },
+            // { who: "characterL", type: "walk",  direction: "right" },
+            // { type: "changeMapNoTransition", map: "C19_Bar_pt2"},
             // { type: "textMessage", text: "We're in chapter 19"},
             // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
             // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
