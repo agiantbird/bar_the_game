@@ -5477,10 +5477,7 @@ window.OverworldMaps = {
         x: utils.withGrid(3),
         y: utils.withGrid(4),
         src: "/images/characters/people/m_sitting.png",
-        behaviorLoop: [
-          { type: "stand",  direction: "right", time: 1800 },
-          { type: "stand",  direction: "down", time: 4000 }
-        ],
+        direction: "right",
         talking: [
           {
             events: [
@@ -5578,7 +5575,37 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,5)]: [
         {
           events: [
-            { type: "textMessage", text: "We're in chapter 19"},
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "J: You know I can give you water at the bar. It's free."},
+            { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            { type: "textMessage", text: "L: I like getting it from the machine. I don't know if I'd drink it otherwise."},
+            { who: "characterM", type: "stand",  direction: "down", time: 1000 },
+            { who: "characterM", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "M: Why do you like getting it from the machine?"},
+            { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            { type: "textMessage", text: "L: I don't know. It's a whole thing when you get it from the machine."},
+            { type: "textMessage", text: "M: A ritual of sorts?"},
+            { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            { type: "textMessage", text: "L: I guess."},
+            { type: "textMessage", text: "J: Does it taste different?"},
+            { type: "textMessage", text: "L: I don't know."},
+            { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            { type: "textMessage", text: "L: It says here that it's purified. Is the bar's water purified?"},
+            { type: "textMessage", text: "J: It's filtered."},
+            { who: "characterM", type: "stand",  direction: "down", time: 1000 },
+            { type: "textMessage", text: "M: That's not the same."},
+            { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            { type: "textMessage", text: "L: How is it different?"},
+            { who: "characterM", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "M: I don't know."},
+            { who: "characterM", type: "stand",  direction: "down", time: 500 },
+            { who: "characterM", type: "stand",  direction: "right", time: 500 },
+            { type: "textMessage", text: "But it's not the same."},
+            { type: "textMessage", text: "J: Should we do a taste test?"},
+            { who: "characterL", type: "stand",  direction: "down", time: 1000 },
+            { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            { type: "textMessage", text: "L: Sure."},
+            // { type: "textMessage", text: "We're in chapter 19"},
             // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
             // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
             // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
