@@ -8110,7 +8110,9 @@ window.OverworldMaps = {
   C22_Bar_pt1: {
     id: "C22_Bar_pt1",
     lowerSrc: "/images/maps/BarLowerNoDoor.png",
+    // lowerSrc: "/images/maps/moveable_background_test.png",
     upperSrc: "/images/maps/C01_BarUpper.png",
+    // upperSrc: "/images/maps/transparent_upper_full_viewfinder.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -8198,6 +8200,81 @@ window.OverworldMaps = {
       [utils.asGridCoord(11,7)] : true,
       [utils.asGridCoord(11,8)] : true,
       [utils.asGridCoord(11,9)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C22_Bar_pt2",
+              x: utils.withGrid(11),
+              y: utils.withGrid(6),
+              direction: "right"
+            },
+            // { type: "textMessage", text: "this should be chapter 6..."},
+          ]
+        }
+      ]
+    }
+  },
+  C22_Bar_pt2: {
+    id: "C22_Bar_pt2",
+    // lowerSrc: "/images/maps/BarLowerNoDoor.png",
+    lowerSrc: "/images/maps/moveable_background_test.png",
+    // upperSrc: "/images/maps/C01_BarUpper.png",
+    upperSrc: "/images/maps/rooftopupper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        direction: "right",
+        dontUseShadow: true,
+      }),
+      characterN: new Person({
+        x: utils.withGrid(31),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/hero_gray.png",
+        direction: "right",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 1000 },
+          { type: "walk", direction: "right" },
+          { type: "walk", direction: "right" },
+          { type: "stand",  direction: "up", time: 1000 },
+          { type: "walk", direction: "right" },
+          { type: "stand",  direction: "left", time: 1200 },
+          { type: "walk", direction: "left" },
+          { type: "walk", direction: "left" },
+          { type: "walk", direction: "left" },
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "...lots to do.", faceHero: "characterN" },
+            ]
+          }
+        ]
+      }),
+    },
+    walls: {
+    //   // top of roof
+    //   [utils.asGridCoord(19,7)] : true,
+    //   [utils.asGridCoord(20,7)] : true,
+    //   [utils.asGridCoord(21,7)] : true,
+    //   [utils.asGridCoord(22,7)] : true,
+    //   [utils.asGridCoord(23,7)] : true,
+    //   [utils.asGridCoord(24,7)] : true,
+    //   [utils.asGridCoord(25,7)] : true,
+    //   [utils.asGridCoord(26,7)] : true,
+    //   [utils.asGridCoord(27,7)] : true,
+    //   [utils.asGridCoord(28,7)] : true,
+    //   [utils.asGridCoord(29,7)] : true,
+    //   [utils.asGridCoord(30,7)] : true,
+      // left 'wall'
+      [utils.asGridCoord(10,6)] : true,
+    //   // right 'wall'
+      [utils.asGridCoord(36,6)] : true,
     },
     cutsceneSpaces: {
       [utils.asGridCoord(5,10)]: [
