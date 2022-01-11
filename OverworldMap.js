@@ -8094,14 +8094,12 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            // { type: "changeMap", map: "C06_Bar_Pt1" },
             { type: "changeMap",
               map: "C12_Bar_pt1",
               x: utils.withGrid(5),
               y: utils.withGrid(5),
               direction: "down"
             },
-            // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
       ]
@@ -8233,6 +8231,143 @@ window.OverworldMaps = {
         y: utils.withGrid(6),
         src: "/images/characters/people/hero_gray.png",
         direction: "right",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 1000 },
+        //   { type: "walk", direction: "right" },
+        //   { type: "walk", direction: "right" },
+        //   { type: "stand",  direction: "up", time: 1000 },
+        //   { type: "walk", direction: "right" },
+        //   { type: "stand",  direction: "left", time: 1200 },
+        //   { type: "walk", direction: "left" },
+        //   { type: "walk", direction: "left" },
+        //   { type: "walk", direction: "left" },
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "...lots to do.", faceHero: "characterN" },
+            ]
+          }
+        ]
+      }),
+    },
+    walls: {
+      // top of roof
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(12,7)] : true,
+      [utils.asGridCoord(13,7)] : true,
+      [utils.asGridCoord(14,7)] : true,
+      [utils.asGridCoord(15,7)] : true,
+      [utils.asGridCoord(16,7)] : true,
+      [utils.asGridCoord(17,7)] : true,
+      [utils.asGridCoord(18,7)] : true,
+      [utils.asGridCoord(19,7)] : true,
+      [utils.asGridCoord(20,7)] : true,
+      [utils.asGridCoord(21,7)] : true,
+      [utils.asGridCoord(22,7)] : true,
+      [utils.asGridCoord(23,7)] : true,
+      [utils.asGridCoord(24,7)] : true,
+      [utils.asGridCoord(25,7)] : true,
+      [utils.asGridCoord(26,7)] : true,
+      [utils.asGridCoord(27,7)] : true,
+      [utils.asGridCoord(28,7)] : true,
+      [utils.asGridCoord(29,7)] : true,
+      [utils.asGridCoord(30,7)] : true,
+      [utils.asGridCoord(31,7)] : true,
+      [utils.asGridCoord(32,7)] : true,
+      [utils.asGridCoord(33,7)] : true,
+      [utils.asGridCoord(34,7)] : true,
+      [utils.asGridCoord(35,7)] : true,
+      // sky ('top' wall)
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(12,5)] : true,
+      [utils.asGridCoord(13,5)] : true,
+      [utils.asGridCoord(14,5)] : true,
+      [utils.asGridCoord(15,5)] : true,
+      [utils.asGridCoord(16,5)] : true,
+      [utils.asGridCoord(17,5)] : true,
+      [utils.asGridCoord(18,5)] : true,
+      [utils.asGridCoord(19,5)] : true,
+      [utils.asGridCoord(20,5)] : true,
+      [utils.asGridCoord(21,5)] : true,
+      [utils.asGridCoord(22,5)] : true,
+      [utils.asGridCoord(23,5)] : true,
+      [utils.asGridCoord(24,5)] : true,
+      [utils.asGridCoord(25,5)] : true,
+      [utils.asGridCoord(26,5)] : true,
+      [utils.asGridCoord(27,5)] : true,
+      [utils.asGridCoord(28,5)] : true,
+      [utils.asGridCoord(29,5)] : true,
+      [utils.asGridCoord(30,5)] : true,
+      [utils.asGridCoord(31,5)] : true,
+      [utils.asGridCoord(32,5)] : true,
+      [utils.asGridCoord(33,5)] : true,
+      [utils.asGridCoord(34,5)] : true,
+      [utils.asGridCoord(35,5)] : true,
+      // left 'wall'
+      [utils.asGridCoord(10,6)] : true,
+      // right 'wall'
+      [utils.asGridCoord(35,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(21, 6)]: [
+        {
+          events: [
+            { who: "hero", type: "walk", direction: "right" },
+            { who: "hero", type: "walk", direction: "right" },
+            { who: "hero", type: "walk", direction: "right" },
+            { who: "hero", type: "walk", direction: "right" },
+            { who: "hero", type: "walk", direction: "right" },
+            { who: "hero", type: "walk", direction: "right" },
+            { who: "hero", type: "walk", direction: "right" },
+            { who: "hero", type: "walk", direction: "right" },
+            { type: "textMessage", text: "J: I thought I heard you up here."},
+            { who: "characterN", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "N: Yes."},
+            // { type: "textMessage", text: "J: How are today's readings?"},
+            // { type: "textMessage", text: "N: Unremarkable. Humidity is at forty-three percent."},
+            // { type: "textMessage", text: "J: Ah."},
+            // { type: "textMessage", text: "N: Thanks for letting me put this up here, by the way."},
+            // { type: "textMessage", text: "J: Sure, it's just roof space."},
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            { type: "textMessage", text: "It's nice to have an excuse to come up here, anyway."},
+            { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { type: "textMessage", text: "N: Mm."},
+            { who: "hero", type: "stand",  direction: "down", time: 1000 },
+            { type: "textMessage", text: "J: Do you have any other stations set up?"},
+            // { type: "textMessage", text: "N: Two others. One on top of the grocery store and one on my own roof."},
+            // { type: "textMessage", text: "J: And you check on each regularly?"},
+            // { type: "textMessage", text: "N: Consistently."},
+            { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { type: "textMessage", text: "J: Find anything?"},
+            // { type: "textMessage", text: "N: Not yet."},
+            // { type: "textMessage", text: "J: Well if you ever need a break, there's a bar nearby. First drink is on the house."},
+            { who: "characterN", type: "stand",  direction: "up", time: 1000 },
+            { who: "characterN", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "N: Not yet."},
+            { type: "changeMapNoTransition", map: "C22_Bar_pt3"},
+          ]
+        }
+      ],
+    }
+  },
+  C22_Bar_pt3: {
+    id: "C22_Bar_pt3",
+    lowerSrc: "/images/maps/moveable_background_test.png",
+    upperSrc: "/images/maps/rooftopupper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(29),
+        y: utils.withGrid(6),
+        direction: "right",
+        dontUseShadow: true,
+      }),
+      characterN: new Person({
+        x: utils.withGrid(31),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/hero_gray.png",
+        direction: "right",
         behaviorLoop: [
           { type: "stand",  direction: "right", time: 1000 },
           { type: "walk", direction: "right" },
@@ -8312,58 +8447,15 @@ window.OverworldMaps = {
       [utils.asGridCoord(35,6)] : true,
     },
     cutsceneSpaces: {
-      [utils.asGridCoord(21, 6)]: [
+      [utils.asGridCoord(11,6)]: [
         {
           events: [
-            // { type: "textMessage", text: "testeroonie.."},
-            // { type: "textMessage", text: "Customer: Ok. I'll be back to checkout soon."},
-            // { who: "grocer", type: "stand",  direction: "down", time: 1000 },
-            { who: "hero", type: "walk", direction: "right" },
-            { who: "hero", type: "walk", direction: "right" },
-            { who: "hero", type: "walk", direction: "right" },
-            { who: "hero", type: "walk", direction: "right" },
-            { who: "hero", type: "walk", direction: "right" },
-            { who: "hero", type: "walk", direction: "right" },
-            { who: "hero", type: "walk", direction: "right" },
-            { who: "hero", type: "walk", direction: "right" },
-            { type: "textMessage", text: "J: I thought I heard you up here."},
-            { who: "characterN", type: "stand",  direction: "left", time: 1000 },
-            { type: "textMessage", text: "N: Yes."},
-            { type: "textMessage", text: "J: How are today's readings?"},
-            { type: "textMessage", text: "N: Unremarkable. Humidity is at forty-three percent."},
-            { type: "textMessage", text: "J: Ah."},
-            { type: "textMessage", text: "N: Thanks for letting me put this up here, by the way."},
-            { type: "textMessage", text: "J: Sure, it's just roof space."},
-            { who: "hero", type: "stand",  direction: "up", time: 1000 },
-            { type: "textMessage", text: "It's nice to have an excuse to come up here, anyway."},
-            { who: "hero", type: "stand",  direction: "right", time: 1000 },
-            { type: "textMessage", text: "N: Mm."},
-            { who: "hero", type: "stand",  direction: "down", time: 1000 },
-            { type: "textMessage", text: "J: Do you have any other stations set up?"},
-            { type: "textMessage", text: "N: Two others. One on top of the grocery store and one on my own roof."},
-            { type: "textMessage", text: "J: And you check on each regularly?"},
-            { type: "textMessage", text: "N: Consistently."},
-            { who: "hero", type: "stand",  direction: "right", time: 1000 },
-            { type: "textMessage", text: "J: Find anything?"},
-            { type: "textMessage", text: "N: Not yet."},
-            { type: "textMessage", text: "J: Well if you ever need a break, there's a bar nearby. First drink is on the house."},
-            { who: "characterN", type: "stand",  direction: "up", time: 1000 },
-            { who: "characterN", type: "stand",  direction: "left", time: 1000 },
-            { type: "textMessage", text: "N: Not yet."},
-          ]
-        }
-      ],
-      [utils.asGridCoord(5,10)]: [
-        {
-          events: [
-            // { type: "changeMap", map: "C06_Bar_Pt1" },
             { type: "changeMap",
-              map: "C17_Bar_pt1",
+              map: "C16_Bar_pt1",
               x: utils.withGrid(5),
               y: utils.withGrid(5),
               direction: "down"
             },
-            // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
       ]
