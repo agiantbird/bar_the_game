@@ -8765,7 +8765,7 @@ window.OverworldMaps = {
   C24_Bar_Pt1: {
     id: "C24_Bar_Pt1",
     // lowerSrc: "/images/maps/parking_lot_wip.png",
-    lowerSrc: "/images/maps/testtest.png",
+    lowerSrc: "/images/maps/parking_lot_lower_bread_animation_5.png",
     // upperSrc: "/images/maps/parkinglot_upper.png",
     upperSrc: "/images/maps/uppertesttest.png",
     gameObjects: {
@@ -8773,6 +8773,7 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(11),
         y: utils.withGrid(11),
+        src: "/images/characters/people/rat.png",
       }),
       cameraOverrider: new Person({
         x: utils.withGrid(11),
