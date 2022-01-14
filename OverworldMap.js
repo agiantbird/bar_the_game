@@ -8635,10 +8635,6 @@ window.OverworldMaps = {
         y: utils.withGrid(5),
         src: "/images/characters/people/l_sitting.png",
         direction: "right",
-        // behaviorLoop: [
-        //   { type: "stand",  direction: "right", time: 300 },
-        //   { type: "stand",  direction: "down", time: 5000 }
-        // ],
         talking: [
           {
             events: [
@@ -8653,10 +8649,6 @@ window.OverworldMaps = {
         y: utils.withGrid(4),
         src: "/images/characters/people/m_sitting.png",
         direction: "right",
-        // behaviorLoop: [
-        //   { type: "stand",  direction: "right", time: 1800 },
-        //   { type: "stand",  direction: "down", time: 4000 }
-        // ],
         talking: [
           {
             events: [
@@ -8751,7 +8743,7 @@ window.OverworldMaps = {
           events: [
             // { type: "changeMap", map: "C06_Bar_Pt1" },
             { type: "changeMap",
-              map: "C24_Bar_Pt1",
+              map: "C24_Bar_Parking_Lot_Pt1",
               x: utils.withGrid(13),
               y: utils.withGrid(8),
               direction: "up"
@@ -8762,8 +8754,8 @@ window.OverworldMaps = {
       ]
     }
   },
-  C24_Bar_Pt1: {
-    id: "C24_Bar_Pt1",
+  C24_Bar_Parking_Lot_Pt1: {
+    id: "C24_Bar_Parking_Lot_Pt1",
     // lowerSrc: "/images/maps/parking_lot_wip.png",
     lowerSrc: "/images/maps/parking_lot_lower_bread_animation_5.png",
     // upperSrc: "/images/maps/parkinglot_upper.png",
@@ -9104,7 +9096,7 @@ window.OverworldMaps = {
           events: [
             // { type: "changeMap", map: "C06_Bar_Pt1" },
             { type: "changeMap",
-              map: "C06_Bar_Pt1",
+              map: "C26_Bar_pt1",
               x: utils.withGrid(5),
               y: utils.withGrid(5),
               direction: "down"
@@ -9112,6 +9104,437 @@ window.OverworldMaps = {
             // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
+      ]
+    }
+  },
+  C26_Bar_pt1: {
+    id: "C26_Bar_pt1",
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "left",
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        direction: "right",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 1800 },
+        //   { type: "stand",  direction: "down", time: 4000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      emptyStool0: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            { who: "hero", type: "stand", direction: "down", time: 1000},
+            { type: "textMessage", text: ". . . ."},
+            { type: "textMessage", text: ". . . ."},
+            { type: "textMessage", text: ". . . ."},
+            { type: "textMessage", text: ". . . ."},
+            { who: "hero", type: "stand", direction: "left", time: 1000},
+            { type: "textMessage", text: "J: You know, I don't really think about K. anymore."},
+            { type: "textMessage", text: ". . . ."},
+            { type: "textMessage", text: ". . . ."},
+            { type: "textMessage", text: ". . . ."},
+            { type: "changeMap",
+              map: "C27_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "left"
+            },
+
+            // { type: "changeMapNoTransition", map: "C23_Bar_pt2"},
+          ]
+        }
+      ],
+    }
+  },
+  C27_Bar_Pt1: {
+    id: "C27_Bar_Pt1",
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "left",
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        direction: "right",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 1800 },
+        //   { type: "stand",  direction: "down", time: 4000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      emptyStool0: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            { type: "textMessage", text: ". . . ."},
+            { type: "textMessage", text: ". . . ."},
+            { type: "textMessage", text: ". . . ."},
+            { type: "textMessage", text: ". . . ."},
+            { who: "characterM", type: "stand", direction: "down", time: 1000},
+            { type: "textMessage", text: "M: Me neither."},
+            { type: "textMessage", text: ". . . ."},
+            { type: "textMessage", text: ". . . ."},
+            { type: "textMessage", text: ". . . ."},
+            { type: "changeMapNoTransition", map: "C27_Bar_Pt2"},
+            // { type: "changeMapNoTransition", map: "C23_Bar_pt2"},
+          ]
+        }
+      ],
+    }
+  },
+  C27_Bar_Pt2: {
+    id: "C27_Bar_Pt2",
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "left",
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        direction: "right",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 1800 },
+        //   { type: "stand",  direction: "down", time: 4000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      emptyStool0: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            { type: "changeMap",
+              map: "C28_Bar",
+              x: utils.withGrid(11),
+              y: utils.withGrid(6),
+              direction: "down"
+            },
+          ]
+        }
+      ],
+    }
+  },
+  C28_Bar: {
+    id: "C28_Bar",
+    lowerSrc: "/images/maps/BarFrontLowerShadow.png",
+    upperSrc: "/images/maps/BarFrontLowerShadow.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 4000 },
+            { type: "textMessage", text: "Notice: The bar is closed as its bathroom has disappeared."},
+            { type: "textMessage", text: "We apologize for the inconvenience."},
+            { type: "changeMap",
+              map: "C14_Bar_pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+          ],
+        },
       ]
     }
   },
