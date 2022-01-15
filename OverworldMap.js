@@ -9510,8 +9510,8 @@ window.OverworldMaps = {
   },
   C28_Bar: {
     id: "C28_Bar",
-    lowerSrc: "/images/maps/BarFrontLowerShadow.png",
-    upperSrc: "/images/maps/BarFrontLowerShadow.png",
+    lowerSrc: "/images/maps/BarFrontLowerShadowNoDoor.png",
+    upperSrc: "/images/maps/BarFrontLowerShadowNoDoor.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -9525,7 +9525,7 @@ window.OverworldMaps = {
         {
           events: [
             { who: "hero", type: "stand",  direction: "right", time: 4000 },
-            { type: "textMessage", text: "Notice: The bar is closed as its bathroom has disappeared."},
+            { type: "textMessage", text: "Notice: The bar is closed as its door has disappeared."},
             { type: "textMessage", text: "We apologize for the inconvenience."},
             { type: "changeMap",
               map: "C14_Bar_pt1",
