@@ -9771,15 +9771,13 @@ window.OverworldMaps = {
   },
   C30_Parking_lot_pt1: {
     id: "C30_Parking_lot_pt1",
-    // lowerSrc: "/images/maps/parking_lot_wip.png",
     lowerSrc: "/images/maps/testtest.png",
-    // upperSrc: "/images/maps/parkinglot_upper.png",
     upperSrc: "/images/maps/uppertesttest.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
         x: utils.withGrid(11),
-        y: utils.withGrid(11),
+        y: utils.withGrid(7),
       }),
       cameraOverrider: new Person({
         x: utils.withGrid(11),
@@ -9789,113 +9787,46 @@ window.OverworldMaps = {
         dontUseShadow: true,
       }),
     },
-    walls: {
-      // edges of level
-      // [utils.asGridCoord(0,3)] : true,
-      // [utils.asGridCoord(0,4)] : true,
-      // [utils.asGridCoord(0,5)] : true,
-      // [utils.asGridCoord(0,6)] : true,
-      // [utils.asGridCoord(0,7)] : true,
-      // [utils.asGridCoord(0,8)] : true,
-      // [utils.asGridCoord(0,9)] : true,
-      // [utils.asGridCoord(1,10)] : true,
-      // [utils.asGridCoord(2,10)] : true,
-      // [utils.asGridCoord(3,10)] : true,
-      // [utils.asGridCoord(4,10)] : true,
-      // [utils.asGridCoord(6,10)] : true,
-      // [utils.asGridCoord(7,10)] : true,
-      // [utils.asGridCoord(8,10)] : true,
-      // [utils.asGridCoord(9,10)] : true,
-      // [utils.asGridCoord(10,10)] : true,
-      // [utils.asGridCoord(11,9)] : true,
-      // [utils.asGridCoord(11,8)] : true,
-      // [utils.asGridCoord(11,7)] : true,
-      // [utils.asGridCoord(11,6)] : true,
-      // [utils.asGridCoord(11,5)] : true,
-      // [utils.asGridCoord(11,4)] : true,
-      // // back wall
-      // [utils.asGridCoord(1,3)] : true,
-      // [utils.asGridCoord(2,3)] : true,
-      // [utils.asGridCoord(3,3)] : true,
-      // [utils.asGridCoord(4,3)] : true,
-      // [utils.asGridCoord(5,3)] : true,
-      // //     door is at 6, 3
-      // [utils.asGridCoord(7,3)] : true,
-      // [utils.asGridCoord(8,3)] : true,
-      // [utils.asGridCoord(9,3)] : true,
-      // [utils.asGridCoord(10,3)] : true,
-
-      // // bar
-      // [utils.asGridCoord(4,4)] : true,
-      // [utils.asGridCoord(4,5)] : true,
-      // [utils.asGridCoord(4,6)] : true,
-      // [utils.asGridCoord(5,6)] : true,
-      // [utils.asGridCoord(6,6)] : true,
-      // [utils.asGridCoord(7,6)] : true,
-      // [utils.asGridCoord(8,6)] : true,
-    },
     cutsceneSpaces: {
-      [utils.asGridCoord(11,11)]: [
+      [utils.asGridCoord(11,7)]: [
         {
           events: [
-            // { who: "hero", type: "stand",  direction: "up", time: 1000 },
-            // { type: "textMessage", text: "test test" },
-            // { who: "hero", type: "walk",  direction: "up" },
-            // { who: "hero", type: "walk",  direction: "up" },
-            // { who: "hero", type: "walk",  direction: "up" },
-            // { who: "hero", type: "walk",  direction: "up" },
-            // { who: "hero", type: "stand",  direction: "up", time: 1000 },
-            // { who: "hero", type: "stand",  direction: "left", time: 1000 },
-            // { who: "hero", type: "stand",  direction: "right", time: 1000 },
-            // { who: "hero", type: "stand",  direction: "up", time: 1000 },
-            // { who: "hero", type: "walk",  direction: "left" },
-            // { who: "hero", type: "walk",  direction: "right" },
-            // { who: "hero", type: "walk",  direction: "right" },
-            // { who: "hero", type: "walk",  direction: "right" },
-            // { who: "hero", type: "walk",  direction: "right" },
-            // { who: "hero", type: "walk",  direction: "left" },
-            // { who: "hero", type: "walk",  direction: "left" },
-            // { who: "hero", type: "walk",  direction: "up" },
-            // { who: "hero", type: "walk",  direction: "up" },
-            // { who: "hero", type: "stand",  direction: "down", time: 1000 },
-            // 11, 7
-            // { type: "textMessage", text: "test test" },
-            // { type: "textMessage", text: "M: Different in a way that seems more clean or less clean?" },
-            // { type: "textMessage", text: "L: I don't know." },
-            // { type: "textMessage", text: "It's too different to tell." },
-            // {type: "changeMapNoTransition", map: "C12_Bar_Pt2"},
-
-
-            // { type: "textMessage", text: "We're in part 3" },
-            // { who: "characterM", type: "stand",  direction: "down", time: 1000 },
-            // { who: "characterM", type: "walk",  direction: "down" },
-            // { who: "characterM", type: "walk",  direction: "down" },
-            // { who: "characterM", type: "walk",  direction: "down" },
-            // { who: "characterM", type: "walk",  direction: "down" },
-            // { who: "characterM", type: "walk",  direction: "down" },
-            // { who: "characterM", type: "walk",  direction: "right" },
-            // { who: "characterM", type: "stand",  direction: "right", time: 2000 },
-            // { who: "characterM", type: "stand",  direction: "down", time: 2000 },
-            // {type: "changeMapNoTransition", map: "C12_Bar_Pt1"}
+            { who: "hero", type: "stand",  direction: "up", time: 3000 },
+            { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { type: "changeMapNoTransition", map: "C30_Parking_lot_pt2" },
           ],
         },
       ],
-      // [utils.asGridCoord(11,10)]: [
-      //   {
-      //     events: [
-      //       // { type: "changeMap", map: "C07_Bar_Pt1" },
-      //       // Link to next map (not chapter 7)
-      //       { type: "changeMap",
-      //         map: "C07_Bar_Pt1",
-      //         x: utils.withGrid(12),
-      //         y: utils.withGrid(6),
-      //         direction: "down"
-      //       },
-      //       // { type: "textMessage", text: "this should be chapter 6..."},
-      //     ]
-      //   }
-      // ]
     }
-    // overrideCheckForFootstepCutscene: false,
+  },
+  C30_Parking_lot_pt2: {
+    id: "C30_Parking_lot_pt2",
+    lowerSrc: "/images/maps/parking_lot_lower_bread_animation_1.png",
+    upperSrc: "/images/maps/uppertesttest.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(7),
+        direction: "right",
+      }),
+      cameraOverrider: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,7)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            // { type: "changeMapNoTransition", map: "C30_Parking_lot_pt2" },
+          ],
+        },
+      ],
+    }
   },
 }
