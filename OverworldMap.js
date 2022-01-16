@@ -9823,6 +9823,18 @@ window.OverworldMaps = {
         {
           events: [
             { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { type: "textMessage", text: ". . . . . . . . *rustle* . . . . . *rustle* . . . . ."},
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            { type: "textMessage", text: "??"},
+            { who: "hero", type: "walk",  direction: "up" },
+            { who: "hero", type: "walk",  direction: "right" },
+            { who: "hero", type: "walk",  direction: "right" },
+            { who: "hero", type: "walk",  direction: "up" },
+            { who: "hero", type: "walk",  direction: "up" },
+            { who: "hero", type: "walk",  direction: "up" },
+            { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { type: "textMessage", text: "!!"},
+
             // { type: "changeMapNoTransition", map: "C30_Parking_lot_pt2" },
           ],
         },
