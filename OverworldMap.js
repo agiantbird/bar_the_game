@@ -7599,7 +7599,7 @@ window.OverworldMaps = {
             { type: "textMessage", text: "Customer: So everything is just *here* then, zero functioning as one?"},
             { type: "textMessage", text: "Grocer: I guess so."},
             { type: "textMessage", text: "Customer: What if you need to stock more things?"},
-            { type: "textMessage", text: "Grocer: It's quite long"},
+            { type: "textMessage", text: "Grocer: It's quite long."},
             { who: "hero", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "Customer: Is it full?"},
             { type: "textMessage", text: "Grocer: Not yet."},
@@ -9894,7 +9894,7 @@ window.OverworldMaps = {
       }),
       characterN: new Person({
         x: utils.withGrid(6),
-        y: utils.withGrid(1),
+        y: utils.withGrid(2),
         src: "/images/characters/people/characterNStanding.png",
         direction: "down",
         // behaviorLoop: [
@@ -9997,30 +9997,418 @@ window.OverworldMaps = {
             { who: "characterN", type: "walk", direction: "down"},
             { who: "characterN", type: "walk", direction: "down"},
             { who: "characterN", type: "walk", direction: "down"},
-            { type: "textMessage", text: "N: WAZZZZUPPPPPPP"},
-          //   { type: "textMessage", text: "L: I don't remember."},
-          //   { type: "textMessage", text: "J: How do you know you were dreaming, then?"},
-          //   { type: "textMessage", text: "L: I felt different when I woke up."},
-          //   { type: "textMessage", text: "Different from what? \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0  \u00A0  \u00A0  \u00A0 \u00A0 \u00A0 \u00A0 Different how?"},
-          //   { who: "characterM", type: "stand",  direction: "right", time: 1000},
-          //   { who: "hero", type: "stand", direction: "up", time: 1000},
-          //   { who: "characterL", type: "stand", direction: "up", time: 1000},
-          //   { who: "hero", type: "stand", direction: "left", time: 1000},
-          //   { who: "characterL", type: "stand", direction: "right", time: 1000},
-          //   { who: "characterM", type: "stand", direction: "down", time: 1000},
-          //   { type: "textMessage", text: "M: Different how?"},
-          //   { type: "textMessage", text: "L: I don't know. When I woke up, I felt like I had gone somewhere."},
-          //   { type: "textMessage", text: "J: Maybe you sleepwalked."},
-          //   { type: "textMessage", text: "L: What?"},
-          //   { type: "textMessage", text: "M: It means you walked in your sleep."},
-          //   { who: "characterL", type: "stand", direction: "up", time: 1000},
-          //   { type: "textMessage", text: "L: I know what it means. I don't think I walked in my sleep."},
-          //   { type: "textMessage", text: "J: How would you know?"},
-          //   { who: "characterL", type: "stand", direction: "right", time: 1000},
-          //   { type: "textMessage", text: "M: You might do it every night."},
-          //   { who: "characterL", type: "stand", direction: "right", time: 1000},
-          //   { type: "textMessage", text: "L: But. . . can you sleepwalk without dreaming?"},
-          //   { type: "changeMapNoTransition", map: "C23_Bar_pt2"},
+            { who: "characterN", type: "walk", direction: "right"},
+            { who: "characterN", type: "walk", direction: "right"},
+            { who: "characterN", type: "stand", direction: "left", time: 1000},
+            { type: "textMessage", text: "N: Beer, please."},
+            { who: "characterN", type: "walk", direction: "right"},
+            { who: "characterN", type: "walk", direction: "down"},
+            { who: "characterN", type: "walk", direction: "down"},
+            { who: "characterN", type: "walk", direction: "left"},
+            { type: "changeMapNoTransition", map: "C31_Bar_pt2"},
+          ]
+        }
+      ],
+    }
+  },
+  C31_Bar_pt2: {
+    id: "C31_Bar_pt1",
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "down",
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        direction: "right",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 300 },
+        //   { type: "stand",  direction: "down", time: 5000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        direction: "right",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 1800 },
+        //   { type: "stand",  direction: "down", time: 4000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      characterN: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/n_sitting.png",
+        direction: "left",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 300 },
+        //   { type: "stand",  direction: "down", time: 5000 }
+        // ],
+        // talking: [
+        //   {
+        //     events: [
+        //       { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+        //       { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+        //     ]
+        //   }
+        // ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            { who: "characterN", type: "stand", direction: "left", time: 1000},
+            { who: "characterN", type: "stand", direction: "up", time: 2000},
+            { who: "hero", type: "stand", direction: "right", time: 1000},
+            { type: "textMessage", text: "J: So, you've figured something out."},
+            { type: "textMessage", text: "N: Mm."},
+            { who: "hero", type: "stand", direction: "down", time: 1000},
+            { type: "textMessage", text: "M: Hello, N."},
+            { who: "characterN", type: "stand", direction: "left", time: 1000},
+            { type: "textMessage", text: "N: Hi."},
+            { who: "characterN", type: "stand", direction: "up", time: 1000},
+            { type: "textMessage", text: "L: Hi, N."},
+            { who: "characterN", type: "stand", direction: "left", time: 1000},
+            { type: "textMessage", text: "N: Hello."},
+            { type: "textMessage", text: "L: What did you figure out?"},
+            { type: "textMessage", text: "N: I'm not sure."},
+            { type: "textMessage", text: "M: You've been up there a while."},
+            { type: "textMessage", text: "N: Two months."},
+            { type: "textMessage", text: "Thirty days each up on the roof of the bar or the grocery store, alternating between the two every other day."},
+            { type: "textMessage", text: "L: What do you think is coming?"},
+            { type: "textMessage", text: "N: Hm?"},
+            { type: "textMessage", text: "M: What are you forecasting?"},
+            { type: "textMessage", text: "N: Oh. Nothing."},
+            { type: "textMessage", text: "M: Nothing?"},
+            { type: "textMessage", text: "N: I'm studying readings from each day and comparing them to reports from days before."},
+            { type: "textMessage", text: "I'm not guessing at what might happen tomorrow."},
+            { type: "textMessage", text: "L: You're looking back in time?"},
+            { type: "textMessage", text: "N: Only as a reference."},
+            { type: "textMessage", text: "M: But yesterday already happened."},
+            { who: "characterN", type: "stand", direction: "up", time: 1000},
+            { type: "textMessage", text: "N: I suppose so."},
+            { type: "textMessage", text: "L: So did most of today."},
+            { type: "textMessage", text: "M: What difference does that make?"},
+            { type: "textMessage", text: "L: I don't know. About a day's worth, I guess."},
+            { who: "hero", type: "stand", direction: "right", time: 1000},
+            { type: "textMessage", text: "J: What are you trying to figure out, N.?"},
+            { type: "textMessage", text: "N: Oh, I don't know anymore. I thought maybe this bar and the grocery store were the same place."},
+            { who: "hero", type: "stand", direction: "down", time: 750},
+            { who: "characterL", type: "stand", direction: "right", time: 750},
+            { who: "characterM", type: "stand", direction: "right", time: 750},
+            { who: "hero", type: "stand", direction: "left", time: 750},
+            { who: "characterM", type: "stand", direction: "down", time: 750},
+            { who: "characterL", type: "stand", direction: "up", time: 750},
+            { who: "characterM", type: "stand", direction: "down", time: 750},
+            { type: "textMessage", text: "M: What do you mean? Geographically?"},
+            { who: "characterL", type: "stand", direction: "right", time: 750},
+            { type: "textMessage", text: "L: Geometrically?"},
+            { who: "characterN", type: "stand", direction: "left", time: 750},
+            { type: "textMessage", text: "N: Neither, and, both."},
+            { type: "textMessage", text: "L: I see..."},
+            { type: "textMessage", text: "M: I don't."},
+            { who: "characterN", type: "stand", direction: "up", time: 750},
+            { type: "textMessage", text: "N: Yes."},
+            { type: "textMessage", text: "J: You thought my bar was the grocery store, and that it was my bar?"},
+            { type: "textMessage", text: "N: More or less."},
+            { type: "textMessage", text: "M: But you've been to both."},
+            { who: "characterN", type: "stand", direction: "left", time: 750},
+            { type: "textMessage", text: "N: Consistently, for months."},
+            { type: "textMessage", text: "J: What were you measuring?"},
+            { who: "characterN", type: "stand", direction: "up", time: 750},
+            { type: "textMessage", text: "N: Everything."},
+            { type: "textMessage", text: "J: And?"},
+            { type: "textMessage", text: "N: It was all different."},
+            { type: "textMessage", text: "L: The bar and the grocery store aren't that far apart."},
+            { type: "textMessage", text: "I would have thought some measurements would be the same."},
+            { type: "textMessage", text: "N: Some were, sometimes."},
+            { type: "textMessage", text: "L: Then maybe the two places are the same place sometimes."},
+            { who: "characterM", type: "stand", direction: "down", time: 750},
+            { type: "textMessage", text: "M: They're two different places."},
+            { type: "textMessage", text: "J: They do seem different."},
+            { who: "characterL", type: "stand", direction: "right", time: 750},
+            { type: "textMessage", text: "L: Very different?"},
+            { type: "textMessage", text: "J: Not very different, I guess. Different enough, though."},
+            { type: "textMessage", text: "L: How different is that?"},
+            { who: "hero", type: "stand", direction: "right", time: 750},
+            { type: "textMessage", text: "J: What measurements were you expecting?"},
+            { type: "textMessage", text: "N: Correlated ones. But there was no pattern at all."},
+            { type: "textMessage", text: "M: Maybe it's because you only checked one building or the other each day."},
+            { type: "textMessage", text: "N: Each station was still taking measurements when I wasn't there though."},
+            { type: "textMessage", text: "M: Maybe you take down measurements differently when you're looking at them."},
+            { type: "textMessage", text: "N: Maybe."},
+            { type: "textMessage", text: "L: Maybe what you needed to measure was something happening at too small a scale to measure."},
+            { type: "textMessage", text: "N: Maybe. But my instruments are pretty precise."},
+            { type: "textMessage", text: "J: Or maybe it's too big to measure."},
+            { type: "textMessage", text: "Maybe the bar and the store are part of a much larger collection of the same building."},
+            { type: "textMessage", text: "N: Many more points in arrangement. It's possible."},
+            { type: "textMessage", text: "L: That's surely it."},
+            { who: "characterM", type: "stand", direction: "right", time: 750},
+            { who: "characterM", type: "stand", direction: "down", time: 750},
+            { who: "hero", type: "stand", direction: "down", time: 750},
+            { who: "hero", type: "stand", direction: "right", time: 750},
+            { type: "textMessage", text: "J: What about the third station?"},
+            { type: "textMessage", text: "N: The one on my roof?"},
+            { type: "textMessage", text: "J: Yeah. What were its readings like?"},
+            { type: "textMessage", text: "N: I only got a few day's worth and those few days of readings were pretty erratic."},
+            { type: "textMessage", text: "I removed its measurements from the set as outliers."},
+            { type: "textMessage", text: "M: What happened after a few days?"},
+            { type: "textMessage", text: "N: It disappeared."},
+            { type: "textMessage", text: "J: Disappeared. It was stolen?"},
+            { type: "textMessage", text: "N: No. I don't think so, anyway."},
+            { type: "textMessage", text: "L: You should have put bars around it."},
+            { type: "changeMapNoTransition", map: "C31_Bar_pt3"},
+          ]
+        }
+      ],
+    }
+  },
+  C31_Bar_pt3: {
+    id: "C31_Bar_pt3",
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "down",
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        direction: "right",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 300 },
+        //   { type: "stand",  direction: "down", time: 5000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        direction: "right",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 1800 },
+        //   { type: "stand",  direction: "down", time: 4000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      characterN: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/n_sitting.png",
+        direction: "left",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 300 },
+        //   { type: "stand",  direction: "down", time: 5000 }
+        // ],
+        // talking: [
+        //   {
+        //     events: [
+        //       { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+        //       { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+        //     ]
+        //   }
+        // ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            { type: "changeMap",
+              map: "C27_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
           ]
         }
       ],
