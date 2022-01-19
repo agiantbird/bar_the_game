@@ -10777,8 +10777,8 @@ window.OverworldMaps = {
         {
           events: [
             { type: "changeMap",
-              map: "C02_Bar",
-              x: utils.withGrid(5),
+              map: "C34_Grocery_pt1",
+              x: utils.withGrid(13),
               y: utils.withGrid(5),
               direction: "down"
             },
@@ -10787,4 +10787,230 @@ window.OverworldMaps = {
       ]
     }
   },
+  C34_Grocery_pt1: {
+    id: "C34_Grocery_pt1",
+    lowerSrc: "/images/maps/grocery_store_lower.png",
+    upperSrc: "/images/maps/grocery_store_upper.png",
+    gameObjects: {
+      grocer: new Person({
+        x: utils.withGrid(12),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/grocer.png",
+        direction: "right",
+      }),
+      hero: new Person({
+        x: utils.withGrid(13),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/vending_machine_guy.png",
+        direction: "up",
+      }),
+      // hero: new Person({
+      //   isPlayerControlled: true,
+      //   x: utils.withGrid(5),
+      //   y: utils.withGrid(7),
+      //   src: "/images/characters/people/hero_gray.png",
+      // }),
+    },
+    walls: {
+      // edges of level
+      //// left wall
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      //// back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      [utils.asGridCoord(6,3)] : true,
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+      [utils.asGridCoord(11,3)] : true,
+      [utils.asGridCoord(12,3)] : true,
+      [utils.asGridCoord(13,3)] : true,
+      ////right wall
+      [utils.asGridCoord(14,4)] : true,
+      [utils.asGridCoord(14,5)] : true,
+      [utils.asGridCoord(14,6)] : true,
+      [utils.asGridCoord(14,7)] : true,
+      [utils.asGridCoord(14,8)] : true,
+      [utils.asGridCoord(14,9)] : true,
+      //// bottom wall
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(5,10)] : true,
+      // door is here
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,10)] : true,
+      [utils.asGridCoord(12,10)] : true,
+      [utils.asGridCoord(13,10)] : true,
+      // grocery shelf
+      [utils.asGridCoord(1,5)] : true,
+      [utils.asGridCoord(2,5)] : true,
+      [utils.asGridCoord(3,5)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(5,5)] : true,
+      [utils.asGridCoord(6,5)] : true,
+      [utils.asGridCoord(7,5)] : true,
+      [utils.asGridCoord(8,5)] : true,
+      [utils.asGridCoord(9,5)] : true,
+      [utils.asGridCoord(10,5)] : true,
+      // cash register
+      [utils.asGridCoord(9,8)] : true,
+      [utils.asGridCoord(10,8)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(12,8)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(1,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "it just seems to go on forever..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(13,5)]: [
+        {
+          events: [
+            { who: "hero", type: "stand", direction: "up", time: 1000 },
+            { who: "hero", type: "stand", direction: "left", time: 1000 },
+            { type: "textMessage", text: "VENDING MACHINE GUY: What do you mean inside?"},
+            { type: "textMessage", text: "GROCER: I don't know, inside the machine."},
+            { type: "textMessage", text: "VENDING MACHINE GUY: There's no room for a person in there. It's full of bottles and cans and machine parts."},
+            { who: "grocer", type: "stand", direction: "up", time: 1000 },
+            { who: "grocer", type: "stand", direction: "right", time: 1000 },
+            { type: "textMessage", text: "GROCER: It just seems like there's more to it than that."},
+            { type: "textMessage", text: "VENDING MACHINE GUY: Maybe."},
+            { who: "hero", type: "stand", direction: "up", time: 1000 },
+            { type: "textMessage", text: "The vending machine game doesn't really attract people with much in the way of imagination."},
+            { who: "grocer", type: "stand", direction: "up", time: 1000 },
+            { type: "textMessage", text: "GROCER: Listen to that thing hum. What else do you think that thing could be?"},
+            { who: "hero", type: "stand", direction: "left", time: 1000 },
+            { type: "textMessage", text: "VENDING MACHINE GUY: It's a vending machine."},
+            { type: "textMessage", text: "GROCER: It's a sound repeating itself."},
+            { who: "hero", type: "stand", direction: "down", time: 1000 },
+            { type: "textMessage", text: "VENDING MACHINE GUY: It vends soda."},
+            { type: "changeMapNoTransition", map: "C34_Grocery_pt2"},
+          ]
+        }
+      ],
+    }
+  },
+  C34_Grocery_pt2: {
+    id: "C34_Grocery_pt2",
+    lowerSrc: "/images/maps/grocery_store_lower.png",
+    upperSrc: "/images/maps/grocery_store_upper.png",
+    gameObjects: {
+      grocer: new Person({
+        x: utils.withGrid(12),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/grocer.png",
+        direction: "right",
+      }),
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(13),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/vending_machine_guy.png",
+        direction: "down",
+      }),
+    },
+    walls: {
+      // edges of level
+      //// left wall
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      //// back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      [utils.asGridCoord(6,3)] : true,
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+      [utils.asGridCoord(11,3)] : true,
+      [utils.asGridCoord(12,3)] : true,
+      [utils.asGridCoord(13,3)] : true,
+      ////right wall
+      [utils.asGridCoord(14,4)] : true,
+      [utils.asGridCoord(14,5)] : true,
+      [utils.asGridCoord(14,6)] : true,
+      [utils.asGridCoord(14,7)] : true,
+      [utils.asGridCoord(14,8)] : true,
+      [utils.asGridCoord(14,9)] : true,
+      //// bottom wall
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(5,10)] : true,
+      // door is here
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,10)] : true,
+      [utils.asGridCoord(12,10)] : true,
+      [utils.asGridCoord(13,10)] : true,
+      // grocery shelf
+      [utils.asGridCoord(1,5)] : true,
+      [utils.asGridCoord(2,5)] : true,
+      [utils.asGridCoord(3,5)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(5,5)] : true,
+      [utils.asGridCoord(6,5)] : true,
+      [utils.asGridCoord(7,5)] : true,
+      [utils.asGridCoord(8,5)] : true,
+      [utils.asGridCoord(9,5)] : true,
+      [utils.asGridCoord(10,5)] : true,
+      // cash register
+      [utils.asGridCoord(9,8)] : true,
+      [utils.asGridCoord(10,8)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(12,8)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(1,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "it just seems to go on forever..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(6,10)]: [
+        {
+          events: [
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C06_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+            // { type: "textMessage", text: "this should be chapter 6..."},
+          ]
+        }
+      ]
+    }
+  }, 
 }
