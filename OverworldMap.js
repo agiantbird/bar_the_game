@@ -11534,13 +11534,254 @@ window.OverworldMaps = {
             { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
             { type: "changeMap",
-              map: "C37_Temple_Scene_Pt1",
-              x: utils.withGrid(11),
-              y: utils.withGrid(6),
-              direction: "down"
+              map: "C39_Grocery_pt1",
+              x: utils.withGrid(10),
+              y: utils.withGrid(9),
+              direction: "up"
             },
           ],
         },
+      ]
+    }
+  },
+  C39_Grocery_pt1: {
+    id: "C39_Grocery_pt1",
+    lowerSrc: "/images/maps/grocery_store_lower.png",
+    upperSrc: "/images/maps/grocery_store_upper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(9),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/grocer.png",
+      }),
+      fruitEnjoyer2: new Person({
+        x: utils.withGrid(10),
+        y: utils.withGrid(9),
+        direction: "up",
+        src: "/images/characters/people/hero_gray.png",
+      }),
+      fruitEnjoyer1: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(9),
+        src: "/images/characters/people/hero_gray.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      //// left wall
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      //// back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      [utils.asGridCoord(6,3)] : true,
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+      [utils.asGridCoord(11,3)] : true,
+      [utils.asGridCoord(12,3)] : true,
+      [utils.asGridCoord(13,3)] : true,
+      ////right wall
+      [utils.asGridCoord(14,4)] : true,
+      [utils.asGridCoord(14,5)] : true,
+      [utils.asGridCoord(14,6)] : true,
+      [utils.asGridCoord(14,7)] : true,
+      [utils.asGridCoord(14,8)] : true,
+      [utils.asGridCoord(14,9)] : true,
+      //// bottom wall
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(5,10)] : true,
+      // door is here
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,10)] : true,
+      [utils.asGridCoord(12,10)] : true,
+      [utils.asGridCoord(13,10)] : true,
+      // grocery shelf
+      [utils.asGridCoord(1,5)] : true,
+      [utils.asGridCoord(2,5)] : true,
+      [utils.asGridCoord(3,5)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(5,5)] : true,
+      [utils.asGridCoord(6,5)] : true,
+      [utils.asGridCoord(7,5)] : true,
+      [utils.asGridCoord(8,5)] : true,
+      [utils.asGridCoord(9,5)] : true,
+      [utils.asGridCoord(10,5)] : true,
+      // cash register
+      [utils.asGridCoord(9,8)] : true,
+      [utils.asGridCoord(10,8)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(12,8)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(1,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "it just seems to go on forever..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(9,7)]: [
+        {
+          events: [
+            { who: "fruitEnjoyer2", type: "stand",  direction: "up", time: 1000 },
+            { who: "hero", type: "stand",  direction: "down", time: 1000},
+            { who: "hero", type: "walk",  direction: "right" },
+            { who: "hero", type: "stand",  direction: "down", time: 1000},
+            { type: "textMessage", text: "GROCER: Did you know the circumference of an orange is infinite?"},
+            { who: "fruitEnjoyer2", type: "stand",  direction: "right", time: 50 },
+            { who: "fruitEnjoyer1", type: "stand",  direction: "left", time: 50 },
+            { who: "fruitEnjoyer2", type: "stand",  direction: "right", time: 1000 },
+            { who: "fruitEnjoyer1", type: "stand",  direction: "left", time: 1000 },
+            { who: "fruitEnjoyer2", type: "stand",  direction: "up", time: 50 },
+            { who: "fruitEnjoyer1", type: "stand",  direction: "up", time: 50 },
+            { who: "fruitEnjoyer2", type: "stand",  direction: "up", time: 1000 },
+            { who: "fruitEnjoyer1", type: "stand",  direction: "up", time: 1000 },
+            { type: "textMessage", text: "GROCER: And think about how many oranges I have!"},
+            { type: "changeMapNoTransition", map: "C39_Grocery_pt2"},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C06_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+            // { type: "textMessage", text: "this should be chapter 6..."},
+          ]
+        }
+      ]
+    }
+  }, 
+  C39_Grocery_pt2: {
+    id: "C39_Grocery_pt2",
+    lowerSrc: "/images/maps/grocery_store_lower.png",
+    upperSrc: "/images/maps/grocery_store_upper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(10),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/grocer.png",
+        direction: "down",
+      }),
+      fruitEnjoyer2: new Person({
+        x: utils.withGrid(10),
+        y: utils.withGrid(9),
+        direction: "up",
+        src: "/images/characters/people/hero_gray.png",
+      }),
+      fruitEnjoyer1: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(9),
+        src: "/images/characters/people/hero_gray.png",
+        direction: "up",
+      }),
+    },
+    walls: {
+      // edges of level
+      //// left wall
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      //// back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      [utils.asGridCoord(6,3)] : true,
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+      [utils.asGridCoord(11,3)] : true,
+      [utils.asGridCoord(12,3)] : true,
+      [utils.asGridCoord(13,3)] : true,
+      ////right wall
+      [utils.asGridCoord(14,4)] : true,
+      [utils.asGridCoord(14,5)] : true,
+      [utils.asGridCoord(14,6)] : true,
+      [utils.asGridCoord(14,7)] : true,
+      [utils.asGridCoord(14,8)] : true,
+      [utils.asGridCoord(14,9)] : true,
+      //// bottom wall
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(5,10)] : true,
+      // door is here
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,10)] : true,
+      [utils.asGridCoord(12,10)] : true,
+      [utils.asGridCoord(13,10)] : true,
+      // grocery shelf
+      [utils.asGridCoord(1,5)] : true,
+      [utils.asGridCoord(2,5)] : true,
+      [utils.asGridCoord(3,5)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(5,5)] : true,
+      [utils.asGridCoord(6,5)] : true,
+      [utils.asGridCoord(7,5)] : true,
+      [utils.asGridCoord(8,5)] : true,
+      [utils.asGridCoord(9,5)] : true,
+      [utils.asGridCoord(10,5)] : true,
+      // cash register
+      [utils.asGridCoord(9,8)] : true,
+      [utils.asGridCoord(10,8)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(12,8)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(1,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "it just seems to go on forever..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(6,10)]: [
+        {
+          events: [
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C16_Bar_pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+            // { type: "textMessage", text: "this should be chapter 6..."},
+          ]
+        }
       ]
     }
   },
