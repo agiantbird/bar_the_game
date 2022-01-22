@@ -11683,8 +11683,8 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(10),
         y: utils.withGrid(7),
-        // src: "/images/characters/people/grocer.png",
-        src: "/images/characters/people/k_standing.png",
+        src: "/images/characters/people/grocer.png",
+        // src: "/images/characters/people/new_k_standing.png",
         direction: "down",
       }),
       fruitEnjoyer2: new Person({
