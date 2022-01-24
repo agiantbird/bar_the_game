@@ -11872,7 +11872,403 @@ window.OverworldMaps = {
         {
           events: [
             { who: "hero", type: "stand",  direction: "right", time: 1500 },
-            { type: "changeMapNoTransition", map: "DemoRoom" },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt5" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt5: {
+    id: "C40_Car_Animation_pt5",
+    lowerSrc: "/images/maps/car_zoom_k_frame_1.png",
+    upperSrc: "/images/maps/car_zoom_k_frame_1.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt6" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt6: {
+    id: "C40_Car_Animation_pt6",
+    lowerSrc: "/images/maps/car_zoom_k_frame_2.png",
+    upperSrc: "/images/maps/car_zoom_k_frame_2.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt7" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt7: {
+    id: "C40_Car_Animation_pt7",
+    lowerSrc: "/images/maps/car_zoom_k_frame_1.png",
+    upperSrc: "/images/maps/car_zoom_k_frame_1.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt8" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt8: {
+    id: "C40_Car_Animation_pt8",
+    lowerSrc: "/images/maps/car_zoom_weather_machine_frame_1.png",
+    upperSrc: "/images/maps/car_zoom_weather_machine_frame_1.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt9" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt9: {
+    id: "C40_Car_Animation_pt9",
+    lowerSrc: "/images/maps/car_zoom_weather_machine_frame_2.png",
+    upperSrc: "/images/maps/car_zoom_weather_machine_frame_2.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt10" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt10: {
+    id: "C40_Car_Animation_pt10",
+    lowerSrc: "/images/maps/car_zoom_weather_machine_frame_1.png",
+    upperSrc: "/images/maps/car_zoom_weather_machine_frame_1.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt11" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt11: {
+    id: "C40_Car_Animation_pt11",
+    lowerSrc: "/images/maps/car_zoom_weather_machine_frame_2.png",
+    upperSrc: "/images/maps/car_zoom_weather_machine_frame_2.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt12" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt12: {
+    id: "C40_Car_Animation_pt12",
+    lowerSrc: "/images/maps/car_zoom_weather_machine_frame_1.png",
+    upperSrc: "/images/maps/car_zoom_weather_machine_frame_1.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt13" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt13: {
+    id: "C40_Car_Animation_pt13",
+    lowerSrc: "/images/maps/car_zoom_weather_machine_frame_2.png",
+    upperSrc: "/images/maps/car_zoom_weather_machine_frame_2.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt14" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt14: {
+    id: "C40_Car_Animation_pt14",
+    lowerSrc: "/images/maps/car_zoom_weather_machine_frame_1.png",
+    upperSrc: "/images/maps/car_zoom_weather_machine_frame_1.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt15" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt15: {
+    id: "C40_Car_Animation_pt15",
+    lowerSrc: "/images/maps/car_lower_2nd_version.png",
+    upperSrc: "/images/maps/car_lower_2nd_version.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt16" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt16: {
+    id: "C40_Car_Animation_pt16",
+    lowerSrc: "/images/maps/car_lower_frame_2.png",
+    upperSrc: "/images/maps/car_lower_frame_2.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt17" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt17: {
+    id: "C40_Car_Animation_pt17",
+    lowerSrc: "/images/maps/car_lower_2nd_version.png",
+    upperSrc: "/images/maps/car_lower_2nd_version.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt18" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt18: {
+    id: "C40_Car_Animation_pt18",
+    lowerSrc: "/images/maps/car_lower_frame_2.png",
+    upperSrc: "/images/maps/car_lower_frame_2.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt19" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt19: {
+    id: "C40_Car_Animation_pt19",
+    lowerSrc: "/images/maps/car_lower_2nd_version.png",
+    upperSrc: "/images/maps/car_lower_2nd_version.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt20" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt20: {
+    id: "C40_Car_Animation_pt20",
+    lowerSrc: "/images/maps/car_lower_frame_2.png",
+    upperSrc: "/images/maps/car_lower_frame_2.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMapNoTransition", map: "C40_Car_Animation_pt21" },
+          ],
+        },
+      ]
+    }
+  },
+  C40_Car_Animation_pt21: {
+    id: "C40_Car_Animation_pt21",
+    lowerSrc: "/images/maps/car_lower_2nd_version.png",
+    upperSrc: "/images/maps/car_lower_2nd_version.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMap",
+              map: "DemoRoom",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
           ],
         },
       ]
