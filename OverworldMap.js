@@ -12264,6 +12264,78 @@ window.OverworldMaps = {
           events: [
             { who: "hero", type: "stand",  direction: "right", time: 1500 },
             { type: "changeMap",
+              map: "C41_Bar_pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+          ],
+        },
+      ]
+    }
+  },
+  C41_Bar_pt1: {
+    id: "C41_Bar_pt1",
+    lowerSrc: "/images/maps/C41_BarLowerWithWeatherMachine.png",
+    upperSrc: "/images/maps/C41_BarUpperWithWeatherMachine.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        // src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+      // weather machine
+      [utils.asGridCoord(8,7)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMap",
               map: "DemoRoom",
               x: utils.withGrid(5),
               y: utils.withGrid(5),
