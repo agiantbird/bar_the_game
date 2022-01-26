@@ -12281,9 +12281,14 @@ window.OverworldMaps = {
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(5),
+        x: utils.withGrid(6),
         y: utils.withGrid(5),
-        // src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+      characterK: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/k_sitting.png",
+        direction: "up",
       }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
@@ -12300,9 +12305,19 @@ window.OverworldMaps = {
         y: utils.withGrid(7),
         src: "/images/assets/stool_sprite_sheet.png",
       }),
-      emptyStool4: new Person({
-        x: utils.withGrid(7),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
         y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool6: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool7: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
         src: "/images/assets/stool_sprite_sheet.png",
       }),
     },
@@ -12331,10 +12346,126 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,7)] : true,
     },
     cutsceneSpaces: {
+      [utils.asGridCoord(6,5)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { who: "hero", type: "stand",  direction: "down", time: 1500 },
+            { type: "textMessage", text: "J: It just appeared?"},
+            { who: "characterK", type: "stand",  direction: "right", time: 1500 },
+            { who: "characterK", type: "stand",  direction: "up", time: 1500 },
+            { type: "textMessage", text: "K: I guess so. It wasn't there before, anyway, and then, it was."},
+            { type: "textMessage", text: "J: N. will be glad to know it's back."},
+            { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { who: "hero", type: "stand",  direction: "down", time: 1500 },
+            { type: "textMessage", text: "J: Or, maybe not. This is a pretty big outlier. How did you know to bring it here, anyway?"},
+            { type: "textMessage", text: "K: An address of somewhere in this town is written on its underside."},
+            { type: "textMessage", text: "J: You really looked this thing over."},
+            { type: "textMessage", text: "K: Sure. It's not every day a weather station appears in your bedroom."},
+            { type: "textMessage", text: "J: I guess not. Will you stay for another drink?"},
+            { who: "characterK", type: "stand",  direction: "right", time: 1500 },
+            { who: "characterK", type: "stand",  direction: "up", time: 1500 },
+            { type: "textMessage", text: "K: Sure. It's not everyday I appear with a weather station."},
+            { type: "changeMapNoTransition", map: "C41_Bar_pt2" },
+            // { type: "changeMap",
+            //   map: "DemoRoom",
+            //   x: utils.withGrid(5),
+            //   y: utils.withGrid(5),
+            //   direction: "down"
+            // },
+          ],
+        },
+      ],
       [utils.asGridCoord(11,6)]: [
         {
           events: [
             { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMap",
+              map: "DemoRoom",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+          ],
+        },
+      ]
+    }
+  },
+  C41_Bar_pt2: {
+    id: "C41_Bar_pt2",
+    lowerSrc: "/images/maps/C41_BarLowerWithWeatherMachine.png",
+    upperSrc: "/images/maps/C41_BarUpperWithWeatherMachine.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(6),
+        y: utils.withGrid(5),
+      }),
+      characterK: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/k_sitting.png",
+        direction: "up",
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool6: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool7: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+      // weather machine
+      [utils.asGridCoord(8,7)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
             { type: "changeMap",
               map: "DemoRoom",
               x: utils.withGrid(5),
