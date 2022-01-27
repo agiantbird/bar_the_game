@@ -12652,8 +12652,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(6,6)] : true,
       [utils.asGridCoord(7,6)] : true,
       [utils.asGridCoord(8,6)] : true,
-      // weather machine
-      [utils.asGridCoord(8,7)] : true,
     },
     cutsceneSpaces: {
       [utils.asGridCoord(6,5)]: [
@@ -12669,24 +12667,12 @@ window.OverworldMaps = {
             { type: "textMessage", text: "K: It's quiet enough, busy enough. It's right on the coast. It's got a bar and a grocery store."},
             { type: "textMessage", text: "J: Maybe I'll head down there some time." },
             { type: "textMessage", text: "M: Living near the coast sounds nice."},
-            // { who: "hero", type: "stand",  direction: "right", time: 1500 },
-            // { who: "hero", type: "stand",  direction: "down", time: 1500 },
-            // { type: "textMessage", text: "J: It just appeared?"},
-            // { who: "characterK", type: "stand",  direction: "right", time: 1500 },
-            // { who: "characterK", type: "stand",  direction: "up", time: 1500 },
-            // { type: "textMessage", text: "K: I guess so. It wasn't there before, anyway, and then, it was."},
-            // { type: "textMessage", text: "J: N. will be glad to know it's back."},
-            // { who: "hero", type: "stand",  direction: "right", time: 1500 },
-            // { who: "hero", type: "stand",  direction: "down", time: 1500 },
-            // { type: "textMessage", text: "J: Or, maybe not. This is a pretty big outlier. How did you know to bring it here, anyway?"},
-            // { type: "textMessage", text: "K: An address of somewhere in this town is written on its underside."},
-            // { type: "textMessage", text: "J: You really looked this thing over."},
-            // { type: "textMessage", text: "K: Sure. It's not every day a weather station appears in your bedroom."},
-            // { type: "textMessage", text: "J: I guess not. Will you stay for another drink?"},
-            // { who: "characterK", type: "stand",  direction: "right", time: 1500 },
-            // { who: "characterK", type: "stand",  direction: "up", time: 1500 },
-            // { type: "textMessage", text: "K: Sure. It's not everyday I appear with a weather station."},
-            // { type: "changeMapNoTransition", map: "C41_Bar_pt2" },
+            { type: "textMessage", text: "L: Sometimes, especially if it's raining, I pretend the rushing pass of cars is the sound of waves breaking." },
+            { type: "textMessage", text: "Are you near enough the coast to hear the surf?" },
+            { type: "textMessage", text: "K: I am."},
+            { type: "textMessage", text: "L: What does it sound like?"},
+            { type: "textMessage", text: "K: Like the rushing pass of cars."},
+            { type: "changeMapNoTransition", map: "C43_Bar_pt2" },
             // { type: "changeMap",
             //   map: "DemoRoom",
             //   x: utils.withGrid(5),
@@ -12700,6 +12686,114 @@ window.OverworldMaps = {
         {
           events: [
             { who: "hero", type: "stand",  direction: "right", time: 1500 },
+            { type: "changeMap",
+              map: "DemoRoom",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+          ],
+        },
+      ]
+    }
+  },
+  C43_Bar_pt2: {
+    id: "C43_Bar_pt2",
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(6),
+        y: utils.withGrid(5),
+      }),
+      characterK: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/k_sitting.png",
+        direction: "up",
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 1800 },
+          { type: "stand",  direction: "down", time: 4000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 300 },
+          { type: "stand",  direction: "down", time: 5000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
             { type: "changeMap",
               map: "DemoRoom",
               x: utils.withGrid(5),
