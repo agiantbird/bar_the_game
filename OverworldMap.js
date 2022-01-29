@@ -12795,13 +12795,250 @@ window.OverworldMaps = {
         {
           events: [
             { type: "changeMap",
-              map: "DemoRoom",
+              map: "C44_Grocery_pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "up"
+            },
+          ],
+        },
+      ]
+    }
+  },
+  C44_Grocery_pt1: {
+    id: "C44_Grocery_pt1",
+    lowerSrc: "/images/maps/grocery_store_lower.png",
+    upperSrc: "/images/maps/grocery_upper_with_sign.png",
+    gameObjects: {
+      grocer: new Person({
+        x: utils.withGrid(9),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/grocer.png",
+      }),
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(7),
+        y: utils.withGrid(8),
+        src: "/images/characters/people/hero_gray.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      //// left wall
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      //// back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      [utils.asGridCoord(6,3)] : true,
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+      [utils.asGridCoord(11,3)] : true,
+      [utils.asGridCoord(12,3)] : true,
+      [utils.asGridCoord(13,3)] : true,
+      ////right wall
+      [utils.asGridCoord(14,4)] : true,
+      [utils.asGridCoord(14,5)] : true,
+      [utils.asGridCoord(14,6)] : true,
+      [utils.asGridCoord(14,7)] : true,
+      [utils.asGridCoord(14,8)] : true,
+      [utils.asGridCoord(14,9)] : true,
+      //// bottom wall
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(5,10)] : true,
+      // door is here
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,10)] : true,
+      [utils.asGridCoord(12,10)] : true,
+      [utils.asGridCoord(13,10)] : true,
+      // grocery shelf
+      [utils.asGridCoord(1,5)] : true,
+      [utils.asGridCoord(2,5)] : true,
+      [utils.asGridCoord(3,5)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(5,5)] : true,
+      [utils.asGridCoord(6,5)] : true,
+      [utils.asGridCoord(7,5)] : true,
+      [utils.asGridCoord(8,5)] : true,
+      [utils.asGridCoord(9,5)] : true,
+      [utils.asGridCoord(10,5)] : true,
+      // cash register
+      [utils.asGridCoord(9,8)] : true,
+      [utils.asGridCoord(10,8)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(12,8)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(1,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "it just seems to go on forever..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(7,8)]: [
+        {
+          events: [
+          // { type: "textMessage", text: "test test test"},
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { type: "textMessage", text: "Customer: You put a sign above the aisle?"},
+            { type: "textMessage", text: "Grocer: Yes."},
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            { who: "hero", type: "stand",  direction: "right", time: 1000 },
+            { type: "textMessage", text: "Customer: Why?"},
+            { who: "grocer", type: "stand",  direction: "up", time: 1000 },
+            { who: "grocer", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "Grocer: For the convenience of my customers."},
+            { who: "grocer", type: "stand",  direction: "up", time: 1000 },
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
+            { who: "grocer", type: "stand",  direction: "up", time: 1000 },
+            { who: "grocer", type: "stand",  direction: "down", time: 1000 },
+            { type: "changeMapNoTransition", map: "C44_Grocery_pt2"},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C06_Bar_Pt1",
               x: utils.withGrid(5),
               y: utils.withGrid(5),
               direction: "down"
             },
-          ],
-        },
+            // { type: "textMessage", text: "this should be chapter 6..."},
+          ]
+        }
+      ]
+    }
+  }, 
+  C44_Grocery_pt2: {
+    id: "C44_Grocery_pt2",
+    lowerSrc: "/images/maps/grocery_store_lower.png",
+    upperSrc: "/images/maps/grocery_upper_with_sign.png",
+    gameObjects: {
+      grocer: new Person({
+        x: utils.withGrid(9),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/grocer.png",
+        direction: 'down',
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Grocer: Let me know if you need help finding anything.", faceHero: "grocer" },
+            ]
+          }
+        ]
+      }),
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(7),
+        y: utils.withGrid(8),
+        direction: 'up',
+        src: "/images/characters/people/hero_gray.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      //// left wall
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      //// back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      [utils.asGridCoord(6,3)] : true,
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+      [utils.asGridCoord(11,3)] : true,
+      [utils.asGridCoord(12,3)] : true,
+      [utils.asGridCoord(13,3)] : true,
+      ////right wall
+      [utils.asGridCoord(14,4)] : true,
+      [utils.asGridCoord(14,5)] : true,
+      [utils.asGridCoord(14,6)] : true,
+      [utils.asGridCoord(14,7)] : true,
+      [utils.asGridCoord(14,8)] : true,
+      [utils.asGridCoord(14,9)] : true,
+      //// bottom wall
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(5,10)] : true,
+      // door is here
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,10)] : true,
+      [utils.asGridCoord(12,10)] : true,
+      [utils.asGridCoord(13,10)] : true,
+      // grocery shelf
+      [utils.asGridCoord(1,5)] : true,
+      [utils.asGridCoord(2,5)] : true,
+      [utils.asGridCoord(3,5)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(5,5)] : true,
+      [utils.asGridCoord(6,5)] : true,
+      [utils.asGridCoord(7,5)] : true,
+      [utils.asGridCoord(8,5)] : true,
+      [utils.asGridCoord(9,5)] : true,
+      [utils.asGridCoord(10,5)] : true,
+      // cash register
+      [utils.asGridCoord(9,8)] : true,
+      [utils.asGridCoord(10,8)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(12,8)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(1,6)]: [
+        {
+          events: [
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "it just seems to go on forever..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(6,10)]: [
+        {
+          events: [
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C16_Bar_pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+            // { type: "textMessage", text: "this should be chapter 6..."},
+          ]
+        }
       ]
     }
   },
