@@ -1230,12 +1230,9 @@ window.OverworldMaps = {
       }),
       characterL: new Person({
         x: utils.withGrid(5),
-        y: utils.withGrid(11),
-        src: "/images/characters/people/hero_gray.png",
-        behaviorLoop: [
-          { type: "stand",  direction: "right", time: 300 },
-          { type: "stand",  direction: "down", time: 5000 }
-        ],
+        y: utils.withGrid(12),
+        direction: 'up',
+        src: "/images/characters/people/l_standing.png",
         talking: [
           {
             events: [
@@ -1270,7 +1267,7 @@ window.OverworldMaps = {
       emptyStool2: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(5),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "/images/assets/stool_sprite_sheet.png",
       }),
       emptyStool3: new Person({
         x: utils.withGrid(4),
@@ -1360,6 +1357,7 @@ window.OverworldMaps = {
             { who: "characterL", type: "walk",  direction: "up" },
             { who: "characterL", type: "walk",  direction: "up" },
             { who: "characterL", type: "walk",  direction: "up" },
+            { who: "characterL", type: "walk",  direction: "up" },
             { who: "characterL", type: "stand",  direction: "right", time: 400 },
             { type: "textMessage", text: "L: Your sign is out."},
             { who: "hero", type: "stand",  direction: "left", time: 400 },
@@ -1399,10 +1397,7 @@ window.OverworldMaps = {
         x: utils.withGrid(3),
         y: utils.withGrid(5),
         src: "/images/characters/people/l_sitting.png",
-        behaviorLoop: [
-          { type: "stand",  direction: "right", time: 300 },
-          { type: "stand",  direction: "down", time: 5000 }
-        ],
+        direction: 'right',
         talking: [
           {
             events: [
@@ -3720,7 +3715,7 @@ window.OverworldMaps = {
         x: utils.withGrid(1),
         y: utils.withGrid(4),
         direction: "up",
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/l_standing.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 300 },
           // { type: "stand",  direction: "down", time: 5000 }
@@ -3905,7 +3900,7 @@ window.OverworldMaps = {
         x: utils.withGrid(1),
         y: utils.withGrid(4),
         direction: "up",
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/l_standing.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 300 },
           // { type: "stand",  direction: "down", time: 5000 }
@@ -5454,7 +5449,7 @@ window.OverworldMaps = {
         x: utils.withGrid(1),
         y: utils.withGrid(4),
         direction: "up",
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/l_standing.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 300 },
           // { type: "stand",  direction: "down", time: 5000 }
