@@ -13849,10 +13849,10 @@ window.OverworldMaps = {
           events: [
             // { type: "changeMap", map: "C06_Bar_Pt1" },
             { type: "changeMap",
-              map: "C06_Bar_Pt1",
+              map: "C48_Bar_pt1",
               x: utils.withGrid(5),
               y: utils.withGrid(5),
-              direction: "down"
+              direction: "right"
             },
             // { type: "textMessage", text: "this should be chapter 6..."},
           ]
@@ -13869,27 +13869,19 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(5),
         y: utils.withGrid(5),
-        direction: "down",
+        direction: "right",
       }),
-      characterN: new Person({
+      customer: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(7),
-        src: "/images/characters/people/n_sitting.png",
+        src: "/images/characters/people/customer_sitting.png",
         direction: "up",
       }),
-      characterL: new Person({
-        x: utils.withGrid(3),
-        y: utils.withGrid(5),
-        src: "/images/characters/people/l_sitting.png",
-        direction: "right",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
-            ]
-          }
-        ]
+      grocer: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(12),
+        src: "/images/characters/people/grocer.png",
+        direction: "up",
       }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
@@ -13914,6 +13906,11 @@ window.OverworldMaps = {
       emptyStool5: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool6: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
         src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
     },
@@ -13974,23 +13971,32 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,5)]: [
         {
           events: [
-            { who: "characterN", type: "stand", direction: "up", time: 1000},
-            { type: "textMessage", text: "L: Nice weather, huh?"},
-            { who: "characterN", type: "stand", direction: "left", time: 1000},
-            { type: "textMessage", text: "N: What?"},
-            { type: "textMessage", text: "L: I said, 'nice weather.'"},
-            { who: "characterN", type: "stand", direction: "down", time: 1000},
-            { who: "characterN", type: "stand", direction: "right", time: 1000},
-            { who: "characterN", type: "stand", direction: "left", time: 1000},
-            { type: "textMessage", text: "N: In the bar?"},
-            { type: "textMessage", text: "L: What?"},
-            { type: "textMessage", text: "N: Nice weather in the bar?"},
-            { who: "characterL", type: "stand", direction: "down", time: 1000},
-            { who: "characterL", type: "stand", direction: "right", time: 1000},
-            { type: "textMessage", text: "L: Outside of it."},
-            { who: "characterN", type: "stand", direction: "down", time: 1000},
-            { who: "characterN", type: "stand", direction: "up", time: 1000},
-            { type: "changeMapNoTransition", map: "C47_Bar_pt2"},
+            { who: "hero", type: "stand", direction: "right", time: 1000},
+            { type: "textMessage", text: "GROCER: A beer please, bartender."},
+            { who: "grocer", type: "walk",  direction: "up" },
+            { who: "grocer", type: "walk",  direction: "up" },
+            { who: "grocer", type: "walk",  direction: "up" },
+            { who: "grocer", type: "walk",  direction: "up" },
+            { who: "hero", type: "stand", direction: "down", time: 1000},
+            { type: "textMessage", text: "J: Sure thing. We were just talking about you."},
+
+            // { who: "characterN", type: "stand", direction: "up", time: 1000},
+            // { type: "textMessage", text: "L: Nice weather, huh?"},
+            // { who: "characterN", type: "stand", direction: "left", time: 1000},
+            // { type: "textMessage", text: "N: What?"},
+            // { type: "textMessage", text: "L: I said, 'nice weather.'"},
+            // { who: "characterN", type: "stand", direction: "down", time: 1000},
+            // { who: "characterN", type: "stand", direction: "right", time: 1000},
+            // { who: "characterN", type: "stand", direction: "left", time: 1000},
+            // { type: "textMessage", text: "N: In the bar?"},
+            // { type: "textMessage", text: "L: What?"},
+            // { type: "textMessage", text: "N: Nice weather in the bar?"},
+            // { who: "characterL", type: "stand", direction: "down", time: 1000},
+            // { who: "characterL", type: "stand", direction: "right", time: 1000},
+            // { type: "textMessage", text: "L: Outside of it."},
+            // { who: "characterN", type: "stand", direction: "down", time: 1000},
+            // { who: "characterN", type: "stand", direction: "up", time: 1000},
+            // { type: "changeMapNoTransition", map: "C47_Bar_pt2"},
           ]
         }
       ],
