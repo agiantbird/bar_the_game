@@ -13979,27 +13979,295 @@ window.OverworldMaps = {
             { who: "grocer", type: "walk",  direction: "up" },
             { who: "hero", type: "stand", direction: "down", time: 1000},
             { type: "textMessage", text: "J: Sure thing. We were just talking about you."},
+            { type: "textMessage", text: "GROCER: We?"},
+            { who: "customer", type: "stand", direction: "left", time: 1000},
+            { who: "customer", type: "stand", direction: "down", time: 1000},
+            { type: "textMessage", text: "GROCER: Oh-- you! I'll never escape you."},
+            { type: "textMessage", text: "CUSTOMER: I've been thinking about the grocery store aisle some more."},
+            { type: "changeMapNoTransition", map: "C48_Bar_pt2"},
 
-            // { who: "characterN", type: "stand", direction: "up", time: 1000},
-            // { type: "textMessage", text: "L: Nice weather, huh?"},
-            // { who: "characterN", type: "stand", direction: "left", time: 1000},
-            // { type: "textMessage", text: "N: What?"},
-            // { type: "textMessage", text: "L: I said, 'nice weather.'"},
-            // { who: "characterN", type: "stand", direction: "down", time: 1000},
-            // { who: "characterN", type: "stand", direction: "right", time: 1000},
-            // { who: "characterN", type: "stand", direction: "left", time: 1000},
-            // { type: "textMessage", text: "N: In the bar?"},
-            // { type: "textMessage", text: "L: What?"},
-            // { type: "textMessage", text: "N: Nice weather in the bar?"},
-            // { who: "characterL", type: "stand", direction: "down", time: 1000},
-            // { who: "characterL", type: "stand", direction: "right", time: 1000},
-            // { type: "textMessage", text: "L: Outside of it."},
-            // { who: "characterN", type: "stand", direction: "down", time: 1000},
-            // { who: "characterN", type: "stand", direction: "up", time: 1000},
-            // { type: "changeMapNoTransition", map: "C47_Bar_pt2"},
           ]
         }
       ],
+    }
+  },
+  C48_Bar_pt2: {
+    id: "C48_Bar_pt2",
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "down",
+      }),
+      customer: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/customer_sitting.png",
+        direction: "down",
+      }),
+      grocer: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/grocer_sitting.png",
+        direction: "up",
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool6: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            { who: "grocer", type: "stand", direction: "up", time: 1000},
+            { who: "grocer", type: "stand", direction: "right", time: 1000},
+            { type: "textMessage", text: "GROCER: I'm sure you have."},
+            { who: "customer", type: "stand", direction: "left", time: 1000},
+            { type: "textMessage", text: "CUSTOMER: The problem is one of arrangement."},
+            { type: "textMessage", text: "GROCER: I just sell groceries."},
+            { type: "textMessage", text: "CUSTOMER: Do you want to get rid of the aisles in your store or not?"},
+            { type: "textMessage", text: "GROCER: I thought you wanted me to add more aisles?"},
+            { type: "textMessage", text: "CUSTOMER: You said that you wouldn't so I thought in the other direction."},
+            { type: "textMessage", text: "GROCER: You thought in the other direction?"},
+            { type: "textMessage", text: "CUSTOMER: Instead of adding more aisles you could remove them."},
+            { type: "textMessage", text: "GROCER: I did do that."},
+            { type: "textMessage", text: "CUSTOMER: But you left one."},
+            { type: "textMessage", text: "GROCER: But you said I have to have one aisle, as no aisle is still an aisle."},
+            { type: "textMessage", text: "CUSTOMER: Right, zero as one."},
+            { type: "textMessage", text: "GROCER: One as zero."},
+            { type: "textMessage", text: "CUSTOMER: But that's not really zero. That's the problem."},
+            { type: "textMessage", text: "GROCER: What's the problem?"},
+            { type: "textMessage", text: "CUSTOMER: The problem is you've arranged a set with nothing in it."},
+            { who: "grocer", type: "stand", direction: "down", time: 1000},
+            { who: "grocer", type: "stand", direction: "right", time: 1000},
+            { type: "textMessage", text: "GROCER: I have?"},
+            { type: "textMessage", text: "CUSTOMER: You have."},
+            { type: "textMessage", text: "GROCER: What do I do?"},
+            { type: "textMessage", text: "CUSTOMER: You have to get rid of the set."},
+            { type: "textMessage", text: "GROCER: Get rid of the set?"},
+            { type: "textMessage", text: "CUSTOMER: True zero."},
+            { type: "textMessage", text: "GROCER: What does that mean?"},
+            { type: "textMessage", text: "CUSTOMER: What does it mean?"},
+            { type: "textMessage", text: "GROCER: Yes, practically."},
+            { type: "textMessage", text: "CUSTOMER: Oh what does it practically mean."},
+            { type: "textMessage", text: "GROCER: Mm."},
+            { who: "customer", type: "stand", direction: "down", time: 1000},
+            { who: "customer", type: "stand", direction: "left", time: 1000},
+            { type: "textMessage", text: "CUSTOMER: Well, you'll have to get rid of the grocery store."},
+            { who: "grocer", type: "stand", direction: "down", time: 1000},
+            { type: "textMessage", text: "GROCER: I will?"},
+            { who: "customer", type: "stand", direction: "down", time: 1000},
+            { type: "textMessage", text: "CUSTOMER: Yep."},
+            { type: "textMessage", text: "GROCER: What will I do?"},
+            { who: "customer", type: "stand", direction: "left", time: 1000},
+            { type: "textMessage", text: "CUSTOMER: Whatever you want. The store will be completely efficient."},
+            { who: "customer", type: "stand", direction: "up", time: 1000},
+            { type: "textMessage", text: "GROCER: I could go to the sea, I guess."},
+            { who: "grocer", type: "stand", direction: "down", time: 1000},
+            { who: "hero", type: "stand", direction: "right", time: 1000},
+            { who: "hero", type: "stand", direction: "down", time: 1000},
+            { type: "textMessage", text: "J: Where will I buy food?"},
+            { type: "changeMapNoTransition", map: "C48_Bar_pt3"},
+          ]
+        }
+      ],
+    }
+  },
+  C48_Bar_pt3: {
+    id: "C48_Bar_pt3",
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+        direction: "down",
+      }),
+      customer: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/customer_sitting.png",
+        direction: "up",
+      }),
+      grocer: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/grocer_sitting.png",
+        direction: "down",
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool5: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool6: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            // { type: "changeMap", map: "C06_Bar_Pt1" },
+            { type: "changeMap",
+              map: "C06_Bar_Pt1",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+            // { type: "textMessage", text: "this should be chapter 6..."},
+          ]
+        }
+      ]
     }
   },
 }
