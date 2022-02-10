@@ -15251,4 +15251,99 @@ window.OverworldMaps = {
       ]
     }
   },
+  C54_TextScene: {
+    id: "C54_TextScene",
+    lowerSrc: "/images/maps/all_black_screen.png",
+    upperSrc: "/images/maps/all_black_screen.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(11),
+        y: utils.withGrid(6),
+        src: "/images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+      }),
+    },
+    walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(11,6)]: [
+        {
+          events: [
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: "At a certain distance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . the thing being looked at can be seen . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: "What's looking? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: "At what? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "},
+            { type: "textMessage", text: ". . . . . . . . . Well, to look at what is doing the looking, the distance required can be . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . considerable . . . . . "},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: "I see . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . There are constants and variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: "Like what? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: "How bright is sunlight? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . How fast . . . . . can it travel? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . How long is a lifetime? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . How fast does it go? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "changeMap",
+              map: "C53_Bar",
+              x: utils.withGrid(11),
+              y: utils.withGrid(6),
+              direction: "down"
+            },
+          ],
+        },
+      ]
+    }
+  },
 }
