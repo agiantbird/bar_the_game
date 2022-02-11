@@ -15346,4 +15346,191 @@ window.OverworldMaps = {
       ]
     }
   },
+  C55_Bar: {
+    id: "C55_Bar",
+    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "/images/maps/C01_BarUpper.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: false,
+        direction: 'down',
+        x: utils.withGrid(5),
+        y: utils.withGrid(5),
+      }),
+      characterM: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        src: "/images/characters/people/m_sitting.png",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 1800 },
+        //   { type: "stand",  direction: "down", time: 4000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      characterL: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/images/characters/people/l_sitting.png",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 300 },
+        //   { type: "stand",  direction: "down", time: 5000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
+              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      characterO: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(7),
+        src: "/images/characters/people/o_sitting.png",
+        // behaviorLoop: [
+        //   { type: "stand",  direction: "right", time: 900 },
+        //   { type: "stand",  direction: "up", time: 4000 }
+        // ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Hi :)", faceHero: "characterO" },
+              { type: "textMessage", text: "I'm O.!"},
+            ]
+          }
+        ]
+      }),
+      emptyStool1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(6),
+        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+      }),
+      emptyStool2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool3: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+      emptyStool4: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(7),
+        src: "/images/assets/stool_sprite_sheet.png",
+      }),
+    },
+    walls: {
+      // back wall
+      [utils.asGridCoord(1,3)] : true,
+      [utils.asGridCoord(2,3)] : true,
+      [utils.asGridCoord(3,3)] : true,
+      [utils.asGridCoord(4,3)] : true,
+      [utils.asGridCoord(5,3)] : true,
+      //     door is at 6, 3
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(8,3)] : true,
+      [utils.asGridCoord(9,3)] : true,
+      [utils.asGridCoord(10,3)] : true,
+
+      // bar
+      [utils.asGridCoord(4,4)] : true,
+      [utils.asGridCoord(4,5)] : true,
+      [utils.asGridCoord(4,6)] : true,
+      [utils.asGridCoord(5,6)] : true,
+      [utils.asGridCoord(6,6)] : true,
+      [utils.asGridCoord(7,6)] : true,
+      [utils.asGridCoord(8,6)] : true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,5)]: [
+        {
+          events: [
+            // { who: "characterM", type: "stand",  direction: "right", time: 20 },
+            // { who: "characterL", type: "stand",  direction: "right", time: 20 },
+            // { type: "textMessage", text: "... ... ... ... ... ... ... ... ... ..."},
+            // { type: "textMessage", text: " ... ... ... ..."},
+            // { type: "textMessage", text: "."},
+            // { type: "textMessage", text: '...'},
+            // { type: "textMessage", text: "."},
+            // { type: "textMessage", text: "L: ...The beginning."},
+            // { who: "characterM", type: "stand",  direction: "down", time: 400 },
+            // { type: "textMessage", text: "M: You mean how long since the beginning?"},
+            // { type: "textMessage", text: "L: Yeah, how long have we been sitting here, since we started sitting here?"},
+            // { who: "characterO", type: "stand",  direction: "left", time: 400 },
+            // { type: "textMessage", text: "O: I'm not sure. Does it matter?"},
+            // { who: "characterM", type: "stand",  direction: "right", time: 20 },
+            // { who: "characterO", type: "stand",  direction: "up", time: 400 },
+            // { type: "textMessage", text: "."},
+            // { type: "textMessage", text: ".."},
+            // { type: "textMessage", text: "..."},
+            // { who: "characterL", type: "stand",  direction: "down", time: 400 },
+            // { type: "textMessage", text: "L: ...We were here before M."},
+            // { who: "characterM", type: "stand",  direction: "down", time: 1000 },
+            // { type: "textMessage", text: "M: I was here at 10:30."},
+            // { type: "textMessage", text: ".............."},
+            // { who: "characterM", type: "stand",  direction: "down", time: 1000 },
+            // { who: "characterM", type: "stand",  direction: "down", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { type: "textMessage", text: "L: So we've been here since 10:30 at least."},
+            // { who: "characterO", type: "stand",  direction: "left", time: 400 },
+            // { type: "textMessage", text: "O: At least."},
+            // { who: "characterL", type: "stand",  direction: "up", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "down", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "right", time: 1000 },
+            // { who: "characterL", type: "stand",  direction: "down", time: 1000 },
+            // { type: "textMessage", text: "L: But how long since?"},
+            // { who: "characterL", type: "stand",  direction: "down", time: 100 },
+            // { type: "textMessage", text: "M: It's 12:10, now."},
+            // { type: "textMessage", text: "L: So for a bit."},
+            // { who: "characterL", type: "stand",  direction: "right", time: 100 },
+            // { type: "textMessage", text: "O: And some time before."},
+            // { who: "characterO", type: "stand",  direction: "up", time: 400 },
+            // { type: "textMessage", text: ".............."},
+            // { type: "textMessage", text: ".............."},
+            // { type: "textMessage", text: ".............."},
+            // { type: "textMessage", text: "L: Felt shorter."},
+            // { who: "characterO", type: "stand",  direction: "left", time: 400 },
+            // { type: "textMessage", text: "O: It did. Longer, too."},
+            // { type: "textMessage", text: ".............."},
+            // { type: "textMessage", text: ".............."},
+            // { type: "textMessage", text: ".............."},
+            // { type: "textMessage", text: "How much longer will we be here?"},
+            // { type: "textMessage", text: ".............."},
+            // { type: "textMessage", text: ".............."},
+            // { type: "changeMapNoTransition", map: "C01_Bar_Pt2" },
+          ]
+        }
+      ],
+      [utils.asGridCoord(5,10)]: [
+        {
+          events: [
+            { type: "changeMap",
+              map: "C02_Bar",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
+              direction: "down"
+            },
+          ]
+        }
+      ]
+    }
+  },
 }
