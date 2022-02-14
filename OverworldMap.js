@@ -1452,7 +1452,6 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "I fret over ducks!", faceHero: "characterDuckWorrier" },
-              // { type: "textMessage", text: "I'm inquisitive and cheerful!"},
             ]
           }
         ]
@@ -3068,7 +3067,7 @@ window.OverworldMaps = {
       characterM: new Person({
         x: utils.withGrid(2),
         y: utils.withGrid(4),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/m_standing.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 1800 },
           // { type: "stand",  direction: "down", time: 4000 }
@@ -3219,7 +3218,7 @@ window.OverworldMaps = {
       characterM: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(9),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/m_standing.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 1800 },
           // { type: "stand",  direction: "down", time: 4000 }
@@ -3379,7 +3378,7 @@ window.OverworldMaps = {
       characterM: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(9),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/m_standing.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 1800 },
           // { type: "stand",  direction: "down", time: 4000 }
@@ -4614,7 +4613,7 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(5),
         y: utils.withGrid(7),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/customer_standing.png",
       }),
     },
     walls: {
@@ -4754,7 +4753,7 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(5),
         y: utils.withGrid(7),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/customer_standing.png",
       }),
     },
     walls: {
@@ -5219,7 +5218,7 @@ window.OverworldMaps = {
       characterO: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(10),
-        src: "/images/characters/people/npc1_gray.png",
+        src: "/images/characters/people/o_standing.png",
         direction: "up",
         talking: [
           {
@@ -8030,7 +8029,7 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(5),
         y: utils.withGrid(7),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/customer_standing.png",
       }),
     },
     walls: {
@@ -8196,7 +8195,7 @@ window.OverworldMaps = {
         x: utils.withGrid(3),
         y: utils.withGrid(6),
         direction: "right",
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/customer_standing.png",
       }),
     },
     walls: {
@@ -8748,7 +8747,7 @@ window.OverworldMaps = {
       characterN: new Person({
         x: utils.withGrid(31),
         y: utils.withGrid(6),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/characterNStanding.png",
         direction: "right",
         // behaviorLoop: [
         //   { type: "stand",  direction: "right", time: 1000 },
@@ -8885,7 +8884,7 @@ window.OverworldMaps = {
       characterN: new Person({
         x: utils.withGrid(31),
         y: utils.withGrid(6),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/characterNStanding.png",
         direction: "right",
         behaviorLoop: [
           { type: "stand",  direction: "right", time: 1000 },
@@ -10063,7 +10062,7 @@ window.OverworldMaps = {
       characterN: new Person({
         x: utils.withGrid(31),
         y: utils.withGrid(6),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/characterNStanding.png",
         direction: "right",
         // behaviorLoop: [
         //   { type: "stand",  direction: "right", time: 1000 },
@@ -10188,7 +10187,7 @@ window.OverworldMaps = {
       characterN: new Person({
         x: utils.withGrid(31),
         y: utils.withGrid(6),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/characterNStanding.png",
         direction: "right",
         behaviorLoop: [
           { type: "stand",  direction: "right", time: 1000 },
@@ -13333,7 +13332,7 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(7),
         y: utils.withGrid(8),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/customer_standing.png",
       }),
     },
     walls: {
@@ -13467,7 +13466,7 @@ window.OverworldMaps = {
         x: utils.withGrid(7),
         y: utils.withGrid(8),
         direction: 'up',
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/customer_standing.png",
       }),
     },
     walls: {
