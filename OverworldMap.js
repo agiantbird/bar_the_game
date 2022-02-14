@@ -1442,7 +1442,8 @@ window.OverworldMaps = {
       characterDuckWorrier: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(11),
-        src: "/images/characters/people/hero_gray.png",
+        direction: 'up',
+        src: "images/characters/people/duck_worrier.png",
         // behaviorLoop: [
         //   { type: "stand",  direction: "right", time: 300 },
         //   { type: "stand",  direction: "down", time: 5000 }
