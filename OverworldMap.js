@@ -2486,7 +2486,7 @@ window.OverworldMaps = {
      fruitEnjoyer2: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(11),
-        src: "/images/characters/people/npc1_gray.png",
+        src: "/images/characters/people/fruit_enjoyer_1_standing.png",
         // behaviorLoop: [
         //   { type: "stand",  direction: "right", time: 300 },
         //   { type: "stand",  direction: "down", time: 5000 }
@@ -2645,7 +2645,7 @@ window.OverworldMaps = {
      fruitEnjoyer2: new Person({
         x: utils.withGrid(6),
         y: utils.withGrid(7),
-        src: "/images/characters/people/o_sitting.png",
+        src: "/images/characters/people/fruit_enjoyer_1_sitting.png",
         talking: [
           {
             events: [
@@ -2768,6 +2768,7 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(6),
         y: utils.withGrid(5),
+        src: "/images/characters/people/fruit_enjoyer_2_standing.png"
       }),
       characterL: new Person({
         x: utils.withGrid(3),
@@ -12077,7 +12078,7 @@ window.OverworldMaps = {
       fruitEnjoyer1: new Person({
         x: utils.withGrid(11),
         y: utils.withGrid(9),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/fruit_enjoyer_1_standing.png",
       }),
     },
     walls: {
@@ -12209,7 +12210,7 @@ window.OverworldMaps = {
       fruitEnjoyer1: new Person({
         x: utils.withGrid(11),
         y: utils.withGrid(9),
-        src: "/images/characters/people/hero_gray.png",
+        src: "/images/characters/people/fruit_enjoyer_1_standing.png",
         direction: "up",
       }),
     },
