@@ -2775,6 +2775,7 @@ window.OverworldMaps = {
         x: utils.withGrid(3),
         y: utils.withGrid(5),
         src: "images/characters/people/l_sitting.png",
+        direction: "right",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 300 },
           // { type: "stand",  direction: "down", time: 5000 }
@@ -2792,6 +2793,7 @@ window.OverworldMaps = {
         x: utils.withGrid(5),
         y: utils.withGrid(7),
         src: "images/characters/people/fruit_enjoyer_1_sitting.png",
+        direction: "up",
         talking: [
           {
             events: [
@@ -2804,6 +2806,7 @@ window.OverworldMaps = {
         x: utils.withGrid(6),
         y: utils.withGrid(7),
         src: "images/characters/people/fruit_enjoyer_2_sitting.png",
+        direction: "up",
         talking: [
           {
             events: [

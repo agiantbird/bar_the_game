@@ -1,4 +1,4 @@
-class Scenetransition {
+class SceneTransition {
 	constructor() {
 		this.element = null;
 	}
