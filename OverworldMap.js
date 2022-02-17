@@ -2761,8 +2761,8 @@ window.OverworldMaps = {
   },
   C10_Bar_Pt3: {
     id: "C10_Bar_Pt3",
-    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
-    upperSrc: "/images/maps/C01_BarUpper.png",
+    lowerSrc: "images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -2772,7 +2772,7 @@ window.OverworldMaps = {
       characterL: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(5),
-        src: "/images/characters/people/l_sitting.png",
+        src: "images/characters/people/l_sitting.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 300 },
           // { type: "stand",  direction: "down", time: 5000 }
@@ -2789,7 +2789,7 @@ window.OverworldMaps = {
       fruitEnjoyer1: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(7),
-        src: "/images/characters/people/fruit_enjoyer_1_sitting.png",
+        src: "images/characters/people/fruit_enjoyer_1_sitting.png",
         talking: [
           {
             events: [
@@ -2801,7 +2801,7 @@ window.OverworldMaps = {
      fruitEnjoyer2: new Person({
         x: utils.withGrid(6),
         y: utils.withGrid(7),
-        src: "/images/characters/people/fruit_enjoyer_2_sitting.png",
+        src: "images/characters/people/fruit_enjoyer_2_sitting.png",
         talking: [
           {
             events: [
@@ -2813,22 +2813,22 @@ window.OverworldMaps = {
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool3: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool4: new Person({
         x: utils.withGrid(4),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool6: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
     },
     walls: {
