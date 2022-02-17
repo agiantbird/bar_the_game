@@ -105,8 +105,8 @@ class OverworldMap {
 window.OverworldMaps = {
   C01_BarPt1: {
     id: "C01_BarPt1",
-    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
-    upperSrc: "/images/maps/C01_BarUpper.png",
+    lowerSrc: "images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: false,
@@ -2446,8 +2446,8 @@ window.OverworldMaps = {
   },
   C10_Bar_Pt1: {
     id: "C10_Bar_Pt1",
-    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
-    upperSrc: "/images/maps/C01_BarUpper.png",
+    lowerSrc: "images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -2457,7 +2457,7 @@ window.OverworldMaps = {
       characterL: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(5),
-        src: "/images/characters/people/l_sitting.png",
+        src: "images/characters/people/l_sitting.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 300 },
           // { type: "stand",  direction: "down", time: 5000 }
@@ -2474,7 +2474,7 @@ window.OverworldMaps = {
       fruitEnjoyer1: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(12),
-        src: "/images/characters/people/fruit_enjoyer_1_standing.png",
+        src: "images/characters/people/fruit_enjoyer_1_standing.png",
         talking: [
           {
             events: [
@@ -2486,7 +2486,7 @@ window.OverworldMaps = {
      fruitEnjoyer2: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(11),
-        src: "/images/characters/people/fruit_enjoyer_2_standing.png",
+        src: "images/characters/people/fruit_enjoyer_2_standing.png",
         // behaviorLoop: [
         //   { type: "stand",  direction: "right", time: 300 },
         //   { type: "stand",  direction: "down", time: 5000 }
@@ -2503,32 +2503,32 @@ window.OverworldMaps = {
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool2: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool3: new Person({
         x: utils.withGrid(4),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool4: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool5: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool6: new Person({
         x: utils.withGrid(6),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
     },
     walls: {
@@ -2605,8 +2605,8 @@ window.OverworldMaps = {
   },
   C10_Bar_Pt2: {
     id: "C10_Bar_Pt2",
-    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
-    upperSrc: "/images/maps/C01_BarUpper.png",
+    lowerSrc: "images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -2616,7 +2616,7 @@ window.OverworldMaps = {
       characterL: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(5),
-        src: "/images/characters/people/l_sitting.png",
+        src: "images/characters/people/l_sitting.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 300 },
           // { type: "stand",  direction: "down", time: 5000 }
@@ -2633,7 +2633,8 @@ window.OverworldMaps = {
       fruitEnjoyer1: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(7),
-        src: "/images/characters/people/l_sitting.png",
+        src: "images/characters/people/fruit_enjoyer_1_sitting.png",
+        direction: "up",
         talking: [
           {
             events: [
@@ -2645,7 +2646,8 @@ window.OverworldMaps = {
      fruitEnjoyer2: new Person({
         x: utils.withGrid(6),
         y: utils.withGrid(7),
-        src: "/images/characters/people/fruit_enjoyer_1_sitting.png",
+        src: "images/characters/people/fruit_enjoyer_2_sitting.png",
+        direction: "up",
         talking: [
           {
             events: [
@@ -2657,22 +2659,22 @@ window.OverworldMaps = {
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool3: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool4: new Person({
         x: utils.withGrid(4),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool6: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
     },
     walls: {
@@ -2736,7 +2738,7 @@ window.OverworldMaps = {
             { who: "hero", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "J: Here?"},
             { type: "textMessage", text: "L: Yeah. It looks like it'd go really well with beer."},
-            { type: "textMessage", text: "J: Why should I sell fruit here? If the grocery store sells fruit?"},
+            { type: "textMessage", text: "J: Why should I sell fruit here if the grocery store sells fruit?"},
             { type: "textMessage", text: "L: That's a good point. I guess there's no need to sell what the grocery store sells."},
             { who: "hero", type: "stand",  direction: "right", time: 1000 },
             { who: "hero", type: "walk",  direction: "right" },
@@ -2894,8 +2896,8 @@ window.OverworldMaps = {
   },
   C11_Bar_Pt1: {
     id: "C11_Bar_Pt1",
-    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
-    upperSrc: "/images/maps/C01_BarUpper.png",
+    lowerSrc: "images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -2905,7 +2907,7 @@ window.OverworldMaps = {
       characterL: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(5),
-        src: "/images/characters/people/l_sitting.png",
+        src: "images/characters/people/l_sitting.png",
         behaviorLoop: [
           { type: "stand",  direction: "right", time: 300 },
           { type: "stand",  direction: "down", time: 5000 }
@@ -2922,7 +2924,7 @@ window.OverworldMaps = {
       characterM: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
-        src: "/images/characters/people/m_sitting.png",
+        src: "images/characters/people/m_sitting.png",
         behaviorLoop: [
           { type: "stand",  direction: "right", time: 1800 },
           { type: "stand",  direction: "down", time: 4000 }
@@ -2939,27 +2941,27 @@ window.OverworldMaps = {
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool2: new Person({
         x: utils.withGrid(4),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool3: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool4: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool5: new Person({
         x: utils.withGrid(6),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
     },
     walls: {
@@ -3039,8 +3041,8 @@ window.OverworldMaps = {
   },
   C11_Bar_Pt2: {
     id: "C11_Bar_Pt2",
-    lowerSrc: "/images/maps/C01_BarLowerWithHardwood.png",
-    upperSrc: "/images/maps/C01_BarUpper.png",
+    lowerSrc: "images/maps/C01_BarLowerWithHardwood.png",
+    upperSrc: "images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -3050,7 +3052,7 @@ window.OverworldMaps = {
       characterL: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(5),
-        src: "/images/characters/people/l_sitting.png",
+        src: "images/characters/people/l_sitting.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 300 },
           // { type: "stand",  direction: "down", time: 5000 }
@@ -3067,7 +3069,7 @@ window.OverworldMaps = {
       characterM: new Person({
         x: utils.withGrid(2),
         y: utils.withGrid(4),
-        src: "/images/characters/people/m_standing.png",
+        src: "images/characters/people/m_standing.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 1800 },
           // { type: "stand",  direction: "down", time: 4000 }
@@ -3084,32 +3086,32 @@ window.OverworldMaps = {
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool2: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool3: new Person({
         x: utils.withGrid(4),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool4: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool5: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool6: new Person({
         x: utils.withGrid(6),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
     },
     walls: {
@@ -3190,8 +3192,8 @@ window.OverworldMaps = {
     // TODO: Need to also lighten the sprites in this chapter
     // with the same shade (people and stools)
     // this could also be one of two brightenings (hence, half bright, implying full bright.)
-    lowerSrc: "/images/maps/C11_BarLowerHalfBright.png",
-    upperSrc: "/images/maps/C11_BarUpperHalfBright.png",
+    lowerSrc: "images/maps/C11_BarLowerHalfBright.png",
+    upperSrc: "images/maps/C11_BarUpperHalfBright.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -3201,7 +3203,7 @@ window.OverworldMaps = {
       characterL: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(5),
-        src: "/images/characters/people/l_sitting.png",
+        src: "images/characters/people/l_sitting.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 300 },
           // { type: "stand",  direction: "down", time: 5000 }
@@ -3218,7 +3220,7 @@ window.OverworldMaps = {
       characterM: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(9),
-        src: "/images/characters/people/m_standing.png",
+        src: "images/characters/people/m_standing.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 1800 },
           // { type: "stand",  direction: "down", time: 4000 }
@@ -3235,32 +3237,32 @@ window.OverworldMaps = {
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool2: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool3: new Person({
         x: utils.withGrid(4),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool4: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool5: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool6: new Person({
         x: utils.withGrid(6),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
     },
     walls: {
@@ -3350,8 +3352,8 @@ window.OverworldMaps = {
     // TODO: Need to also lighten the sprites in this chapter
     // with the same shade (people and stools)
     // this could also be one of two brightenings (hence, half bright, implying full bright.)
-    lowerSrc: "/images/maps/C11_BarLowerHalfBright.png",
-    upperSrc: "/images/maps/C11_BarUpperHalfBright.png",
+    lowerSrc: "images/maps/C11_BarLowerHalfBright.png",
+    upperSrc: "images/maps/C11_BarUpperHalfBright.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -3361,7 +3363,7 @@ window.OverworldMaps = {
       characterL: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(5),
-        src: "/images/characters/people/l_sitting.png",
+        src: "images/characters/people/l_sitting.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 300 },
           // { type: "stand",  direction: "down", time: 5000 }
@@ -3378,7 +3380,7 @@ window.OverworldMaps = {
       characterM: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(9),
-        src: "/images/characters/people/m_standing.png",
+        src: "images/characters/people/m_standing.png",
         behaviorLoop: [
           // { type: "stand",  direction: "right", time: 1800 },
           // { type: "stand",  direction: "down", time: 4000 }
@@ -3395,32 +3397,32 @@ window.OverworldMaps = {
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool2: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
-        src: "/images/assets/slightly_raised_stool_sprite_sheet.png",
+        src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
       emptyStool3: new Person({
         x: utils.withGrid(4),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool4: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool5: new Person({
         x: utils.withGrid(7),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
       emptyStool6: new Person({
         x: utils.withGrid(6),
         y: utils.withGrid(7),
-        src: "/images/assets/stool_sprite_sheet.png",
+        src: "images/assets/stool_sprite_sheet.png",
       }),
     },
     walls: {
