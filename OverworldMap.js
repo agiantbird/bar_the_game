@@ -125,8 +125,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "... ... ...", faceHero: "characterM" },
             ]
           }
         ]
@@ -135,15 +134,11 @@ window.OverworldMaps = {
         x: utils.withGrid(3),
         y: utils.withGrid(5),
         src: "images/characters/people/l_sitting.png",
-        // behaviorLoop: [
-        //   { type: "stand",  direction: "right", time: 300 },
-        //   { type: "stand",  direction: "down", time: 5000 }
-        // ],
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "... ... ..."},
             ]
           }
         ]
@@ -152,15 +147,11 @@ window.OverworldMaps = {
         x: utils.withGrid(6),
         y: utils.withGrid(7),
         src: "images/characters/people/o_sitting.png",
-        // behaviorLoop: [
-        //   { type: "stand",  direction: "right", time: 900 },
-        //   { type: "stand",  direction: "up", time: 4000 }
-        // ],
+        direction: "up",
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi :)", faceHero: "characterO" },
-              { type: "textMessage", text: "I'm O.!"},
+              { type: "textMessage", text: "... ... ...", faceHero: "characterO" },
             ]
           }
         ]
@@ -222,8 +213,8 @@ window.OverworldMaps = {
           events: [
             { who: "characterM", type: "stand",  direction: "right", time: 20 },
             { who: "characterL", type: "stand",  direction: "right", time: 20 },
-            { type: "textMessage", text: "... ... ... ... ... ... ... ... ... ..."},
-            { type: "textMessage", text: " ... ... ... ..."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
+            { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
             { type: "textMessage", text: "."},
             { type: "textMessage", text: '...'},
             { type: "textMessage", text: "."},
@@ -312,8 +303,21 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "... ... ...", faceHero: "characterM" },
+            ]
+          }
+        ]
+      }),
+      mDialogueBoxExtender: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(4),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
             ]
           }
         ]
@@ -329,8 +333,22 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "... ... ..."},
+            ]
+          }
+        ]
+      }),
+      lDialogueBoxExtender: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(5),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
             ]
           }
         ]
@@ -346,8 +364,21 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi :)", faceHero: "characterO" },
-              { type: "textMessage", text: "I'm O.!"},
+              { type: "textMessage", text: "... ... ...", faceHero: "characterO" },
+            ]
+          }
+        ]
+      }),
+      oDialogueBoxExtender: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(6),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "O: ... ... ...", faceHero: "characterO" },
             ]
           }
         ]
@@ -860,7 +891,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(6,3)]: [
         {
           events: [
-            // { type: "changeMap", map: "C04_Bar" },
             { type: "changeMap",
               map: "C04_Bar_Pt1",
               x: utils.withGrid(5),
@@ -965,31 +995,31 @@ window.OverworldMaps = {
         {
           events: [
             { who: "hero", type: "stand",  direction: "right", time: 1800 },
-            // { type: "textMessage", text: "L: You've had this place a long time, huh?"},
-            // { type: "textMessage", text: "J: I suppose I have."},
-            // { type: "textMessage", text: "L: What was here beforehand?"},
-            // { type: "textMessage", text: "J: Nothing."},
-            // { type: "textMessage", text: "L: Nothing?"},
-            // { type: "textMessage", text: "J: Nothing."},
-            // { type: "textMessage", text: "L: So you built this place?"},
-            // { type: "textMessage", text: "J: No."},
-            // { type: "textMessage", text: "L: No?"},
-            // { type: "textMessage", text: "J: The building was here. There just wasn't a business operating in it, which is why I could buy it."},
-            // { type: "textMessage", text: "L: What was here before you and before it was nothing?"},
-            // { type: "textMessage", text: "J: I don't know; I didn't ask. There was some furniture I kept and some that I got rid of."},
-            // { type: "textMessage", text: "I ordered the bar you're sitting at and a company installed it."},
-            // { type: "textMessage", text: "L: What furniture did you keep?"},
-            // { type: "textMessage", text: "J: Those tables and chairs by the door. Those magazine racks I keep the spare menus in."},
-            // { type: "textMessage", text: "L: But those could have been for any business..."},
-            // { type: "textMessage", text: "J: I guess so."},
-            // { type: "textMessage", text: ".........."},
-            // { type: "textMessage", text: ".........."},
+            { type: "textMessage", text: "L: You've had this place a long time, huh?"},
+            { type: "textMessage", text: "J: I suppose I have."},
+            { type: "textMessage", text: "L: What was here beforehand?"},
+            { type: "textMessage", text: "J: Nothing."},
+            { type: "textMessage", text: "L: Nothing?"},
+            { type: "textMessage", text: "J: Nothing."},
+            { type: "textMessage", text: "L: So you built this place?"},
+            { type: "textMessage", text: "J: No."},
+            { type: "textMessage", text: "L: No?"},
+            { type: "textMessage", text: "J: The building was here. There just wasn't a business operating in it, which is why I could buy it."},
+            { type: "textMessage", text: "L: What was here before you and before it was nothing?"},
+            { type: "textMessage", text: "J: I don't know; I didn't ask. There was some furniture I kept and some that I got rid of."},
+            { type: "textMessage", text: "I ordered the bar you're sitting at and a company installed it."},
+            { type: "textMessage", text: "L: What furniture did you keep?"},
+            { type: "textMessage", text: "J: Those tables and chairs by the door. Those magazine racks I keep the spare menus in."},
+            { type: "textMessage", text: "L: But those could have been for any business..."},
+            { type: "textMessage", text: "J: I guess so."},
+            { type: "textMessage", text: ".........."},
+            { type: "textMessage", text: ".........."},
             { type: "textMessage", text: "L: Have you looked in the walls?"},
             { type: "textMessage", text: "J: In the walls?"},
             { type: "textMessage", text: "L: Yes."},
             { type: "textMessage", text: "J: Why would I look in the walls?"},
-            // { type: "textMessage", text: "L: I don't know..."},
-            // { type: "textMessage", text: "L: Because you looked at everything outside of them, I guess."},
+            { type: "textMessage", text: "L: I don't know..."},
+            { type: "textMessage", text: "L: Because you looked at everything outside of them, I guess."},
             { type: "changeMapNoTransition", map: "C04_Bar_Pt2" },
           ]
         }
@@ -1094,35 +1124,35 @@ window.OverworldMaps = {
               y: utils.withGrid(5),
               direction: "down"
             },
-            // { type: "changeMap", map: "C05_Bar" },
-            // { type: "textMessage", text: "M: What are you looking at?"},
-            // { type: "textMessage", text: "J: Nothing."},
-            // { type: "textMessage", text: "M: Oh, ok."},
-            // { type: "textMessage", text: "J: But I feel like there isn't supposed to be nothing there. Wasn't there something there?"},
-            // { type: "textMessage", text: "M: There was something there?"},
-            // { type: "textMessage", text: "L: There's a wall there."},
-            // { type: "textMessage", text: "M: A wall isn't something, it's a place for something."},
-            // { type: "textMessage", text: "L: It's a 'there' but not a thing?"},
-            // { type: "textMessage", text: "M: Right, and it is an 'is'."},
-            // { type: "textMessage", text: "L: It is?"},
-            // { type: "textMessage", text: "J: I think there was a window there."},
-            // { type: "textMessage", text: "M: A window?"},
-            // { type: "textMessage", text: "J: A window."},
-            // { type: "textMessage", text: "M: There can't have been a window there. There's a wall there."},
-            // { type: "textMessage", text: "L: Maybe someone took it."},
-            // { type: "textMessage", text: "J: Took it?"},
-            // { type: "textMessage", text: "L: Yeah, stole it."},
-            // { type: "textMessage", text: "M: How do you steal a window?"},
-            // { type: "textMessage", text: "L: You cut it out of the wall."},
-            // { type: "textMessage", text: "M: Then there'd be a window-sized window cut out of the wall."},
-            // { type: "textMessage", text: "J: I don't think it was stolen."},
-            // { type: "textMessage", text: "L: You should have put bars over it."},
-            // { type: "textMessage", text: "M: Do you remember what was outside?"},
-            // { type: "textMessage", text: "J: Outside the window?"},
-            // { type: "textMessage", text: "M: Yes, when you looked through the window."},
-            // { type: "textMessage", text: "J: Not really... No, I guess not."},
-            // { type: "textMessage", text: "M: Then it probably was never there. Maybe you had a window there in another bar you tended."},
-            // { type: "textMessage", text: "J: Yeah, maybe."},
+            { type: "changeMap", map: "C05_Bar" },
+            { type: "textMessage", text: "M: What are you looking at?"},
+            { type: "textMessage", text: "J: Nothing."},
+            { type: "textMessage", text: "M: Oh, ok."},
+            { type: "textMessage", text: "J: But I feel like there isn't supposed to be nothing there. Wasn't there something there?"},
+            { type: "textMessage", text: "M: There was something there?"},
+            { type: "textMessage", text: "L: There's a wall there."},
+            { type: "textMessage", text: "M: A wall isn't something, it's a place for something."},
+            { type: "textMessage", text: "L: It's a 'there' but not a thing?"},
+            { type: "textMessage", text: "M: Right, and it is an 'is'."},
+            { type: "textMessage", text: "L: It is?"},
+            { type: "textMessage", text: "J: I think there was a window there."},
+            { type: "textMessage", text: "M: A window?"},
+            { type: "textMessage", text: "J: A window."},
+            { type: "textMessage", text: "M: There can't have been a window there. There's a wall there."},
+            { type: "textMessage", text: "L: Maybe someone took it."},
+            { type: "textMessage", text: "J: Took it?"},
+            { type: "textMessage", text: "L: Yeah, stole it."},
+            { type: "textMessage", text: "M: How do you steal a window?"},
+            { type: "textMessage", text: "L: You cut it out of the wall."},
+            { type: "textMessage", text: "M: Then there'd be a window-sized window cut out of the wall."},
+            { type: "textMessage", text: "J: I don't think it was stolen."},
+            { type: "textMessage", text: "L: You should have put bars over it."},
+            { type: "textMessage", text: "M: Do you remember what was outside?"},
+            { type: "textMessage", text: "J: Outside the window?"},
+            { type: "textMessage", text: "M: Yes, when you looked through the window."},
+            { type: "textMessage", text: "J: Not really... No, I guess not."},
+            { type: "textMessage", text: "M: Then it probably was never there. Maybe you had a window there in another bar you tended."},
+            { type: "textMessage", text: "J: Yeah, maybe."},
           ]
         }
       ]
