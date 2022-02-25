@@ -6500,7 +6500,7 @@ window.OverworldMaps = {
     upperSrc: "images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(5),
         y: utils.withGrid(5),
       }),
@@ -6516,28 +6516,12 @@ window.OverworldMaps = {
         y: utils.withGrid(5),
         src: "images/characters/people/l_sitting.png",
         direction: "right",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
-            ]
-          }
-        ]
       }),
       characterO: new Person({
         x: utils.withGrid(6),
         y: utils.withGrid(7),
         src: "images/characters/people/o_sitting.png",
         direction: "up",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Hi :)", faceHero: "characterO" },
-              { type: "textMessage", text: "I'm O.!"},
-            ]
-          }
-        ]
       }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
@@ -6564,28 +6548,6 @@ window.OverworldMaps = {
         y: utils.withGrid(7),
         src: "images/assets/stool_sprite_sheet.png",
       }),
-    },
-    walls: {
-      // back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      //     door is at 6, 3
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-
-      // bar
-      [utils.asGridCoord(4,4)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(4,6)] : true,
-      [utils.asGridCoord(5,6)] : true,
-      [utils.asGridCoord(6,6)] : true,
-      [utils.asGridCoord(7,6)] : true,
-      [utils.asGridCoord(8,6)] : true,
     },
     cutsceneSpaces: {
       [utils.asGridCoord(5,5)]: [
@@ -6611,11 +6573,13 @@ window.OverworldMaps = {
             { type: "textMessage", text: "L: Where do birds go when it's windy?"},
             { who: "characterO", type: "stand", direction: "left", time: 1000 },
             { type: "textMessage", text: "O: I don't know, where do they go?"},
+            { who: "characterL", type: "stand",  direction: "down", time: 1000 },
             { type: "textMessage", text: "L: I don't know."},
             { type: "textMessage", text: "O: Oh, I thought you were setting up a joke."},
             { type: "textMessage", text: "L: No."},
             { type: "textMessage", text: "O: Then it's a serious question?"},
             { type: "textMessage", text: "L: It's serious enough."},
+            { who: "characterO", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "O: It's a good one."},
             { who: "characterL", type: "stand",  direction: "right", time: 1000 },
             { who: "characterO", type: "stand",  direction: "up", time: 1000 },
@@ -6635,7 +6599,7 @@ window.OverworldMaps = {
     upperSrc: "images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(6),
         y: utils.withGrid(4),
       }),
@@ -6651,28 +6615,12 @@ window.OverworldMaps = {
         y: utils.withGrid(5),
         src: "images/characters/people/l_sitting.png",
         direction: "right",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
-            ]
-          }
-        ]
       }),
       characterO: new Person({
         x: utils.withGrid(6),
         y: utils.withGrid(7),
         src: "images/characters/people/o_sitting.png",
         direction: "up",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Hi :)", faceHero: "characterO" },
-              { type: "textMessage", text: "I'm O.!"},
-            ]
-          }
-        ]
       }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
@@ -6699,28 +6647,6 @@ window.OverworldMaps = {
         y: utils.withGrid(7),
         src: "images/assets/stool_sprite_sheet.png",
       }),
-    },
-    walls: {
-      // back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      //     door is at 6, 3
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-
-      // bar
-      [utils.asGridCoord(4,4)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(4,6)] : true,
-      [utils.asGridCoord(5,6)] : true,
-      [utils.asGridCoord(6,6)] : true,
-      [utils.asGridCoord(7,6)] : true,
-      [utils.asGridCoord(8,6)] : true,
     },
     cutsceneSpaces: {
       [utils.asGridCoord(6,4)]: [
@@ -6758,6 +6684,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      lDialogueBoxExtender: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(5),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+            ]
+          }
+        ]
+      }),
       characterO: new Person({
         x: utils.withGrid(6),
         y: utils.withGrid(7),
@@ -6768,6 +6708,20 @@ window.OverworldMaps = {
             events: [
               { type: "textMessage", text: "Hi :)", faceHero: "characterO" },
               { type: "textMessage", text: "I'm O.!"},
+            ]
+          }
+        ]
+      }),
+      oDialogueBoxExtender: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(6),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "O: ... ... ...", faceHero: "characterO" },
             ]
           }
         ]
@@ -6799,6 +6753,29 @@ window.OverworldMaps = {
       }),
     },
     walls: {
+      // edges of level
+      [utils.asGridCoord(0,3)] : true,
+      [utils.asGridCoord(0,4)] : true,
+      [utils.asGridCoord(0,5)] : true,
+      [utils.asGridCoord(0,6)] : true,
+      [utils.asGridCoord(0,7)] : true,
+      [utils.asGridCoord(0,8)] : true,
+      [utils.asGridCoord(0,9)] : true,
+      [utils.asGridCoord(1,10)] : true,
+      [utils.asGridCoord(2,10)] : true,
+      [utils.asGridCoord(3,10)] : true,
+      [utils.asGridCoord(4,10)] : true,
+      [utils.asGridCoord(6,10)] : true,
+      [utils.asGridCoord(7,10)] : true,
+      [utils.asGridCoord(8,10)] : true,
+      [utils.asGridCoord(9,10)] : true,
+      [utils.asGridCoord(10,10)] : true,
+      [utils.asGridCoord(11,9)] : true,
+      [utils.asGridCoord(11,8)] : true,
+      [utils.asGridCoord(11,7)] : true,
+      [utils.asGridCoord(11,6)] : true,
+      [utils.asGridCoord(11,5)] : true,
+      [utils.asGridCoord(11,4)] : true,
       // back wall
       [utils.asGridCoord(1,3)] : true,
       [utils.asGridCoord(2,3)] : true,
@@ -6810,7 +6787,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -6821,6 +6797,14 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,6)] : true,
     },
     cutsceneSpaces: {
+      [utils.asGridCoord(6,3)]: [
+        {
+          events: [
+            { who: "hero", type: "walk",  direction: "down" },
+            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
+          ]
+        }
+      ],
       [utils.asGridCoord(5,10)]: [
         {
           events: [
@@ -6931,14 +6915,12 @@ window.OverworldMaps = {
       [utils.asGridCoord(6,3)]: [
         {
           events: [
-            // { type: "changeMap", map: "C06_Bar_Pt1" },
             { type: "changeMap",
               map: "C22_Bar_pt2",
               x: utils.withGrid(11),
               y: utils.withGrid(6),
               direction: "right"
             },
-            // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
       ]
@@ -6961,24 +6943,6 @@ window.OverworldMaps = {
         y: utils.withGrid(6),
         src: "images/characters/people/characterNStanding.png",
         direction: "right",
-        // behaviorLoop: [
-        //   { type: "stand",  direction: "right", time: 1000 },
-        //   { type: "walk", direction: "right" },
-        //   { type: "walk", direction: "right" },
-        //   { type: "stand",  direction: "up", time: 1000 },
-        //   { type: "walk", direction: "right" },
-        //   { type: "stand",  direction: "left", time: 1200 },
-        //   { type: "walk", direction: "left" },
-        //   { type: "walk", direction: "left" },
-        //   { type: "walk", direction: "left" },
-        // ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "...lots to do.", faceHero: "characterN" },
-            ]
-          }
-        ]
       }),
     },
     walls: {
@@ -7054,24 +7018,28 @@ window.OverworldMaps = {
             { type: "textMessage", text: "J: I thought I heard you up here."},
             { who: "characterN", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "N: Yes."},
-            // { type: "textMessage", text: "J: How are today's readings?"},
-            // { type: "textMessage", text: "N: Unremarkable. Humidity is at forty-three percent."},
-            // { type: "textMessage", text: "J: Ah."},
-            // { type: "textMessage", text: "N: Thanks for letting me put this up here, by the way."},
-            // { type: "textMessage", text: "J: Sure, it's just roof space."},
+            { type: "textMessage", text: "J: How are today's readings?"},
+            { who: "characterN", type: "stand",  direction: "right", time: 1000 },
+            { who: "characterN", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "N: Unremarkable. Humidity is at forty-three percent."},
+            { type: "textMessage", text: "J: Ah."},
+            { type: "textMessage", text: "N: Thanks for letting me put this up here, by the way."},
+            { type: "textMessage", text: "J: Sure, it's just roof space."},
             { who: "hero", type: "stand",  direction: "up", time: 1000 },
             { type: "textMessage", text: "It's nice to have an excuse to come up here, anyway."},
             { who: "hero", type: "stand",  direction: "right", time: 1000 },
             { type: "textMessage", text: "N: Mm."},
             { who: "hero", type: "stand",  direction: "down", time: 1000 },
             { type: "textMessage", text: "J: Do you have any other stations set up?"},
-            // { type: "textMessage", text: "N: Two others. One on top of the grocery store and one on my own roof."},
-            // { type: "textMessage", text: "J: And you check on each regularly?"},
-            // { type: "textMessage", text: "N: Consistently."},
+            { who: "characterN", type: "stand",  direction: "down", time: 1000 },
+            { type: "textMessage", text: "N: Two others. One on top of the grocery store and one on my own roof."},
+            { type: "textMessage", text: "J: And you check on each regularly?"},
+            { type: "textMessage", text: "N: Consistently."},
             { who: "hero", type: "stand",  direction: "right", time: 1000 },
             { type: "textMessage", text: "J: Find anything?"},
-            // { type: "textMessage", text: "N: Not yet."},
-            // { type: "textMessage", text: "J: Well if you ever need a break, there's a bar nearby. First drink is on the house."},
+            { who: "characterN", type: "stand",  direction: "left", time: 1000 },
+            { type: "textMessage", text: "N: Not yet."},
+            { type: "textMessage", text: "J: Well if you ever need a break, there's a bar nearby. First drink is on the house."},
             { who: "characterN", type: "stand",  direction: "up", time: 1000 },
             { who: "characterN", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "N: Not yet."},
