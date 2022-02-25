@@ -1,7 +1,7 @@
 class Progress {
 	constructor(map, playerPosition) {
 		// this.mapId = "C01_BarPt1";
-		this.mapId = "C19_Bar_pt19"
+		this.mapId = "C20_Grocery_pt1"
 		this.startingHeroX = 0;
 		this.startingHeroY = 0;
 		this.startingHeroDirection = "down";

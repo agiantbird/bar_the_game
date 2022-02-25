@@ -6303,82 +6303,13 @@ window.OverworldMaps = {
         src: "images/characters/people/grocer.png",
       }),
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(5),
         y: utils.withGrid(7),
         src: "images/characters/people/customer_standing.png",
       }),
     },
-    walls: {
-      // edges of level
-      //// left wall
-      [utils.asGridCoord(0,4)] : true,
-      [utils.asGridCoord(0,5)] : true,
-      [utils.asGridCoord(0,6)] : true,
-      [utils.asGridCoord(0,7)] : true,
-      [utils.asGridCoord(0,8)] : true,
-      [utils.asGridCoord(0,9)] : true,
-      //// back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      [utils.asGridCoord(6,3)] : true,
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-      [utils.asGridCoord(11,3)] : true,
-      [utils.asGridCoord(12,3)] : true,
-      [utils.asGridCoord(13,3)] : true,
-      ////right wall
-      [utils.asGridCoord(14,4)] : true,
-      [utils.asGridCoord(14,5)] : true,
-      [utils.asGridCoord(14,6)] : true,
-      [utils.asGridCoord(14,7)] : true,
-      [utils.asGridCoord(14,8)] : true,
-      [utils.asGridCoord(14,9)] : true,
-      //// bottom wall
-      [utils.asGridCoord(1,10)] : true,
-      [utils.asGridCoord(2,10)] : true,
-      [utils.asGridCoord(3,10)] : true,
-      [utils.asGridCoord(4,10)] : true,
-      [utils.asGridCoord(5,10)] : true,
-      // door is here
-      [utils.asGridCoord(7,10)] : true,
-      [utils.asGridCoord(8,10)] : true,
-      [utils.asGridCoord(9,10)] : true,
-      [utils.asGridCoord(10,10)] : true,
-      [utils.asGridCoord(11,10)] : true,
-      [utils.asGridCoord(12,10)] : true,
-      [utils.asGridCoord(13,10)] : true,
-      // grocery shelf
-      [utils.asGridCoord(1,5)] : true,
-      [utils.asGridCoord(2,5)] : true,
-      [utils.asGridCoord(3,5)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(5,5)] : true,
-      [utils.asGridCoord(6,5)] : true,
-      [utils.asGridCoord(7,5)] : true,
-      [utils.asGridCoord(8,5)] : true,
-      [utils.asGridCoord(9,5)] : true,
-      [utils.asGridCoord(10,5)] : true,
-      // cash register
-      [utils.asGridCoord(9,8)] : true,
-      [utils.asGridCoord(10,8)] : true,
-      [utils.asGridCoord(11,8)] : true,
-      [utils.asGridCoord(12,8)] : true,
-    },
     cutsceneSpaces: {
-      [utils.asGridCoord(1,6)]: [
-        {
-          events: [
-            { who: "hero", type: "stand",  direction: "left", time: 1000 },
-            { type: "textMessage", text: "it just seems to go on forever..."},
-          ]
-        }
-      ],
       [utils.asGridCoord(5,7)]: [
         {
           events: [
@@ -6388,12 +6319,14 @@ window.OverworldMaps = {
             { type: "textMessage", text: "Grocer: That's right."},
             { type: "textMessage", text: "Customer: As well as everything else?"},
             { type: "textMessage", text: "Grocer: Yes."},
+            { who: "hero", type: "stand",  direction: "right", time: 1000 },
             { type: "textMessage", text: "Customer: How can you have just the one aisle?"},
             { who: "grocer", type: "stand",  direction: "up", time: 1000 },
             { who: "grocer", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "Grocer: It's all I've needed so far."},
             { type: "textMessage", text: "Customer: But you can't have just one aisle. You can have zero, or three, at the least."},
             { type: "textMessage", text: "Grocer: But if I had three aisles I'd have six, and I don't have the space for six aisles, nevermind twelve."},
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
             { type: "textMessage", text: "Customer: So everything is just *here* then, zero functioning as one?"},
             { type: "textMessage", text: "Grocer: I guess so."},
             { type: "textMessage", text: "Customer: What if you need to stock more things?"},
@@ -6401,10 +6334,12 @@ window.OverworldMaps = {
             { who: "hero", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "Customer: Is it full?"},
             { type: "textMessage", text: "Grocer: Not yet."},
+            { who: "hero", type: "stand",  direction: "up", time: 1000 },
             { type: "textMessage", text: "Customer: What if it was?"},
             { type: "textMessage", text: "Grocer: I'd worry about sales..."},
             { type: "textMessage", text: "Customer: What if you needed to stock more kinds of things? That needed more shelf space?"},
             { type: "textMessage", text: "Grocer: The aisle could twist or turn some I suppose, to avoid the back wall."},
+            { who: "hero", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "Customer: I can't see the end of it. How long is the aisle, already?"},
             { type: "textMessage", text: "Grocer: It's quite long."},
             { who: "hero", type: "stand",  direction: "right", time: 1000 },
@@ -6431,20 +6366,6 @@ window.OverworldMaps = {
           ]
         }
       ],
-      [utils.asGridCoord(5,10)]: [
-        {
-          events: [
-            // { type: "changeMap", map: "C06_Bar_Pt1" },
-            { type: "changeMap",
-              map: "C20_Grocery_pt2",
-              x: utils.withGrid(5),
-              y: utils.withGrid(5),
-              direction: "down"
-            },
-            // { type: "textMessage", text: "this should be chapter 6..."},
-          ]
-        }
-      ]
     }
   },
   C20_Grocery_pt2: {
@@ -6473,6 +6394,20 @@ window.OverworldMaps = {
         y: utils.withGrid(6),
         direction: "right",
         src: "images/characters/people/customer_standing.png",
+      }),
+      grocerDialogueBoxExtender: new Person({
+        x: utils.withGrid(9),
+        y: utils.withGrid(8),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Grocer: Let me know if you need help finding anything.", faceHero: "grocer" },
+            ]
+          }
+        ]
       }),
     },
     walls: {
