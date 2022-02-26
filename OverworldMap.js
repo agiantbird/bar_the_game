@@ -7165,7 +7165,7 @@ window.OverworldMaps = {
     upperSrc: "images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(5),
         y: utils.withGrid(5),
         direction: "left",
@@ -7175,28 +7175,12 @@ window.OverworldMaps = {
         y: utils.withGrid(5),
         src: "images/characters/people/l_sitting.png",
         direction: "right",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
-            ]
-          }
-        ]
       }),
       characterM: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
         src: "images/characters/people/m_sitting.png",
         direction: "right",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
-            ]
-          }
-        ]
       }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
@@ -7224,67 +7208,15 @@ window.OverworldMaps = {
         src: "images/assets/stool_sprite_sheet.png",
       }),
     },
-    walls: {
-      // edges of level
-      [utils.asGridCoord(0,3)] : true,
-      [utils.asGridCoord(0,4)] : true,
-      [utils.asGridCoord(0,5)] : true,
-      [utils.asGridCoord(0,6)] : true,
-      [utils.asGridCoord(0,7)] : true,
-      [utils.asGridCoord(0,8)] : true,
-      [utils.asGridCoord(0,9)] : true,
-      [utils.asGridCoord(1,10)] : true,
-      [utils.asGridCoord(2,10)] : true,
-      [utils.asGridCoord(3,10)] : true,
-      [utils.asGridCoord(4,10)] : true,
-      [utils.asGridCoord(6,10)] : true,
-      [utils.asGridCoord(7,10)] : true,
-      [utils.asGridCoord(8,10)] : true,
-      [utils.asGridCoord(9,10)] : true,
-      [utils.asGridCoord(10,10)] : true,
-      [utils.asGridCoord(11,9)] : true,
-      [utils.asGridCoord(11,8)] : true,
-      [utils.asGridCoord(11,7)] : true,
-      [utils.asGridCoord(11,6)] : true,
-      [utils.asGridCoord(11,5)] : true,
-      [utils.asGridCoord(11,4)] : true,
-      // back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      //     door is at 6, 3
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-
-      // bar
-      [utils.asGridCoord(4,4)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(4,6)] : true,
-      [utils.asGridCoord(5,6)] : true,
-      [utils.asGridCoord(6,6)] : true,
-      [utils.asGridCoord(7,6)] : true,
-      [utils.asGridCoord(8,6)] : true,
-    },
     cutsceneSpaces: {
-      [utils.asGridCoord(6,3)]: [
-        {
-          events: [
-            { who: "hero", type: "walk",  direction: "down" },
-            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
-          ]
-        }
-      ],
       [utils.asGridCoord(5,5)]: [
         {
           events: [
+            { who: "characterL", type: "stand", direction: "right", time: 1000},
             { type: "textMessage", text: "L: I don't remember."},
             { type: "textMessage", text: "J: How do you know you were dreaming, then?"},
             { type: "textMessage", text: "L: I felt different when I woke up."},
-            { type: "textMessage", text: "Different from what? \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0  \u00A0  \u00A0  \u00A0 \u00A0 \u00A0 \u00A0 Different how?"},
+            { type: "textMessage", text: "J: Different from what? \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0  \u00A0  \u00A0  \u00A0 \u00A0 \u00A0 M: Different how?"},
             { who: "characterM", type: "stand",  direction: "right", time: 1000},
             { who: "hero", type: "stand", direction: "up", time: 1000},
             { who: "characterL", type: "stand", direction: "up", time: 1000},
@@ -7301,7 +7233,9 @@ window.OverworldMaps = {
             { type: "textMessage", text: "J: How would you know?"},
             { who: "characterL", type: "stand", direction: "right", time: 1000},
             { type: "textMessage", text: "M: You might do it every night."},
+            { who: "characterM", type: "stand", direction: "right", time: 1000},
             { who: "characterL", type: "stand", direction: "right", time: 1000},
+            { who: "characterL", type: "stand", direction: "down", time: 1000},
             { type: "textMessage", text: "L: But. . . can you sleepwalk without dreaming?"},
             { type: "changeMapNoTransition", map: "C23_Bar_pt2"},
           ]
@@ -7324,7 +7258,11 @@ window.OverworldMaps = {
         x: utils.withGrid(3),
         y: utils.withGrid(5),
         src: "images/characters/people/l_sitting.png",
-        direction: "right",
+        direction: "down",
+        behaviorLoop: [
+          { type: "stand",  direction: "down", time: 3050 },
+          { type: "stand",  direction: "right", time: 2000 },
+        ],
         talking: [
           {
             events: [
@@ -7339,11 +7277,43 @@ window.OverworldMaps = {
         y: utils.withGrid(4),
         src: "images/characters/people/m_sitting.png",
         direction: "right",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 3050 },
+          { type: "stand",  direction: "down", time: 2000 },
+        ],
         talking: [
           {
             events: [
               { type: "textMessage", text: "M. here.", faceHero: "characterM" },
               { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      mDialogueBoxExtender: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(4),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+            ]
+          }
+        ]
+      }),
+      lDialogueBoxExtender: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(5),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
             ]
           }
         ]
@@ -7431,14 +7401,12 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            // { type: "changeMap", map: "C06_Bar_Pt1" },
             { type: "changeMap",
               map: "C24_Bar_Parking_Lot_Pt1",
               x: utils.withGrid(15),
               y: utils.withGrid(3),
               direction: "right"
             },
-            // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
       ]
@@ -7446,13 +7414,11 @@ window.OverworldMaps = {
   },
   C24_Bar_Parking_Lot_Pt1: {
     id: "C24_Bar_Parking_Lot_Pt1",
-    // lowerSrc: "images/maps/parking_lot_wip.png",
     lowerSrc: "images/maps/parking_lot_lower_bread_animation_5.png",
-    // upperSrc: "images/maps/parkinglot_upper.png",
     upperSrc: "images/maps/rat_upper.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(15),
         y: utils.withGrid(3),
         direction: "right",
@@ -7532,90 +7498,21 @@ window.OverworldMaps = {
   C25_Grocery_Pt1: {
     id: "C25_Grocery_Pt1",
     lowerSrc: "images/maps/grocery_store_lower.png",
-    upperSrc: "images/maps/grocery_store_upper.png",
+    upperSrc: "images/maps/grocery_store_upper_with_lemons.png",
     gameObjects: {
       grocer: new Person({
-        x: utils.withGrid(9),
+        x: utils.withGrid(10),
         y: utils.withGrid(7),
         src: "images/characters/people/grocer.png",
       }),
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(13),
         y: utils.withGrid(8),
         direction: "up",
       }),
     },
-    walls: {
-      // edges of level
-      //// left wall
-      [utils.asGridCoord(0,4)] : true,
-      [utils.asGridCoord(0,5)] : true,
-      [utils.asGridCoord(0,6)] : true,
-      [utils.asGridCoord(0,7)] : true,
-      [utils.asGridCoord(0,8)] : true,
-      [utils.asGridCoord(0,9)] : true,
-      //// back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      [utils.asGridCoord(6,3)] : true,
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-      [utils.asGridCoord(11,3)] : true,
-      [utils.asGridCoord(12,3)] : true,
-      [utils.asGridCoord(13,3)] : true,
-      ////right wall
-      [utils.asGridCoord(14,4)] : true,
-      [utils.asGridCoord(14,5)] : true,
-      [utils.asGridCoord(14,6)] : true,
-      [utils.asGridCoord(14,7)] : true,
-      [utils.asGridCoord(14,8)] : true,
-      [utils.asGridCoord(14,9)] : true,
-      //// bottom wall
-      [utils.asGridCoord(1,10)] : true,
-      [utils.asGridCoord(2,10)] : true,
-      [utils.asGridCoord(3,10)] : true,
-      [utils.asGridCoord(4,10)] : true,
-      [utils.asGridCoord(5,10)] : true,
-      // door is here
-      [utils.asGridCoord(7,10)] : true,
-      [utils.asGridCoord(8,10)] : true,
-      [utils.asGridCoord(9,10)] : true,
-      [utils.asGridCoord(10,10)] : true,
-      [utils.asGridCoord(11,10)] : true,
-      [utils.asGridCoord(12,10)] : true,
-      [utils.asGridCoord(13,10)] : true,
-      // grocery shelf
-      [utils.asGridCoord(1,5)] : true,
-      [utils.asGridCoord(2,5)] : true,
-      [utils.asGridCoord(3,5)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(5,5)] : true,
-      [utils.asGridCoord(6,5)] : true,
-      [utils.asGridCoord(7,5)] : true,
-      [utils.asGridCoord(8,5)] : true,
-      [utils.asGridCoord(9,5)] : true,
-      [utils.asGridCoord(10,5)] : true,
-      // cash register
-      [utils.asGridCoord(9,8)] : true,
-      [utils.asGridCoord(10,8)] : true,
-      [utils.asGridCoord(11,8)] : true,
-      [utils.asGridCoord(12,8)] : true,
-    },
     cutsceneSpaces: {
-      [utils.asGridCoord(1,6)]: [
-        {
-          events: [
-            { who: "hero", type: "stand",  direction: "left", time: 1000 },
-            { type: "textMessage", text: "it just seems to go on forever..."},
-          ]
-        }
-      ],
       [utils.asGridCoord(13,8)]: [
         {
           events: [
@@ -7636,33 +7533,45 @@ window.OverworldMaps = {
             { who: "hero", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "J: Do you know the person that fills it up buys the soda and water from your store?"},
             { type: "textMessage", text: "Grocer: Sure."},
-            // TODO: 'Olives' are being rung up in the novella at this point, so it's like a visual joke
-            // might be hard to represent olives in pixel art at this scale, so maybe have lemons/limes
-            // being rung up and change line to "Is what strange? Lemons?" for example
+            { who: "hero", type: "stand",  direction: "up", time: 1000},
             { type: "textMessage", text: "J: You do? Is that strange?"},
-            { type: "textMessage", text: "Grocer: Is what strange? Olives?"},
-            { type: "textMessage", text: "J: That he sells your product in your store?"},
+            { type: "textMessage", text: "Grocer: Is what strange?"},
+            { who: "grocer", type: "stand",  direction: "up", time: 1000},
             { who: "grocer", type: "stand",  direction: "right", time: 1000},
             { who: "grocer", type: "stand",  direction: "down", time: 1000},
+            { who: "grocer", type: "stand",  direction: "left", time: 1000},
+            { who: "grocer", type: "stand",  direction: "down", time: 1000},
+            { type: "textMessage", text: "Grocer: Lemons?"},
+            { type: "textMessage", text: "J: That he sells your product in your store?"},
+            { who: "grocer", type: "stand",  direction: "up", time: 1000},
+            { who: "grocer", type: "stand",  direction: "down", time: 1000},
             { type: "textMessage", text: "Grocer: He paid for it."},
+            { who: "grocer", type: "stand",  direction: "up", time: 1000},
             { type: "textMessage", text: "And it's a pretty big purchase to fill that vending machine up..."},
-            { type: "textMessage", text: "And he  owns another machine or two beyond that... I'm happy for the sale."},
+            { who: "grocer", type: "stand",  direction: "down", time: 1000},
+            { type: "textMessage", text: "And he owns another machine or two beyond that... I'm happy for the sale."},
             { who: "hero", type: "stand",  direction: "up", time: 1000 },
             { type: "textMessage", text: "J: Hm."},
             { type: "textMessage", text: "Grocer: Is it any more odd than you buying your bar ingredients from me?"},
             { who: "hero", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "J: What do you mean?"},
+            { who: "grocer", type: "stand",  direction: "down", time: 1000},
             { type: "textMessage", text: "Grocer: Well, I'm sure you could have these shipped directly to the bar"},
             { type: "textMessage", text: "from the same place you order your alcohol and napkins and everything else, couldn't you?"},
+            { who: "grocer", type: "stand",  direction: "down", time: 1000},
             { type: "textMessage", text: "J: I guess so."},
+            { who: "hero", type: "stand",  direction: "down", time: 1000},
             { type: "textMessage", text: "But, it's mostly beer and wine drinkers at the bar."},
+            { who: "hero", type: "stand",  direction: "up", time: 500},
             { type: "textMessage", text: "I don't think I'd go through ingredients and garnishes like these fast enough"}, 
             { type: "textMessage", text: "for the amount I'd have to order directly."},
             { type: "textMessage", text: "Grocer: I see. Well, why don't you just buy these with your regular groceries for the week?"},
             { type: "textMessage", text: "J: My regular groceries?"},
             { type: "textMessage", text: "Grocer: Yeah, your own food."},
+            { who: "hero", type: "stand",  direction: "left", time: 1000},
             { type: "textMessage", text: "J: I don't know. I think I try to keep those things separate."},
             { type: "textMessage", text: "Grocer: Why?"},
+            { who: "hero", type: "stand",  direction: "up", time: 1000},
             { type: "textMessage", text: "J: I don't know. To avoid having to unmix them, maybe."},
             { type: "textMessage", text: "Grocer: I see. Do you live nearby?"},
             { type: "textMessage", text: "J: I live in the bar."},
@@ -7681,7 +7590,9 @@ window.OverworldMaps = {
             { type: "textMessage", text: "Grocer: No, I mean it went up after the window did."},
             { type: "textMessage", text: "J: Does anything ever go missing? A window?"},
             { type: "textMessage", text: "Grocer: Oh sure, windows, toilets. It's no big deal. Things seem to work out."},
+            { who: "grocer", type: "walk",  direction: "left" },
             { type: "textMessage", text: "J: Hm. One last thing..."},
+            { who: "grocer", type: "stand",  direction: "down", time: 1000},
             { type: "textMessage", text: "Grocer: Yes?"},
             { type: "textMessage", text: "J: Your logo-- has it always been a duck?"},
             { who: "grocer", type: "stand",  direction: "up", time: 1000 },
@@ -7703,6 +7614,30 @@ window.OverworldMaps = {
         x: utils.withGrid(9),
         y: utils.withGrid(7),
         src: "images/characters/people/grocer.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "down", time: 3000 },
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Grocer: Let me know if you need help finding anything.", faceHero: "grocer" },
+            ]
+          }
+        ]
+      }),
+      grocerDialogueBoxExtender: new Person({
+        x: utils.withGrid(9),
+        y: utils.withGrid(8),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Grocer: Let me know if you need help finding anything.", faceHero: "grocer" },
+            ]
+          }
+        ]
       }),
       hero: new Person({
         isPlayerControlled: true,
@@ -7784,14 +7719,12 @@ window.OverworldMaps = {
       [utils.asGridCoord(6,10)]: [
         {
           events: [
-            // { type: "changeMap", map: "C06_Bar_Pt1" },
             { type: "changeMap",
               map: "C26_Bar_pt1",
               x: utils.withGrid(5),
               y: utils.withGrid(5),
               direction: "down"
             },
-            // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
       ]
