@@ -397,7 +397,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -768,7 +767,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -1114,7 +1112,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -1392,7 +1389,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -1661,7 +1657,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -2006,7 +2001,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -2600,7 +2594,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -3853,7 +3846,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -4318,7 +4310,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -4657,7 +4648,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -4901,7 +4891,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -7379,7 +7368,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -7979,7 +7967,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -8709,7 +8696,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -11530,7 +11516,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -11773,7 +11758,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -12410,56 +12394,11 @@ window.OverworldMaps = {
     upperSrc: "images/maps/all_black_screen.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(11),
         y: utils.withGrid(6),
         src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
       }),
-    },
-    walls: {
-      // edges of level
-      [utils.asGridCoord(0,3)] : true,
-      [utils.asGridCoord(0,4)] : true,
-      [utils.asGridCoord(0,5)] : true,
-      [utils.asGridCoord(0,6)] : true,
-      [utils.asGridCoord(0,7)] : true,
-      [utils.asGridCoord(0,8)] : true,
-      [utils.asGridCoord(0,9)] : true,
-      [utils.asGridCoord(1,10)] : true,
-      [utils.asGridCoord(2,10)] : true,
-      [utils.asGridCoord(3,10)] : true,
-      [utils.asGridCoord(4,10)] : true,
-      [utils.asGridCoord(6,10)] : true,
-      [utils.asGridCoord(7,10)] : true,
-      [utils.asGridCoord(8,10)] : true,
-      [utils.asGridCoord(9,10)] : true,
-      [utils.asGridCoord(10,10)] : true,
-      [utils.asGridCoord(11,9)] : true,
-      [utils.asGridCoord(11,8)] : true,
-      [utils.asGridCoord(11,7)] : true,
-      [utils.asGridCoord(11,6)] : true,
-      [utils.asGridCoord(11,5)] : true,
-      [utils.asGridCoord(11,4)] : true,
-      // back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      //     door is at 6, 3
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-
-      // bar
-      [utils.asGridCoord(4,4)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(4,6)] : true,
-      [utils.asGridCoord(5,6)] : true,
-      [utils.asGridCoord(6,6)] : true,
-      [utils.asGridCoord(7,6)] : true,
-      [utils.asGridCoord(8,6)] : true,
     },
     cutsceneSpaces: {
       [utils.asGridCoord(11,6)]: [
@@ -12511,7 +12450,7 @@ window.OverworldMaps = {
     upperSrc: "images/maps/transparent_upper_full_viewfinder.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(11),
         y: utils.withGrid(6),
         src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
@@ -12525,9 +12464,9 @@ window.OverworldMaps = {
             { who: "hero", type: "stand",  direction: "right", time: 4000 },
             { type: "textMessage", text: "The bar is not open because it is closed."},
             { type: "changeMap",
-              map: "C14_Bar_pt1",
-              x: utils.withGrid(5),
-              y: utils.withGrid(5),
+              map: "C54_TextScene",
+              x: utils.withGrid(11),
+              y: utils.withGrid(6),
               direction: "down"
             },
           ],
@@ -12541,56 +12480,11 @@ window.OverworldMaps = {
     upperSrc: "images/maps/all_black_screen.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(11),
         y: utils.withGrid(6),
         src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
       }),
-    },
-    walls: {
-      // edges of level
-      [utils.asGridCoord(0,3)] : true,
-      [utils.asGridCoord(0,4)] : true,
-      [utils.asGridCoord(0,5)] : true,
-      [utils.asGridCoord(0,6)] : true,
-      [utils.asGridCoord(0,7)] : true,
-      [utils.asGridCoord(0,8)] : true,
-      [utils.asGridCoord(0,9)] : true,
-      [utils.asGridCoord(1,10)] : true,
-      [utils.asGridCoord(2,10)] : true,
-      [utils.asGridCoord(3,10)] : true,
-      [utils.asGridCoord(4,10)] : true,
-      [utils.asGridCoord(6,10)] : true,
-      [utils.asGridCoord(7,10)] : true,
-      [utils.asGridCoord(8,10)] : true,
-      [utils.asGridCoord(9,10)] : true,
-      [utils.asGridCoord(10,10)] : true,
-      [utils.asGridCoord(11,9)] : true,
-      [utils.asGridCoord(11,8)] : true,
-      [utils.asGridCoord(11,7)] : true,
-      [utils.asGridCoord(11,6)] : true,
-      [utils.asGridCoord(11,5)] : true,
-      [utils.asGridCoord(11,4)] : true,
-      // back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      //     door is at 6, 3
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-
-      // bar
-      [utils.asGridCoord(4,4)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(4,6)] : true,
-      [utils.asGridCoord(5,6)] : true,
-      [utils.asGridCoord(6,6)] : true,
-      [utils.asGridCoord(7,6)] : true,
-      [utils.asGridCoord(8,6)] : true,
     },
     cutsceneSpaces: {
       [utils.asGridCoord(11,6)]: [
@@ -12620,9 +12514,9 @@ window.OverworldMaps = {
             { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
             { type: "changeMap",
-              map: "C53_Bar",
-              x: utils.withGrid(11),
-              y: utils.withGrid(6),
+              map: "C55_Bar",
+              x: utils.withGrid(5),
+              y: utils.withGrid(5),
               direction: "down"
             },
           ],
@@ -12645,52 +12539,19 @@ window.OverworldMaps = {
         x: utils.withGrid(3),
         y: utils.withGrid(4),
         src: "images/characters/people/m_sitting.png",
-        // behaviorLoop: [
-        //   { type: "stand",  direction: "right", time: 1800 },
-        //   { type: "stand",  direction: "down", time: 4000 }
-        // ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
-            ]
-          }
-        ]
+        direction: "right",
       }),
       characterL: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(5),
         src: "images/characters/people/l_sitting.png",
-        // behaviorLoop: [
-        //   { type: "stand",  direction: "right", time: 300 },
-        //   { type: "stand",  direction: "down", time: 5000 }
-        // ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
-            ]
-          }
-        ]
+        direction: "right",
       }),
       characterO: new Person({
         x: utils.withGrid(6),
         y: utils.withGrid(7),
         src: "images/characters/people/o_sitting.png",
-        // behaviorLoop: [
-        //   { type: "stand",  direction: "right", time: 900 },
-        //   { type: "stand",  direction: "up", time: 4000 }
-        // ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Hi :)", faceHero: "characterO" },
-              { type: "textMessage", text: "I'm O.!"},
-            ]
-          }
-        ]
+        direction: "up",
       }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
@@ -12713,37 +12574,7 @@ window.OverworldMaps = {
         src: "images/assets/stool_sprite_sheet.png",
       }),
     },
-    walls: {
-      // back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      //     door is at 6, 3
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-
-      // bar
-      [utils.asGridCoord(4,4)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(4,6)] : true,
-      [utils.asGridCoord(5,6)] : true,
-      [utils.asGridCoord(6,6)] : true,
-      [utils.asGridCoord(7,6)] : true,
-      [utils.asGridCoord(8,6)] : true,
-    },
     cutsceneSpaces: {
-      [utils.asGridCoord(6,3)]: [
-        {
-          events: [
-            { who: "hero", type: "walk",  direction: "down" },
-            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
-          ]
-        }
-      ],
       [utils.asGridCoord(5,5)]: [
         {
           events: [
@@ -12751,41 +12582,62 @@ window.OverworldMaps = {
             { type: "textMessage", text: ". . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . ."},
+            { who: "characterL", type: "stand",  direction: "down", time: 1000 },
             { type: "textMessage", text: "L: How long have we been sitting here?"},
+            { who: "characterO", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "O: I'm not sure."},
             { type: "textMessage", text: ". . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . ."},
+            { who: "characterM", type: "stand",  direction: "down", time: 1000 },
             { type: "textMessage", text: "M: It's 12:10 now."},
+            { who: "characterL", type: "stand",  direction: "right", time: 1000 },
             { type: "textMessage", text: "L: So for a bit."},
+            { who: "characterO", type: "stand",  direction: "up", time: 1000 },
             { type: "textMessage", text: "O: And some time before."},
             { type: "textMessage", text: ". . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . ."},
+            { who: "characterL", type: "stand",  direction: "down", time: 1000 },
             { type: "textMessage", text: "L: But for how much longer before?"},
+            { who: "characterO", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "O: Tonight?"},
             { type: "textMessage", text: "L: Tonight, and before that."},
+            { who: "characterM", type: "stand",  direction: "down", time: 1000 },
             { type: "textMessage", text: "M: Quite some time before that."},
+            { who: "characterM", type: "stand",  direction: "right", time: 1000 },
             { type: "textMessage", text: ". . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . ."},
             { type: "textMessage", text: "L: But how much time before that?"},
             { type: "textMessage", text: "O: I'm not sure."},
+            { who: "characterM", type: "stand",  direction: "down", time: 1000 },
             { type: "textMessage", text: "M: It's hard to know exactly."},
             { type: "textMessage", text: ". . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . ."},
+            { who: "characterL", type: "stand",  direction: "right", time: 1000 },
             { type: "textMessage", text: "L: Let's work from the time we do know to find the beginning."},
             { type: "textMessage", text: "O: Work from when?"},
+            { who: "characterL", type: "stand",  direction: "down", time: 1000 },
             { type: "textMessage", text: "L: From 12:10."},
             { type: "textMessage", text: "M: It's some time past that already, though."},
+            { who: "characterL", type: "stand",  direction: "right", time: 1000 },
             { type: "textMessage", text: "L: I guess so."},
+            { who: "characterO", type: "stand",  direction: "up", time: 1000 },
             { type: "textMessage", text: "O: Let's just count back from now then."},
+            { who: "characterM", type: "stand",  direction: "right", time: 1000 },
             { type: "textMessage", text: "M: Now isn't current enough."},
             { type: "textMessage", text: ". . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . ."},
+            { who: "characterL", type: "stand",  direction: "down", time: 1000 },
             { type: "textMessage", text: "L: Let's work back from the end, then."},
+            { who: "characterM", type: "stand",  direction: "down", time: 1000 },
             { type: "textMessage", text: "M: From what's to come?"},
+            { who: "characterO", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "O: From where?"},
+            { who: "characterL", type: "stand",  direction: "right", time: 1000 },
             { type: "textMessage", text: "L: The end."},
+            { who: "characterO", type: "stand",  direction: "up", time: 1000 },
+            { who: "characterM", type: "stand",  direction: "right", time: 1000 },
             { type: "textMessage", text: ". . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . ."},
