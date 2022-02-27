@@ -11280,7 +11280,7 @@ window.OverworldMaps = {
     upperSrc: "images/maps/BarUpperWithSlider.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(5),
         y: utils.withGrid(5),
         direction: "down",
@@ -11290,28 +11290,12 @@ window.OverworldMaps = {
         y: utils.withGrid(5),
         src: "images/characters/people/l_sitting.png",
         direction: "right",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
-            ]
-          }
-        ]
       }),
       characterM: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
         src: "images/characters/people/m_sitting.png",
         direction: "right",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
-            ]
-          }
-        ]
       }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
@@ -11339,60 +11323,7 @@ window.OverworldMaps = {
         src: "images/assets/stool_sprite_sheet.png",
       }),
     },
-    walls: {
-      // edges of level
-      [utils.asGridCoord(0,3)] : true,
-      [utils.asGridCoord(0,4)] : true,
-      [utils.asGridCoord(0,5)] : true,
-      [utils.asGridCoord(0,6)] : true,
-      [utils.asGridCoord(0,7)] : true,
-      [utils.asGridCoord(0,8)] : true,
-      [utils.asGridCoord(0,9)] : true,
-      [utils.asGridCoord(1,10)] : true,
-      [utils.asGridCoord(2,10)] : true,
-      [utils.asGridCoord(3,10)] : true,
-      [utils.asGridCoord(4,10)] : true,
-      [utils.asGridCoord(6,10)] : true,
-      [utils.asGridCoord(7,10)] : true,
-      [utils.asGridCoord(8,10)] : true,
-      [utils.asGridCoord(9,10)] : true,
-      [utils.asGridCoord(10,10)] : true,
-      [utils.asGridCoord(11,9)] : true,
-      [utils.asGridCoord(11,8)] : true,
-      [utils.asGridCoord(11,7)] : true,
-      [utils.asGridCoord(11,6)] : true,
-      [utils.asGridCoord(11,5)] : true,
-      [utils.asGridCoord(11,4)] : true,
-      // back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      //     door is at 6, 3
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-
-      // bar
-      [utils.asGridCoord(4,4)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(4,6)] : true,
-      [utils.asGridCoord(5,6)] : true,
-      [utils.asGridCoord(6,6)] : true,
-      [utils.asGridCoord(7,6)] : true,
-      [utils.asGridCoord(8,6)] : true,
-    },
     cutsceneSpaces: {
-      [utils.asGridCoord(6,3)]: [
-        {
-          events: [
-            { who: "hero", type: "walk",  direction: "down" },
-            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
-          ]
-        }
-      ],
       [utils.asGridCoord(5,5)]: [
         {
           events: [
@@ -11419,11 +11350,14 @@ window.OverworldMaps = {
             { type: "textMessage", text: "M: We're in a bar."},
             { who: "characterM", type: "stand", direction: "right", time: 1000},
             { type: "textMessage", text: "M: What is a slider?"},
+            { who: "hero", type: "stand", direction: "left", time: 1000},
+            { who: "hero", type: "stand", direction: "down", time: 1000},
             { type: "textMessage", text: "J: Hamburger."},
             { type: "textMessage", text: "M: Then why not call it a hamburger?"},
             { type: "textMessage", text: "L: It's different."},
             { who: "characterM", type: "stand", direction: "down", time: 1000},
             { type: "textMessage", text: "M: How?"},
+            { who: "hero", type: "stand", direction: "left", time: 1000},
             { type: "textMessage", text: "J: Smaller."},
             { who: "characterM", type: "stand", direction: "right", time: 1000},
             { type: "textMessage", text: "M: Smaller isn't different."},
@@ -11431,19 +11365,23 @@ window.OverworldMaps = {
             { type: "textMessage", text: "L: Isn't it?"},
             { who: "characterL", type: "stand", direction: "right", time: 1000},
             { type: "textMessage", text: "L: Is it?"},
+            { who: "hero", type: "stand", direction: "down", time: 1000},
             { type: "textMessage", text: "J: Not really; sort of. I think the sea is nice. I'm going to go."},
             { type: "textMessage", text: "M: I don't think you will."},
             { who: "characterL", type: "stand", direction: "up", time: 1000},
             { type: "textMessage", text: "L: You're very, what is the word, contrarian today."},
             { who: "characterM", type: "stand", direction: "down", time: 1000},
             { type: "textMessage", text: "M: No I'm not."},
+            { who: "characterL", type: "stand", direction: "right", time: 1},
             { who: "hero", type: "stand", direction: "left", time: 1000},
             { type: "textMessage", text: "J: Why won't I go?"},
             { who: "characterM", type: "stand", direction: "right", time: 1000},
             { type: "textMessage", text: "M: Because you're here."},
             { type: "textMessage", text: "J: Where?"},
+            { who: "characterM", type: "stand", direction: "down", time: 1000},
             { type: "textMessage", text: "M: This bar, this town, this, well, this."},
             { type: "textMessage", text: "J: I don't know; I choose to be here."},
+            { who: "characterM", type: "stand", direction: "right", time: 1000},
             { type: "textMessage", text: "M: That's what I said."},
             { who: "characterL", type: "stand", direction: "right", time: 1000},
             { who: "characterL", type: "stand", direction: "down", time: 1000},
@@ -11472,6 +11410,10 @@ window.OverworldMaps = {
         y: utils.withGrid(5),
         src: "images/characters/people/l_sitting.png",
         direction: "right",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 2300 },
+          { type: "stand",  direction: "down", time: 2000 }
+        ],
         talking: [
           {
             events: [
@@ -11486,11 +11428,43 @@ window.OverworldMaps = {
         y: utils.withGrid(4),
         src: "images/characters/people/m_sitting.png",
         direction: "right",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 3300 },
+          { type: "stand",  direction: "down", time: 1000 }
+        ],
         talking: [
           {
             events: [
               { type: "textMessage", text: "M. here.", faceHero: "characterM" },
               { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      mDialogueBoxExtender: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(4),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+            ]
+          }
+        ]
+      }),
+      lDialogueBoxExtender: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(5),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
             ]
           }
         ]
@@ -11578,14 +11552,12 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            // { type: "changeMap", map: "C06_Bar_Pt1" },
             { type: "changeMap",
               map: "C47_Bar_pt1",
               x: utils.withGrid(5),
               y: utils.withGrid(5),
               direction: "down"
             },
-            // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
       ]
@@ -11597,7 +11569,7 @@ window.OverworldMaps = {
     upperSrc: "images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(5),
         y: utils.withGrid(5),
         direction: "down",
@@ -11613,14 +11585,6 @@ window.OverworldMaps = {
         y: utils.withGrid(5),
         src: "images/characters/people/l_sitting.png",
         direction: "right",
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
-            ]
-          }
-        ]
       }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
@@ -11648,60 +11612,7 @@ window.OverworldMaps = {
         src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
     },
-    walls: {
-      // edges of level
-      [utils.asGridCoord(0,3)] : true,
-      [utils.asGridCoord(0,4)] : true,
-      [utils.asGridCoord(0,5)] : true,
-      [utils.asGridCoord(0,6)] : true,
-      [utils.asGridCoord(0,7)] : true,
-      [utils.asGridCoord(0,8)] : true,
-      [utils.asGridCoord(0,9)] : true,
-      [utils.asGridCoord(1,10)] : true,
-      [utils.asGridCoord(2,10)] : true,
-      [utils.asGridCoord(3,10)] : true,
-      [utils.asGridCoord(4,10)] : true,
-      [utils.asGridCoord(6,10)] : true,
-      [utils.asGridCoord(7,10)] : true,
-      [utils.asGridCoord(8,10)] : true,
-      [utils.asGridCoord(9,10)] : true,
-      [utils.asGridCoord(10,10)] : true,
-      [utils.asGridCoord(11,9)] : true,
-      [utils.asGridCoord(11,8)] : true,
-      [utils.asGridCoord(11,7)] : true,
-      [utils.asGridCoord(11,6)] : true,
-      [utils.asGridCoord(11,5)] : true,
-      [utils.asGridCoord(11,4)] : true,
-      // back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      //     door is at 6, 3
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-
-      // bar
-      [utils.asGridCoord(4,4)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(4,6)] : true,
-      [utils.asGridCoord(5,6)] : true,
-      [utils.asGridCoord(6,6)] : true,
-      [utils.asGridCoord(7,6)] : true,
-      [utils.asGridCoord(8,6)] : true,
-    },
     cutsceneSpaces: {
-      [utils.asGridCoord(6,3)]: [
-        {
-          events: [
-            { who: "hero", type: "walk",  direction: "down" },
-            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
-          ]
-        }
-      ],
       [utils.asGridCoord(5,5)]: [
         {
           events: [
@@ -11743,17 +11654,60 @@ window.OverworldMaps = {
         y: utils.withGrid(7),
         src: "images/characters/people/n_sitting.png",
         direction: "up",
+        behaviorLoop: [
+          { type: "stand",  direction: "up", time: 2300 },
+          { type: "stand",  direction: "left", time: 1000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "N: ... ... ...", faceHero: "characterN" },
+            ]
+          }
+        ],
+      }),
+      nDialogueBoxExtender: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(6),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "N: ... ... ...", faceHero: "characterN" },
+            ]
+          }
+        ]
       }),
       characterL: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(5),
         src: "images/characters/people/l_sitting.png",
         direction: "right",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 3300 },
+          { type: "stand",  direction: "down", time: 1000 }
+        ],
         talking: [
           {
             events: [
               { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
               { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+            ]
+          }
+        ]
+      }),
+      lDialogueBoxExtender: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(5),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
             ]
           }
         ]
@@ -11841,14 +11795,12 @@ window.OverworldMaps = {
       [utils.asGridCoord(5,10)]: [
         {
           events: [
-            // { type: "changeMap", map: "C06_Bar_Pt1" },
             { type: "changeMap",
               map: "C48_Bar_pt1",
               x: utils.withGrid(5),
               y: utils.withGrid(5),
               direction: "right"
             },
-            // { type: "textMessage", text: "this should be chapter 6..."},
           ]
         }
       ]
@@ -11860,7 +11812,7 @@ window.OverworldMaps = {
     upperSrc: "images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(5),
         y: utils.withGrid(5),
         direction: "right",
@@ -11908,60 +11860,7 @@ window.OverworldMaps = {
         src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
     },
-    walls: {
-      // edges of level
-      [utils.asGridCoord(0,3)] : true,
-      [utils.asGridCoord(0,4)] : true,
-      [utils.asGridCoord(0,5)] : true,
-      [utils.asGridCoord(0,6)] : true,
-      [utils.asGridCoord(0,7)] : true,
-      [utils.asGridCoord(0,8)] : true,
-      [utils.asGridCoord(0,9)] : true,
-      [utils.asGridCoord(1,10)] : true,
-      [utils.asGridCoord(2,10)] : true,
-      [utils.asGridCoord(3,10)] : true,
-      [utils.asGridCoord(4,10)] : true,
-      [utils.asGridCoord(6,10)] : true,
-      [utils.asGridCoord(7,10)] : true,
-      [utils.asGridCoord(8,10)] : true,
-      [utils.asGridCoord(9,10)] : true,
-      [utils.asGridCoord(10,10)] : true,
-      [utils.asGridCoord(11,9)] : true,
-      [utils.asGridCoord(11,8)] : true,
-      [utils.asGridCoord(11,7)] : true,
-      [utils.asGridCoord(11,6)] : true,
-      [utils.asGridCoord(11,5)] : true,
-      [utils.asGridCoord(11,4)] : true,
-      // back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      //     door is at 6, 3
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-
-      // bar
-      [utils.asGridCoord(4,4)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(4,6)] : true,
-      [utils.asGridCoord(5,6)] : true,
-      [utils.asGridCoord(6,6)] : true,
-      [utils.asGridCoord(7,6)] : true,
-      [utils.asGridCoord(8,6)] : true,
-    },
     cutsceneSpaces: {
-      [utils.asGridCoord(6,3)]: [
-        {
-          events: [
-            { who: "hero", type: "walk",  direction: "down" },
-            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
-          ]
-        }
-      ],
       [utils.asGridCoord(5,5)]: [
         {
           events: [
@@ -11976,8 +11875,10 @@ window.OverworldMaps = {
             { type: "textMessage", text: "GROCER: We?"},
             { who: "customer", type: "stand", direction: "left", time: 1000},
             { who: "customer", type: "stand", direction: "down", time: 1000},
+            { who: "grocer", type: "stand", direction: "right", time: 1000},
             { type: "textMessage", text: "GROCER: Oh-- you! I'll never escape you."},
             { type: "textMessage", text: "CUSTOMER: I've been thinking about the grocery store aisle some more."},
+            { who: "grocer", type: "stand", direction: "up", time: 1000},
             { type: "changeMapNoTransition", map: "C48_Bar_pt2"},
 
           ]
@@ -11991,7 +11892,7 @@ window.OverworldMaps = {
     upperSrc: "images/maps/C01_BarUpper.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(5),
         y: utils.withGrid(5),
         direction: "down",
@@ -12034,60 +11935,7 @@ window.OverworldMaps = {
         src: "images/assets/slightly_raised_stool_sprite_sheet.png",
       }),
     },
-    walls: {
-      // edges of level
-      [utils.asGridCoord(0,3)] : true,
-      [utils.asGridCoord(0,4)] : true,
-      [utils.asGridCoord(0,5)] : true,
-      [utils.asGridCoord(0,6)] : true,
-      [utils.asGridCoord(0,7)] : true,
-      [utils.asGridCoord(0,8)] : true,
-      [utils.asGridCoord(0,9)] : true,
-      [utils.asGridCoord(1,10)] : true,
-      [utils.asGridCoord(2,10)] : true,
-      [utils.asGridCoord(3,10)] : true,
-      [utils.asGridCoord(4,10)] : true,
-      [utils.asGridCoord(6,10)] : true,
-      [utils.asGridCoord(7,10)] : true,
-      [utils.asGridCoord(8,10)] : true,
-      [utils.asGridCoord(9,10)] : true,
-      [utils.asGridCoord(10,10)] : true,
-      [utils.asGridCoord(11,9)] : true,
-      [utils.asGridCoord(11,8)] : true,
-      [utils.asGridCoord(11,7)] : true,
-      [utils.asGridCoord(11,6)] : true,
-      [utils.asGridCoord(11,5)] : true,
-      [utils.asGridCoord(11,4)] : true,
-      // back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      //     door is at 6, 3
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-
-      // bar
-      [utils.asGridCoord(4,4)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(4,6)] : true,
-      [utils.asGridCoord(5,6)] : true,
-      [utils.asGridCoord(6,6)] : true,
-      [utils.asGridCoord(7,6)] : true,
-      [utils.asGridCoord(8,6)] : true,
-    },
     cutsceneSpaces: {
-      [utils.asGridCoord(6,3)]: [
-        {
-          events: [
-            { who: "hero", type: "walk",  direction: "down" },
-            { type: "textMessage", text: "Probably shouldn't go to the roof right now..."},
-          ]
-        }
-      ],
       [utils.asGridCoord(5,5)]: [
         {
           events: [
@@ -12096,8 +11944,10 @@ window.OverworldMaps = {
             { type: "textMessage", text: "GROCER: I'm sure you have."},
             { who: "customer", type: "stand", direction: "left", time: 1000},
             { type: "textMessage", text: "CUSTOMER: The problem is one of arrangement."},
+            { who: "grocer", type: "stand", direction: "down", time: 1000},
             { type: "textMessage", text: "GROCER: I just sell groceries."},
             { type: "textMessage", text: "CUSTOMER: Do you want to get rid of the aisles in your store or not?"},
+            { who: "grocer", type: "stand", direction: "right", time: 1000},
             { type: "textMessage", text: "GROCER: I thought you wanted me to add more aisles?"},
             { type: "textMessage", text: "CUSTOMER: You said that you wouldn't so I thought in the other direction."},
             { type: "textMessage", text: "GROCER: You thought in the other direction?"},
@@ -12117,8 +11967,10 @@ window.OverworldMaps = {
             { type: "textMessage", text: "GROCER: What do I do?"},
             { type: "textMessage", text: "CUSTOMER: You have to get rid of the set."},
             { type: "textMessage", text: "GROCER: Get rid of the set?"},
+            { who: "customer", type: "stand", direction: "down", time: 1000},
             { type: "textMessage", text: "CUSTOMER: True zero."},
             { type: "textMessage", text: "GROCER: What does that mean?"},
+            { who: "customer", type: "stand", direction: "left", time: 1000},
             { type: "textMessage", text: "CUSTOMER: What does it mean?"},
             { type: "textMessage", text: "GROCER: Yes, practically."},
             { type: "textMessage", text: "CUSTOMER: Oh what does it practically mean."},
@@ -12161,12 +12013,62 @@ window.OverworldMaps = {
         y: utils.withGrid(7),
         src: "images/characters/people/customer_sitting.png",
         direction: "up",
+        behaviorLoop: [
+          { type: "stand",  direction: "up", time: 3900 },
+          { type: "stand",  direction: "left", time: 1000 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "CUSTOMER: ... ... ...", faceHero: "customer" },
+            ]
+          }
+        ],
       }),
       grocer: new Person({
         x: utils.withGrid(5),
         y: utils.withGrid(7),
         src: "images/characters/people/grocer_sitting.png",
         direction: "down",
+        behaviorLoop: [
+          { type: "stand",  direction: "down", time: 2300 },
+          { type: "stand",  direction: "right", time: 1050 }
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "GROCER: ... ... ...", faceHero: "grocer" },
+            ]
+          }
+        ],
+      }),
+      customerDialogueBoxExtender: new Person({
+        x: utils.withGrid(7),
+        y: utils.withGrid(6),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "CUSTOMER: ... ... ...", faceHero: "customer" },
+            ]
+          }
+        ]
+      }),
+      grocerDialogueBoxExtender: new Person({
+        x: utils.withGrid(5),
+        y: utils.withGrid(6),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "GROCER: ... ... ...", faceHero: "grocer" },
+            ]
+          }
+        ]
       }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
@@ -12229,7 +12131,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(8,3)] : true,
       [utils.asGridCoord(9,3)] : true,
       [utils.asGridCoord(10,3)] : true,
-
       // bar
       [utils.asGridCoord(4,4)] : true,
       [utils.asGridCoord(4,5)] : true,
@@ -12268,56 +12169,11 @@ window.OverworldMaps = {
     upperSrc: "images/maps/all_black_screen.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(11),
         y: utils.withGrid(6),
         src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
       }),
-    },
-    walls: {
-      // edges of level
-      [utils.asGridCoord(0,3)] : true,
-      [utils.asGridCoord(0,4)] : true,
-      [utils.asGridCoord(0,5)] : true,
-      [utils.asGridCoord(0,6)] : true,
-      [utils.asGridCoord(0,7)] : true,
-      [utils.asGridCoord(0,8)] : true,
-      [utils.asGridCoord(0,9)] : true,
-      [utils.asGridCoord(1,10)] : true,
-      [utils.asGridCoord(2,10)] : true,
-      [utils.asGridCoord(3,10)] : true,
-      [utils.asGridCoord(4,10)] : true,
-      [utils.asGridCoord(6,10)] : true,
-      [utils.asGridCoord(7,10)] : true,
-      [utils.asGridCoord(8,10)] : true,
-      [utils.asGridCoord(9,10)] : true,
-      [utils.asGridCoord(10,10)] : true,
-      [utils.asGridCoord(11,9)] : true,
-      [utils.asGridCoord(11,8)] : true,
-      [utils.asGridCoord(11,7)] : true,
-      [utils.asGridCoord(11,6)] : true,
-      [utils.asGridCoord(11,5)] : true,
-      [utils.asGridCoord(11,4)] : true,
-      // back wall
-      [utils.asGridCoord(1,3)] : true,
-      [utils.asGridCoord(2,3)] : true,
-      [utils.asGridCoord(3,3)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(5,3)] : true,
-      //     door is at 6, 3
-      [utils.asGridCoord(7,3)] : true,
-      [utils.asGridCoord(8,3)] : true,
-      [utils.asGridCoord(9,3)] : true,
-      [utils.asGridCoord(10,3)] : true,
-
-      // bar
-      [utils.asGridCoord(4,4)] : true,
-      [utils.asGridCoord(4,5)] : true,
-      [utils.asGridCoord(4,6)] : true,
-      [utils.asGridCoord(5,6)] : true,
-      [utils.asGridCoord(6,6)] : true,
-      [utils.asGridCoord(7,6)] : true,
-      [utils.asGridCoord(8,6)] : true,
     },
     cutsceneSpaces: {
       [utils.asGridCoord(11,6)]: [
@@ -12377,7 +12233,7 @@ window.OverworldMaps = {
     upperSrc: "images/maps/transparent_upper_full_viewfinder.png",
     gameObjects: {
       hero: new Person({
-        isPlayerControlled: true,
+        isPlayerControlled: false,
         x: utils.withGrid(11),
         y: utils.withGrid(9),
         src: "images/characters/people/l_standing.png",
@@ -12396,56 +12252,6 @@ window.OverworldMaps = {
         removeWall: true,
         dontUseShadow: true,
       }),
-    },
-    walls: {
-      // top edge
-      [utils.asGridCoord(0,8)] : true,
-      [utils.asGridCoord(1,8)] : true,
-      [utils.asGridCoord(2,8)] : true,
-      [utils.asGridCoord(3,8)] : true,
-      [utils.asGridCoord(4,8)] : true,
-      [utils.asGridCoord(5,8)] : true,
-      [utils.asGridCoord(6,8)] : true,
-      [utils.asGridCoord(7,8)] : true,
-      [utils.asGridCoord(8,8)] : true,
-      [utils.asGridCoord(9,8)] : true,
-      [utils.asGridCoord(10,8)] : true,
-      [utils.asGridCoord(11,8)] : true,
-      [utils.asGridCoord(12,8)] : true,
-      [utils.asGridCoord(13,8)] : true,
-      [utils.asGridCoord(14,8)] : true,
-      [utils.asGridCoord(15,8)] : true,
-      [utils.asGridCoord(16,8)] : true,
-      [utils.asGridCoord(17,8)] : true,
-      [utils.asGridCoord(18,8)] : true,
-      [utils.asGridCoord(19,8)] : true,
-      [utils.asGridCoord(20,8)] : true,
-      [utils.asGridCoord(21,8)] : true,
-      [utils.asGridCoord(22,8)] : true,
-      // bottom edge
-      [utils.asGridCoord(0,10)] : true,
-      [utils.asGridCoord(1,10)] : true,
-      [utils.asGridCoord(2,10)] : true,
-      [utils.asGridCoord(3,10)] : true,
-      [utils.asGridCoord(4,10)] : true,
-      [utils.asGridCoord(5,10)] : true,
-      [utils.asGridCoord(6,10)] : true,
-      [utils.asGridCoord(7,10)] : true,
-      [utils.asGridCoord(8,10)] : true,
-      [utils.asGridCoord(9,10)] : true,
-      [utils.asGridCoord(10,10)] : true,
-      [utils.asGridCoord(11,10)] : true,
-      [utils.asGridCoord(12,10)] : true,
-      [utils.asGridCoord(13,10)] : true,
-      [utils.asGridCoord(14,10)] : true,
-      [utils.asGridCoord(15,10)] : true,
-      [utils.asGridCoord(16,10)] : true,
-      [utils.asGridCoord(17,10)] : true,
-      [utils.asGridCoord(18,10)] : true,
-      [utils.asGridCoord(19,10)] : true,
-      [utils.asGridCoord(20,10)] : true,
-      [utils.asGridCoord(21,10)] : true,
-      [utils.asGridCoord(22,10)] : true,
     },
     cutsceneSpaces: {
       [utils.asGridCoord(11,9)]: [
@@ -12513,7 +12319,17 @@ window.OverworldMaps = {
         x: utils.withGrid(12),
         y: utils.withGrid(9),
         src: "images/characters/people/m_standing.png",
-        direction: 'up'
+        direction: 'up',
+        behaviorLoop: [
+          { type: "stand",  direction: "up", time: 4000 },
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+            ]
+          }
+        ]
       }),
       cameraOverrider: new Person({
         x: utils.withGrid(11),
