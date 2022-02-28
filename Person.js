@@ -18,10 +18,6 @@ class Person extends GameObject {
       this.updatePosition();
     } else {
 
-      //More cases for starting to walk will come here
-      //
-      //
-
       //Case: We're keyboard ready and have an arrow pressed
       if (!state.map.isCutscenePlaying && this.isPlayerControlled && state.arrow) {
         this.startBehavior(state, {

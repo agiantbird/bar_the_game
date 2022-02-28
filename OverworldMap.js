@@ -44,7 +44,6 @@ class OverworldMap {
       let object = this.gameObjects[key];
       object.id = key;
 
-      //TODO: determine if this object should actually mount
       object.mount(this);
 
     })
