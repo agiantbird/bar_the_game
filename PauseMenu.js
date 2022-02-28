@@ -24,21 +24,21 @@ class PauseMenu {
           }
         },
         {
-          label: "Aknowledgement: Drew Conley",
+          label: "Acknowledgment: Drew Conley",
           description: "I'd like to thank...",
           handler: () => {
             this.keyboardMenu.setOptions(this.getOptions("thankyou1"))
           }
         },
         {
-          label: "Aknowledgement: Eric Torrey",
+          label: "Acknowledgment: Eric Torrey",
           description: "I'd also like to thank...",
           handler: () => {
             this.keyboardMenu.setOptions(this.getOptions("thankyou2"))
           }
         },
         {
-          label: "Aknowledgement: Stephanie Boyer",
+          label: "Acknowledgment: Stephanie Boyer",
           description: "I'd also like to thank...",
           handler: () => {
             this.keyboardMenu.setOptions(this.getOptions("thankyou3"))
@@ -97,7 +97,7 @@ class PauseMenu {
         }
       ];
     }
-    // case 3: aknowledgement1 menu
+    // case 3: Acknowledgment1 menu
     if (pageKey === "thankyou1") {
       return[
         {
@@ -141,7 +141,7 @@ class PauseMenu {
         }
       ];
     }
-    // case 4: aknowledgement2 menu
+    // case 4: Acknowledgment2 menu
     if(pageKey == "thankyou2") {
       return[
         {
@@ -190,7 +190,7 @@ class PauseMenu {
         }
       ];
     }
-    // case 5: aknowledgement2 menu
+    // case 5: Acknowledgment2 menu
     if(pageKey == "thankyou3") {
       return[
         {
