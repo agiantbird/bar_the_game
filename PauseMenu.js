@@ -17,10 +17,31 @@ class PauseMenu {
           }
         },
         {
-          label: "Aknowledgements",
+          label: "Controls",
+          description: "Remind yourself of the game's controls",
+          handler: () => {
+            this.keyboardMenu.setOptions(this.getOptions("controls"))
+          }
+        },
+        {
+          label: "Aknowledgement: Drew Conley",
           description: "I'd like to thank...",
           handler: () => {
-            this.keyboardMenu.setOptions(this.getOptions("thankyous"))
+            this.keyboardMenu.setOptions(this.getOptions("thankyou1"))
+          }
+        },
+        {
+          label: "Aknowledgement: Eric Torrey",
+          description: "I'd also like to thank...",
+          handler: () => {
+            this.keyboardMenu.setOptions(this.getOptions("thankyou2"))
+          }
+        },
+        {
+          label: "Aknowledgement: Stephanie Boyer",
+          description: "I'd also like to thank...",
+          handler: () => {
+            this.keyboardMenu.setOptions(this.getOptions("thankyou3"))
           }
         },
         {
@@ -32,49 +53,192 @@ class PauseMenu {
         },
       ]
     }
-
-    // case 2: aknowledgement1 menu
-    return[
-      {
-        label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
-        description: "",
-        handler: () => {
+    // case 2: controls menu
+    if (pageKey === "controls") {
+      return[
+        {
+          label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+          description: "",
+          handler: () => {
+          }
+        },
+        {
+          label: "Movement: WASD or arrow buttons",
+          description: "",
+          handler: () => {
+            
+          }
+        },
+        {
+          label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+          description: "",
+          handler: () => {
+          }
+        },
+        {
+          label: "Press ENTER to intereact with objects and people, as well as to advance dialogue.",
+          description: "",
+          handler: () => {
+            
+          }
+        },
+        {
+          label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+          description: '',
+          handler: () => {
+          }
+        },
+        {
+          label: "[Back]",
+          description: "Back to root menu",
+          handler: () => {
+            this.keyboardMenu.setOptions( this.getOptions("root") );
+          }
         }
-      },
-      {
-        label: "This game owes everything to Drew Conley's 'Pizza Legends RPG' series.",
-        description: "",
-        handler: () => {
-          
+      ];
+    }
+    // case 3: aknowledgement1 menu
+    if (pageKey === "thankyou1") {
+      return[
+        {
+          label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+          description: "",
+          handler: () => {
+          }
+        },
+        {
+          label: "This game owes everything to Drew Conley's 'Pizza Legends RPG' series.",
+          description: "",
+          handler: () => {
+            
+          }
+        },
+        {
+          label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+          description: "",
+          handler: () => {
+          }
+        },
+        {
+          label: "Click the link below to check out that series of video tutorials and start on your own game.",
+          description: "",
+          handler: () => {
+            
+          }
+        },
+        {
+          label: (`<a href="https://youtu.be/fyi4vfbKEeo" target="_blank">Pizza Legends RPG</a>`),
+          description: '',
+          handler: () => {
+          }
+        },
+        {
+          label: "[Back]",
+          description: "Back to root menu",
+          handler: () => {
+            this.keyboardMenu.setOptions( this.getOptions("root") );
+          }
         }
-      },
-      {
-        label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
-        description: "",
-        handler: () => {
+      ];
+    }
+    // case 4: aknowledgement2 menu
+    if(pageKey == "thankyou2") {
+      return[
+        {
+          label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+          description: "",
+          handler: () => {
+          }
+        },
+        {
+          label: "When I was considering how to adapt my novella, BAR, into a game, ",
+          description: "",
+          handler: () => {
+            
+          }
+        },
+        {
+          label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+          description: "",
+          handler: () => {
+          }
+        },
+        {
+          label: "it was my friend Eric Torrey who suggested an HTML + JavaScript approach.",
+          description: "",
+          handler: () => {
+          }
+        },
+        {
+          label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+          description: "",
+          handler: () => {
+          }
+        },
+        {
+          label: "Thank you, Eric, for your help and encouragement!",
+          description: '',
+          handler: () => {
+          }
+        },
+        {
+          label: "[Back]",
+          description: "Back to root menu",
+          handler: () => {
+            this.keyboardMenu.setOptions( this.getOptions("root") );
+          }
         }
-      },
-      {
-        label: "Click the link below to check out that series of video tutorials and start on your own game.",
-        description: "",
-        handler: () => {
-          
+      ];
+    }
+    // case 5: aknowledgement2 menu
+    if(pageKey == "thankyou3") {
+      return[
+        {
+          label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+          description: "",
+          handler: () => {
+          }
+        },
+        {
+          label: "Thank you, finally, to my heartbeat, Stephanie Boyer.",
+          description: "",
+          handler: () => {
+            
+          }
+        },
+        {
+          label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+          description: "",
+          handler: () => {
+          }
+        },
+        {
+          label: "To fill your heart and mind with real art, go look at Stephanie's paintings:",
+          description: "",
+          handler: () => {
+          }
+        },
+        {
+          label: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+          description: "",
+          handler: () => {
+          }
+        },
+        {
+          label: (`<a href="https://www.stephanielboyer.com/" target="_blank">Stephanie Boyer Art</a>`),
+          description: '',
+          handler: () => {
+          }
+        },
+        {
+          label: "[Back]",
+          description: "Back to root menu",
+          handler: () => {
+            this.keyboardMenu.setOptions( this.getOptions("root") );
+          }
         }
-      },
-      {
-        label: (`<a href="https://youtu.be/fyi4vfbKEeo" target="_blank">Pizza Legends RPG</a>`),
-        description: '',
-        handler: () => {
-        }
-      },
-      {
-        label: "[Back]",
-        description: "Back to root menu",
-        handler: () => {
-          this.keyboardMenu.setOptions( this.getOptions("root") );
-        }
-      }
-    ];
+      ];
+    }
   }
 
   createElement() {
