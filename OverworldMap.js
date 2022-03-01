@@ -492,6 +492,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The light in the vending machine is flickering, steady" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -857,6 +871,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine invites you to think about your selection" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -995,6 +1023,90 @@ window.OverworldMaps = {
         y: utils.withGrid(5),
         direction: "right",
         src: "images/characters/people/new_k_standing.png",
+      }),
+      weatherMachineHitBox1: new Person({
+        x: utils.withGrid(8),
+        y: utils.withGrid(4),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The machine makes what sound like confused beeps" },
+            ]
+          }
+        ]
+      }),
+      weatherMachineHitBox2: new Person({
+        x: utils.withGrid(8),
+        y: utils.withGrid(5),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The machine makes what sound like confused beeps" },
+            ]
+          }
+        ]
+      }),
+      weatherMachineHitBox3: new Person({
+        x: utils.withGrid(8),
+        y: utils.withGrid(6),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The machine makes what sound like confused beeps" },
+            ]
+          }
+        ]
+      }),
+      weatherMachineHitBox4: new Person({
+        x: utils.withGrid(9),
+        y: utils.withGrid(4),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The machine makes what sound like confused beeps" },
+            ]
+          }
+        ]
+      }),
+      weatherMachineHitBox5: new Person({
+        x: utils.withGrid(9),
+        y: utils.withGrid(5),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The machine makes what sound like confused beeps" },
+            ]
+          }
+        ]
+      }),
+      weatherMachineHitBox6: new Person({
+        x: utils.withGrid(9),
+        y: utils.withGrid(6),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The machine makes what sound like confused beeps" },
+            ]
+          }
+        ]
       }),
     },
     walls: {
@@ -1193,6 +1305,20 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine advertises a product not in stock" },
             ]
           }
         ]
@@ -1479,6 +1605,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine advertises a selection 'vast and void'" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -1736,6 +1876,20 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(5),
         y: utils.withGrid(5),
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine sounds like the inside of an ear" },
+            ]
+          }
+        ]
       }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
@@ -2087,6 +2241,20 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is bored" },
             ]
           }
         ]
@@ -2689,6 +2857,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine makes a sound like rattling teeth" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(4),
@@ -3068,6 +3250,20 @@ window.OverworldMaps = {
             events: [
               { type: "textMessage", text: "M. here.", faceHero: "characterM" },
               { type: "textMessage", text: "I'm kind of grumpy."},
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is reflecting your shadow" },
             ]
           }
         ]
@@ -3931,6 +4127,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Please make your selection..." },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -4124,6 +4334,20 @@ window.OverworldMaps = {
         y: utils.withGrid(7),
         direction: "right",
         src: "images/characters/people/customer_standing.png",
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(13),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is suspending disbelief" },
+            ]
+          }
+        ]
       }),
     },
     walls: {
@@ -4396,6 +4620,20 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "There is a toothpick at the bottom of the vending machine" },
             ]
           }
         ]
@@ -4743,6 +4981,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is staring back" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -4970,6 +5222,20 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(5),
         y: utils.withGrid(5),
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine door is a little open but mostly closed" },
+            ]
+          }
+        ]
       }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
@@ -6339,6 +6605,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is contemplating the weight of flax" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -6545,6 +6825,20 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "Grocer: Let me know if you need help finding anything.", faceHero: "grocer" },
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(13),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is quacking quietly" },
             ]
           }
         ]
@@ -6866,6 +7160,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is humming with electricity" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -6968,6 +7276,20 @@ window.OverworldMaps = {
         isPlayerControlled: true,
         x: utils.withGrid(5),
         y: utils.withGrid(5),
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is dreaming of imaginary numbers" },
+            ]
+          }
+        ]
       }),
       emptyStool0: new Person({
         x: utils.withGrid(3),
@@ -7458,6 +7780,21 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine, like a well filling with blood, has started to--" },
+              { type: "textMessage", text: "--Hey! Someone left a quarter behind in the change slot. Nice!" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -7784,6 +8121,20 @@ window.OverworldMaps = {
         y: utils.withGrid(9),
         direction: "up",
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(13),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine makes the sound of barglasses clinking at the end of a tunnel" },
+            ]
+          }
+        ]
+      }),
     },
     walls: {
       // edges of level
@@ -8048,6 +8399,20 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is not the whole universe" },
             ]
           }
         ]
@@ -8743,8 +9108,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, N!", faceHero: "characterN" },
-              { type: "textMessage", text: "......."},
+              { type: "textMessage", text: "N: If this is beer, bring me wine.", faceHero: "characterN" },
+              { type: "textMessage", text: "N: If this is wine, please bring me beer."},
             ]
           }
         ]
@@ -8786,7 +9151,22 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "N: ... ... ...", faceHero: "characterN" },
+              { type: "textMessage", text: "N: If this is beer, bring me wine.", faceHero: "characterN" },
+              { type: "textMessage", text: "N: If this is wine, please bring me beer."},
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is counting infinities between zero and one" },
             ]
           }
         ]
@@ -9140,6 +9520,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is not worrying about falling or not falling into cause and effect" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -9305,6 +9699,20 @@ window.OverworldMaps = {
         y: utils.withGrid(5),
         src: "images/characters/people/vending_machine_guy.png",
         direction: "down",
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(13),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is a vending machine" },
+            ]
+          }
+        ]
       }),
     },
     walls: {
@@ -9578,6 +9986,20 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is blocking the wall behind it" },
             ]
           }
         ]
@@ -9914,6 +10336,20 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "... ... ...", faceHero: "fruitEnjoyer2" },
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(13),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is measuring degrees of uncertainty" },
             ]
           }
         ]
@@ -10607,6 +11043,48 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is miserably pursuing happiness" },
+            ]
+          }
+        ]
+      }),
+      weatherMachineHitBox1: new Person({
+        x: utils.withGrid(8),
+        y: utils.withGrid(6),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The machine makes what sound like drunken beeps" },
+            ]
+          }
+        ]
+      }),
+      weatherMachineHitBox2: new Person({
+        x: utils.withGrid(8),
+        y: utils.withGrid(7),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The machine makes what sound like drunken beeps" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -10931,6 +11409,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is destroying information" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -11100,6 +11592,20 @@ window.OverworldMaps = {
         y: utils.withGrid(8),
         direction: 'up',
         src: "images/characters/people/customer_standing.png",
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(13),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is dreaming about falling asleep" },
+            ]
+          }
+        ]
       }),
     },
     walls: {
@@ -11309,6 +11815,20 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "N: ... ... ...", faceHero: "characterN" },
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine is an unsolved problem" },
             ]
           }
         ]
@@ -11606,6 +12126,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine has been restocked" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -11844,6 +12378,20 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "This is not a vending machine" },
             ]
           }
         ]
@@ -12205,6 +12753,20 @@ window.OverworldMaps = {
           }
         ]
       }),
+      vendingMachineHitBox: new Person({
+        x: utils.withGrid(1),
+        y: utils.withGrid(3),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine has no mind but it must dream" },
+            ]
+          }
+        ]
+      }),
       emptyStool1: new Person({
         x: utils.withGrid(3),
         y: utils.withGrid(6),
@@ -12462,6 +13024,34 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox1: new Person({
+        x: utils.withGrid(3),
+        y: utils.withGrid(8),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine feels funny" },
+            ]
+          }
+        ]
+      }),
+      vendingMachineHitBox2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(8),
+        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
+        removeWall: true,
+        dontUseShadow: true,
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "The vending machine feels funny" },
             ]
           }
         ]
