@@ -3897,6 +3897,10 @@ window.OverworldMaps = {
       [utils.asGridCoord(20,13)] : true,
       [utils.asGridCoord(21,13)] : true,
       [utils.asGridCoord(22,13)] : true,
+      // dumpster
+      [utils.asGridCoord(14,4)] : true,
+      [utils.asGridCoord(15,4)] : true,
+      [utils.asGridCoord(16,4)] : true,
       // building
       [utils.asGridCoord(6,10)] : true,
       [utils.asGridCoord(6,11)] : true,
