@@ -11242,7 +11242,7 @@ window.OverworldMaps = {
           events: [
             { who: "hero", type: "stand",  direction: "down", time: 1500 },
             { type: "textMessage", text: "L: K.! You're back." },
-            { who: "characterK", type: "stand",  direction: "down", time: 1000 },
+            { who: "characterK", type: "stand",  direction: "left", time: 1000 },
             { type: "textMessage", text: "K: Just visiting."},
             { type: "textMessage", text: "L: For how long?"},
             { who: "characterK", type: "stand",  direction: "up", time: 1000 },
@@ -12873,9 +12873,9 @@ window.OverworldMaps = {
             { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
             { type: "textMessage", text: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."},
             { type: "changeMap",
-              map: "C33_Bar_Pt1",
-              x: utils.withGrid(5),
-              y: utils.withGrid(5),
+              map: "C50_Bar_pt1",
+              x: utils.withGrid(11),
+              y: utils.withGrid(9),
               direction: "down"
             },
           ],
