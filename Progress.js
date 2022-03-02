@@ -1,6 +1,6 @@
 class Progress {
 	constructor(map, playerPosition) {
-		this.mapId = "C49_TextScene"
+		this.mapId = "Tutorial_Map"
 		this.startingHeroX = 0;
 		this.startingHeroY = 0;
 		this.startingHeroDirection = "down";
