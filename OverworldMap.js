@@ -407,7 +407,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: Hm. . .", faceHero: "characterM" },
             ]
           }
         ]
@@ -421,7 +421,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: Hm. . .", faceHero: "characterM" },
             ]
           }
         ]
@@ -440,8 +440,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "... ... ...", faceHero: "characterL" },
-              { type: "textMessage", text: "... ... ..."},
+              { type: "textMessage", text: "L: . . . I was here before . . .", faceHero: "characterL" },
             ]
           }
         ]
@@ -455,7 +454,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: . . . I was here before . . .", faceHero: "characterL" },
             ]
           }
         ]
@@ -473,7 +472,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "... ... ...", faceHero: "characterO" },
+              { type: "textMessage", text: "O: . . .", faceHero: "characterO" },
             ]
           }
         ]
@@ -487,7 +486,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "O: ... ... ...", faceHero: "characterO" },
+              { type: "textMessage", text: "O: . . .", faceHero: "characterO" },
             ]
           }
         ]
@@ -819,8 +818,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: It is what it is.", faceHero: "characterM" },
             ]
           }
         ]
@@ -837,8 +835,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: Am I my own point?", faceHero: "characterL" },
             ]
           }
         ]
@@ -852,7 +849,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: It is what it is.", faceHero: "characterM" },
             ]
           }
         ]
@@ -866,7 +863,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: Am I my own point?", faceHero: "characterL" },
             ]
           }
         ]
@@ -1289,8 +1286,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: I made a hole in a wall in my house down once. . .", faceHero: "characterL" },
+              { type: "textMessage", text: ". . . there was another wall, inside!"},
             ]
           }
         ]
@@ -1304,7 +1301,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: I made a hole in a wall in my house down once. . .", faceHero: "characterL" },
+              { type: "textMessage", text: ". . . there was another wall, inside!"},
             ]
           }
         ]
@@ -1554,8 +1552,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: I hate thieves.", faceHero: "characterL" },
             ]
           }
         ]
@@ -1571,8 +1568,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: I thought I had more beer left in this glass. . .", faceHero: "characterM" },
             ]
           }
         ]
@@ -1586,7 +1582,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: I thought I had more beer left in this glass. . .", faceHero: "characterM" },
             ]
           }
         ]
@@ -1600,7 +1596,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: I hate thieves.", faceHero: "characterL" },
             ]
           }
         ]
@@ -2192,8 +2188,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: My tongue tingles if I stand too close to the sign.", faceHero: "characterL" },
             ]
           }
         ]
@@ -2211,8 +2206,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: The sign points to the bar. . . what points to the sign?", faceHero: "characterM" },
             ]
           }
         ]
@@ -2226,7 +2220,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: The sign points to the bar. . . what points to the sign?", faceHero: "characterM" },
             ]
           }
         ]
@@ -2240,7 +2234,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: My tongue tingles if I stand too close to the sign.", faceHero: "characterL" },
             ]
           }
         ]
@@ -2775,8 +2769,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: Is wine a fruit?", faceHero: "characterL" },
             ]
           }
         ]
@@ -2793,7 +2786,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "I love fruit and my wife!", faceHero: "fruitEnjoyer1" },
+              { type: "textMessage", text: "CUSTOMER: This is a nice place!", faceHero: "fruitEnjoyer1" },
             ]
           }
         ]
@@ -2810,7 +2803,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "I love fruit and my husband!", faceHero: "fruitEnjoyer2" },
+              { type: "textMessage", text: "CUSTOMER: The fruit pairs nicely with these drinks, with itself.", faceHero: "fruitEnjoyer2" },
             ]
           }
         ]
@@ -2824,7 +2817,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: Is wine a fruit?", faceHero: "characterL" },
             ]
           }
         ]
@@ -2838,7 +2831,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "I love fruit and my wife!", faceHero: "fruitEnjoyer1" },
+              { type: "textMessage", text: "CUSTOMER: This is a nice place!", faceHero: "fruitEnjoyer1" },
             ]
           }
         ]
@@ -2852,7 +2845,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "I love fruit and my husband!", faceHero: "fruitEnjoyer2" },
+              { type: "textMessage", text: "CUSTOMER: The fruit pairs nicely with these drinks, with itself.", faceHero: "fruitEnjoyer2" },
             ]
           }
         ]
@@ -3216,8 +3209,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: How can you tell two different things apart?", faceHero: "characterL" },
             ]
           }
         ]
@@ -3231,7 +3223,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: How can you tell two different things apart?", faceHero: "characterL" },
             ]
           }
         ]
@@ -3248,8 +3240,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: Is that you? Everything looks like the inside of my eyelids.", faceHero: "characterM" },
             ]
           }
         ]
@@ -4089,8 +4080,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: Maybe I can cram it back in. . .", faceHero: "characterL" },
             ]
           }
         ]
@@ -4107,8 +4097,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: He's going to do something dumb, like try to cram the water bottle back in.", faceHero: "characterM" },
             ]
           }
         ]
@@ -4122,21 +4111,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
-            ]
-          }
-        ]
-      }),
-      vendingMachineHitBox: new Person({
-        x: utils.withGrid(1),
-        y: utils.withGrid(3),
-        src: "images/characters/people/no_sprite_placeholder_for_text_scenes.png",
-        removeWall: true,
-        dontUseShadow: true,
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Please make your selection..." },
+              { type: "textMessage", text: "M: He's going to do something dumb, like try to cram the water bottle back in.", faceHero: "characterM" },
             ]
           }
         ]
@@ -4572,8 +4547,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: I wish I had one big tooth.", faceHero: "characterL" },
             ]
           }
         ]
@@ -4590,8 +4564,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: I should go use the bathroom while I can.", faceHero: "characterM" },
             ]
           }
         ]
@@ -4605,7 +4578,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: I should go use the bathroom while I can.", faceHero: "characterM" },
             ]
           }
         ]
@@ -4619,7 +4592,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: I wish I had one big tooth.", faceHero: "characterL" },
             ]
           }
         ]
@@ -4901,8 +4874,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: How. . . am . . . I . . .", faceHero: "characterL" },
             ]
           }
         ]
@@ -4919,8 +4891,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: Don't even try asking him 'What's new?'", faceHero: "characterM" },
             ]
           }
         ]
@@ -4933,8 +4904,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi :)", faceHero: "characterO" },
-              { type: "textMessage", text: "I'm O.!"},
+              { type: "textMessage", text: "O: I hate leaving, but it's nice to come back.", faceHero: "characterO" },
             ]
           }
         ]
@@ -4948,7 +4918,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: Don't even try asking him 'What's new?'", faceHero: "characterM" },
             ]
           }
         ]
@@ -4962,7 +4932,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: How. . . am . . . I . . .", faceHero: "characterL" },
             ]
           }
         ]
@@ -4976,7 +4946,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "O: ... ... ...", faceHero: "characterO" },
+              { type: "textMessage", text: "O: I hate leaving, but it's nice to come back.", faceHero: "characterO" },
             ]
           }
         ]
@@ -6549,8 +6519,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: This water tastes like my mouth.", faceHero: "characterL" },
             ]
           }
         ],
@@ -6567,8 +6536,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: It's fun doing little activities like this.", faceHero: "characterM" },
             ]
           }
         ],
@@ -6586,7 +6554,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: It's fun doing little activities like this.", faceHero: "characterM" },
             ]
           }
         ]
@@ -6600,7 +6568,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: This water tastes like my mouth.", faceHero: "characterL" },
             ]
           }
         ]
@@ -7109,11 +7077,14 @@ window.OverworldMaps = {
         y: utils.withGrid(5),
         src: "images/characters/people/l_sitting.png",
         direction: "right",
+        behaviorLoop: [
+          { type: "stand",  direction: "right", time: 2000 },
+          { type: "stand",  direction: "down", time: 4000 },
+        ],
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: Where does wind go?", faceHero: "characterL" },
             ]
           }
         ]
@@ -7127,7 +7098,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: Where does wind go?", faceHero: "characterL" },
             ]
           }
         ]
@@ -7137,11 +7108,14 @@ window.OverworldMaps = {
         y: utils.withGrid(7),
         src: "images/characters/people/o_sitting.png",
         direction: "up",
+        behaviorLoop: [
+          { type: "stand",  direction: "up", time: 3000 },
+          { type: "stand",  direction: "left", time: 3000 },
+        ],
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi :)", faceHero: "characterO" },
-              { type: "textMessage", text: "I'm O.!"},
+              { type: "textMessage", text: "O: How much wind is there in a wing beat?", faceHero: "characterO" },
             ]
           }
         ]
@@ -7155,7 +7129,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "O: ... ... ...", faceHero: "characterO" },
+              { type: "textMessage", text: "O: How much wind is there in a wing beat?", faceHero: "characterO" },
             ]
           }
         ]
@@ -7728,8 +7702,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: We call things we remember 'memories' . . .  what do we call things we've forgotten?", faceHero: "characterL" },
             ]
           }
         ]
@@ -7746,8 +7719,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: I'm getting sleepy", faceHero: "characterM" },
             ]
           }
         ]
@@ -7761,7 +7733,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: I'm getting sleepy", faceHero: "characterM" },
             ]
           }
         ]
@@ -7775,7 +7747,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: We call things we remember 'memories' . . .  what do we call things we've forgotten?", faceHero: "characterL" },
             ]
           }
         ]
@@ -8383,7 +8355,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
+              { type: "textMessage", text: "M: I was thinking about the past, yesterday", faceHero: "characterM" },
               { type: "textMessage", text: "I'm kind of grumpy."},
             ]
           }
@@ -8398,7 +8370,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: I was thinking about the past, yesterday", faceHero: "characterM" },
             ]
           }
         ]
@@ -9072,8 +9044,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: Would you steal a weather station to feed your family?", faceHero: "characterL" },
             ]
           }
         ]
@@ -9090,8 +9061,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: . . . Is each end of a tunnel the same place?", faceHero: "characterM" },
             ]
           }
         ]
@@ -9108,8 +9078,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "N: If this is beer, bring me wine.", faceHero: "characterN" },
-              { type: "textMessage", text: "N: If this is wine, please bring me beer."},
+              { type: "textMessage", text: "N: If this is beer, bring me wine. . .", faceHero: "characterN" },
+              { type: "textMessage", text: ". . . if this is wine, please bring me beer."},
             ]
           }
         ]
@@ -9123,7 +9093,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: . . . Is each end of a tunnel the same place?", faceHero: "characterM" },
             ]
           }
         ]
@@ -9137,7 +9107,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: Would you steal a weather station to feed your family?", faceHero: "characterL" },
             ]
           }
         ]
@@ -9151,8 +9121,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "N: If this is beer, bring me wine.", faceHero: "characterN" },
-              { type: "textMessage", text: "N: If this is wine, please bring me beer."},
+              { type: "textMessage", text: "N: If this is beer, bring me wine. . .", faceHero: "characterN" },
+              { type: "textMessage", text: ". . .if this is wine, please bring me beer."},
             ]
           }
         ]
@@ -9436,8 +9406,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: . . . It's nice that it's warm in here.", faceHero: "characterM" },
             ]
           }
         ]
@@ -9454,8 +9423,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: I wish I moved with the seasons. . .", faceHero: "characterL" },
             ]
           }
         ]
@@ -9472,8 +9440,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi :)", faceHero: "characterO" },
-              { type: "textMessage", text: "I'm O.!"},
+              { type: "textMessage", text: "O: Do they know where to go but not how far?", faceHero: "characterO" },
+              { type: "textMessage", text: "All compass and no map?"},
             ]
           }
         ]
@@ -9487,7 +9455,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: . . . It's nice that it's warm in here.", faceHero: "characterM" },
             ]
           }
         ]
@@ -9501,7 +9469,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: I wish I moved with the seasons. . .", faceHero: "characterL" },
             ]
           }
         ]
@@ -9515,7 +9483,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "O: ... ... ...", faceHero: "characterO" },
+              { type: "textMessage", text: "O: Do they know where to go but not how far?", faceHero: "characterO" },
+              { type: "textMessage", text: "All compass and no map?"},
             ]
           }
         ]
@@ -9906,8 +9875,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: The bar has a dumpster?", faceHero: "characterM" },
             ]
           }
         ]
@@ -9924,8 +9892,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: We should brick over these walls. . .", faceHero: "characterL" },
             ]
           }
         ]
@@ -9942,8 +9909,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi :)", faceHero: "characterO" },
-              { type: "textMessage", text: "I'm O.!"},
+              { type: "textMessage", text: "O: I don't think rats drink", faceHero: "characterO" },
             ]
           }
         ]
@@ -9957,7 +9923,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "O: ... ... ...", faceHero: "characterO" },
+              { type: "textMessage", text: "O: I don't think rats drink", faceHero: "characterO" },
             ]
           }
         ]
@@ -9971,7 +9937,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: The bar has a dumpster?", faceHero: "characterM" },
             ]
           }
         ]
@@ -9985,7 +9951,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: We should brick over these walls. . .", faceHero: "characterL" },
             ]
           }
         ]
@@ -10290,7 +10256,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: ". . . . .", faceHero: "fruitEnjoyer2" },
+              { type: "textMessage", text: "CUSTOMER: This is a nice store", faceHero: "fruitEnjoyer2" },
             ]
           }
         ]
@@ -10307,7 +10273,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: ". . . . .", faceHero: "fruitEnjoyer1" },
+              { type: "textMessage", text: "CUSTOMER: More fruit should be named after colors", faceHero: "fruitEnjoyer1" },
             ]
           }
         ]
@@ -10321,7 +10287,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "... ... ...", faceHero: "fruitEnjoyer1" },
+              { type: "textMessage", text: "CUSTOMER: More fruit should be named after colors", faceHero: "fruitEnjoyer1" },
             ]
           }
         ]
@@ -10335,7 +10301,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "... ... ...", faceHero: "fruitEnjoyer2" },
+              { type: "textMessage", text: "CUSTOMER: This is a nice store", faceHero: "fruitEnjoyer2" },
             ]
           }
         ]
@@ -11023,8 +10989,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "K. here.", faceHero: "characterK" },
-              { type: "textMessage", text: "I'm. . ."},
+              { type: "textMessage", text: "K: At what point do you think something occurs?", faceHero: "characterK" },
             ]
           }
         ]
@@ -11038,7 +11003,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "K: ... ... ...", faceHero: "characterK" },
+              { type: "textMessage", text: "K: At what point do you think something occurs?", faceHero: "characterK" },
             ]
           }
         ]
@@ -11325,8 +11290,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "K. here.", faceHero: "characterK" },
-              { type: "textMessage", text: "I'm. . ."},
+              { type: "textMessage", text: "K: I wonder what my town looks like when I'm not there", faceHero: "characterK" },
             ]
           }
         ]
@@ -11340,7 +11304,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "K: ... ... ...", faceHero: "characterK" },
+              { type: "textMessage", text: "K: I wonder what my town looks like when I'm not there", faceHero: "characterK" },
             ]
           }
         ]
@@ -11357,8 +11321,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: Travel is a hassle", faceHero: "characterM" },
             ]
           }
         ]
@@ -11375,8 +11338,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: Everything sounds different with my eyes closed", faceHero: "characterL" },
             ]
           }
         ]
@@ -11390,7 +11352,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: Travel is a hassle", faceHero: "characterM" },
             ]
           }
         ]
@@ -11404,7 +11366,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: Everything sounds different with my eyes closed", faceHero: "characterL" },
             ]
           }
         ]
@@ -11800,7 +11762,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "N: ... ... ...", faceHero: "characterN" },
+              { type: "textMessage", text: "N: It's hard to point with a sphere", faceHero: "characterN" },
             ]
           }
         ]
@@ -11814,7 +11776,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "N: ... ... ...", faceHero: "characterN" },
+              { type: "textMessage", text: "N: It's hard to point with a sphere", faceHero: "characterN" },
             ]
           }
         ]
@@ -12074,8 +12036,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: I guess bite-sized is a relative term", faceHero: "characterL" },
             ]
           }
         ]
@@ -12092,8 +12053,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M. here.", faceHero: "characterM" },
-              { type: "textMessage", text: "I'm kind of grumpy."},
+              { type: "textMessage", text: "M: Which order comes with more toppings?", faceHero: "characterM" },
             ]
           }
         ]
@@ -12107,7 +12067,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: Which order comes with more toppings?", faceHero: "characterM" },
             ]
           }
         ]
@@ -12121,7 +12081,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: I guess bite-sized is a relative term", faceHero: "characterL" },
             ]
           }
         ]
@@ -12331,7 +12291,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "N: ... ... ...", faceHero: "characterN" },
+              { type: "textMessage", text: "N: This drink is making me thirsty", faceHero: "characterN" },
             ]
           }
         ],
@@ -12345,7 +12305,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "N: ... ... ...", faceHero: "characterN" },
+              { type: "textMessage", text: "N: This drink is making me thirsty", faceHero: "characterN" },
             ]
           }
         ]
@@ -12362,8 +12322,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "It's me, L!", faceHero: "characterL" },
-              { type: "textMessage", text: "I'm inquisitive and cheerful!"},
+              { type: "textMessage", text: "L: Have you ever gone cloud gazing at night?", faceHero: "characterL" },
             ]
           }
         ]
@@ -12377,7 +12336,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "L: ... ... ...", faceHero: "characterL" },
+              { type: "textMessage", text: "L: Have you ever gone cloud gazing at night?", faceHero: "characterL" },
             ]
           }
         ]
@@ -12703,7 +12662,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "CUSTOMER: ... ... ...", faceHero: "customer" },
+              { type: "textMessage", text: "CUSTOMER: I could help make this bar more efficient, too", faceHero: "customer" },
             ]
           }
         ],
@@ -12720,7 +12679,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "GROCER: ... ... ...", faceHero: "grocer" },
+              { type: "textMessage", text: "GROCER: None. . .  one . . . many . . .", faceHero: "grocer" },
             ]
           }
         ],
@@ -12734,7 +12693,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "CUSTOMER: ... ... ...", faceHero: "customer" },
+              { type: "textMessage", text: "CUSTOMER: I could help make this bar more efficient, too", faceHero: "customer" },
             ]
           }
         ]
@@ -12748,7 +12707,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "GROCER: ... ... ...", faceHero: "grocer" },
+              { type: "textMessage", text: "GROCER: None. . .  one . . . many . . .", faceHero: "grocer" },
             ]
           }
         ]
@@ -13023,7 +12982,7 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "M: ... ... ...", faceHero: "characterM" },
+              { type: "textMessage", text: "M: I should check on my house. . .", faceHero: "characterM" },
             ]
           }
         ]

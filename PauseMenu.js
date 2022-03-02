@@ -18,7 +18,7 @@ class PauseMenu {
         },
         {
           label: "Controls",
-          description: "Remind yourself of the game's controls",
+          description: "Remind yourself of the game's controls.",
           handler: () => {
             this.keyboardMenu.setOptions(this.getOptions("controls"))
           }
@@ -46,7 +46,7 @@ class PauseMenu {
         },
         {
           label: "Close",
-          description: "Close the pause menu",
+          description: "Close the pause menu.",
           handler: () => {
             this.close();
           }
