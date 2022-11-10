@@ -6,43 +6,56 @@ class Overworld {
    this.map = null;
  }
 
-  startGameLoop() {
-    const step = () => {
-      //Clear off the canvas
-      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+ draw() {
+  // clean up old draws
+  this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-      //Establish the camera person
-      const cameraPerson = this.map.gameObjects.cameraOverrider || this.map.gameObjects.hero;
+  // update all objects
+  Object.values(this.map.gameObjects).forEach(obj => {
+    obj.update({ arrow: this.directionInput.direction, map: this.map });
+  });
 
-      //Update all objects
-      Object.values(this.map.gameObjects).forEach(object => {
-        object.update({
-          arrow: this.directionInput.direction,
-          map: this.map,
-        })
-      })
+  // establish the camera person
+  const cameraPerson = this.map.gameObjects.hero;
 
-      //Draw Lower layer
-      this.map.drawLowerImage(this.ctx, cameraPerson);
+  // draw ground layer
+  this.map.drawLowerImage(this.ctx, cameraPerson);
 
-      //Draw Game Objects
-      Object.values(this.map.gameObjects).sort((a,b) => {
-        return a.y - b.y;
-      }).forEach(object => {
-        object.sprite.draw(this.ctx, cameraPerson);
-      })
+  // draw game objects
+  Object.values(this.map.gameObjects)
+    .sort((a, b) => a.y - b.y)
+    .forEach(obj => {
+    obj.sprite.draw(this.ctx, cameraPerson);
+  });
 
-      //Draw Upper layer
-      this.map.drawUpperImage(this.ctx, cameraPerson);
-      
-      if(!this.map.isPaused) {
-        requestAnimationFrame(() => {
-          step();   
-        })
-      }
+  // draw upper layer
+  this.map.drawUpperImage(this.ctx, cameraPerson);
+}
+
+startGameLoop() {
+  const fps = 60;
+  let now;
+  let then = Date.now();
+  let interval = 1000/fps;
+  let delta;
+  
+  const step = () => {
+
+    if (!this.map.isPaused) {
+      requestAnimationFrame(step)
     }
-    step();
- }
+
+    now = Date.now();
+    delta = now - then;
+
+    if (delta > interval) {
+      then = now - (delta % interval);
+      this.draw();
+    }
+  }
+
+  step();
+}
 
  bindActionInput() {
    new KeyPressListener("Enter", () => {
